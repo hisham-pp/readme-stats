@@ -236,6 +236,6 @@ export const techMap: Record<string, { badge: string; icon: string }> = {
   neovim: { badge: "248_neovim.svg", icon: "neovim-icon.svg" },
   insomnia: { badge: "249_insomnia.svg", icon: "insomnia-icon.svg" },
   dbeaver: { badge: "250_dbeaver.svg", icon: "dbeaver-icon.svg" },
-  venv: { badge: "251_venv.svg", icon: "venv-icon.svg" },,
+  venv: { badge: "251_venv.svg", icon: "venv-icon.svg" },
   v0: { badge: "122_v0.svg", icon: "v0-icon.svg" }
 };

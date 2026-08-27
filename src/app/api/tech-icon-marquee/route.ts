@@ -14,15 +14,49 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const techsParam = searchParams.get('techs');
     const widthParam = searchParams.get('width');
+    const hasbg = searchParams.get('hasbg') === 'true';
 
-    let files: string[] = [];
+    // Parse techConfig to get colors
+    const configPath = path.join(process.cwd(), 'src', 'lib', 'techConfig.json');
+    const techConfig = fs.existsSync(configPath) ? JSON.parse(fs.readFileSync(configPath, 'utf8')) : {};
+
+    let files: { file: string, color: string, defs?: string }[] = [];
     if (techsParam) {
       const requestedTechs = techsParam.split(',').map(t => t.trim().toLowerCase());
-      files = requestedTechs
-        .map(tech => techMap[tech]?.icon)
-        .filter(Boolean) as string[];
+      
+      files = requestedTechs.map(tech => {
+        const item = techMap[tech];
+        if (!item || !item.icon) return null;
+        
+        let color = '#333333';
+        let defs = '';
+        if (item.badge) {
+          const configId = item.badge.replace('.svg', '');
+          const conf = Object.values(techConfig).find((c: any) => c.id === configId) as any;
+          if (conf) {
+            color = conf.color || color;
+            defs = conf.defs || '';
+          }
+        }
+        
+        return { file: item.icon, color, defs };
+      }).filter(Boolean) as { file: string, color: string, defs?: string }[];
     } else {
-      files = Object.values(techMap).map(tech => tech.icon).filter(Boolean).sort();
+      files = Object.values(techMap)
+        .filter(tech => tech.icon)
+        .map(tech => {
+          let color = '#333333';
+          let defs = '';
+          if (tech.badge) {
+            const configId = tech.badge.replace('.svg', '');
+            const conf = Object.values(techConfig).find((c: any) => c.id === configId) as any;
+            if (conf) {
+              color = conf.color || color;
+              defs = conf.defs || '';
+            }
+          }
+          return { file: tech.icon, color, defs };
+        }).sort((a, b) => a.file.localeCompare(b.file));
     }
 
     if (files.length === 0) {
@@ -35,8 +69,9 @@ export async function GET(request: NextRequest) {
     const targetHeight = 40; // Uniform height for all icons
     
     // First, calculate total width and prepare inner SVG tags
-    const iconElements = files.map(file => {
-      const filePath = path.join(iconsDir, file);
+    let allDefs = '';
+    const iconElements = files.map(item => {
+      const filePath = path.join(iconsDir, item.file);
       const svgContent = fs.readFileSync(filePath, 'utf8');
       
       // Extract width from the SVG tag or viewBox
@@ -67,9 +102,33 @@ export async function GET(request: NextRequest) {
       // Add explicit width and height corresponding to our target height to ensure consistent rendering
       cleanedSvgContent = cleanedSvgContent.replace(/<svg/, `<svg width="${iconWidth}" height="${targetHeight}"`);
 
+      let containerWidth = iconWidth;
+      let finalSvgContent = cleanedSvgContent;
+
+      if (hasbg) {
+        // We'll wrap the icon inside a rounded rectangle
+        // Let's add some padding
+        const padding = 12;
+        containerWidth = iconWidth + padding * 2;
+        const containerHeight = targetHeight + padding * 2;
+        
+        // Re-scale the inner icon so it's centered in the rect
+        const innerIcon = cleanedSvgContent.replace(/<svg/, `<svg x="${padding}" y="${padding}" width="${iconWidth}" height="${targetHeight}"`);
+        
+        finalSvgContent = `
+          <g>
+            <rect x="0" y="0" width="${containerWidth}" height="${containerHeight}" rx="12" fill="${item.color}" />
+            ${innerIcon}
+          </g>
+        `;
+        if (item.defs) {
+          allDefs += item.defs;
+        }
+      }
+
       return {
-        svgContent: cleanedSvgContent,
-        width: iconWidth
+        svgContent: finalSvgContent,
+        width: containerWidth
       };
     });
 
@@ -104,7 +163,7 @@ export async function GET(request: NextRequest) {
     });
     
     // Icon marquees need to be taller than badge marquees
-    const height = targetHeight + 10;
+    const height = hasbg ? targetHeight + 24 + 10 : targetHeight + 10; // extra padding if hasbg
 
     const wrapperSvg = `
       <svg xmlns="http://www.w3.org/2000/svg" width="${viewBoxWidth}" height="${height}" viewBox="0 0 ${viewBoxWidth} ${height}">
@@ -124,6 +183,7 @@ export async function GET(request: NextRequest) {
         
         <!-- Gradient masks to create fade out on edges -->
         <defs>
+          ${allDefs}
           <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stop-color="transparent" />
             <stop offset="5%" stop-color="white" />
