@@ -35,9 +35,9 @@ export async function GET(request: NextRequest) {
           if (svgFile && fs.existsSync(svgFile)) {
             let svgContent = fs.readFileSync(svgFile, 'utf8');
             svgContent = svgContent.replace(/<\?xml.*?\?>/g, '').trim();
-            // Remove hardcoded dimensions to let us scale them
-            svgContent = svgContent.replace(/<svg([^>]*)width="[^"]*"/g, '<svg$1');
-            svgContent = svgContent.replace(/<svg([^>]*)height="[^"]*"/g, '<svg$1');
+            // Remove hardcoded dimensions ONLY from the root svg tag
+            svgContent = svgContent.replace(/<svg([^>]*)width="[^"]*"/, '<svg$1');
+            svgContent = svgContent.replace(/<svg([^>]*)height="[^"]*"/, '<svg$1');
             lang.embeddedSvg = svgContent;
           }
         }

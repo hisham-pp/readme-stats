@@ -76,23 +76,23 @@ export default function Home() {
           <div className="w-full bg-[#0d1117] p-8 rounded-lg flex flex-col items-center justify-center gap-8 overflow-hidden border border-zinc-800 mb-8">
             <div className="w-full">
               <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">Default Style</p>
-              <img src="/api/top-langs?username=hisham-pp&v=1" alt="Top Languages Default" className="max-w-full mx-auto" />
+              <img src="/api/top-langs?username=hisham-pp&v=2" alt="Top Languages Default" className="max-w-full mx-auto" />
             </div>
             <div className="w-full">
               <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">Icon Style</p>
-              <img src="/api/top-langs?username=hisham-pp&type=icon&v=1" alt="Top Languages Icons" className="max-w-full mx-auto" />
+              <img src="/api/top-langs?username=hisham-pp&type=icon&v=2" alt="Top Languages Icons" className="max-w-full mx-auto" />
             </div>
             <div className="w-full">
               <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">Badge Style</p>
-              <img src="/api/top-langs?username=hisham-pp&type=badge&v=1" alt="Top Languages Badges" className="max-w-full mx-auto" />
+              <img src="/api/top-langs?username=hisham-pp&type=badge&v=2" alt="Top Languages Badges" className="max-w-full mx-auto" />
             </div>
             <div className="w-full">
               <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">Treemap Icon Style</p>
-              <img src="/api/top-langs?username=hisham-pp&type=treemap-icon&v=1" alt="Top Languages Treemap Icons" className="max-w-full mx-auto" />
+              <img src="/api/top-langs?username=hisham-pp&type=treemap-icon&v=2" alt="Top Languages Treemap Icons" className="max-w-full mx-auto" />
             </div>
             <div className="w-full">
               <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">Treemap Badge Style</p>
-              <img src="/api/top-langs?username=hisham-pp&type=treemap-badge&v=1" alt="Top Languages Treemap Badges" className="max-w-full mx-auto" />
+              <img src="/api/top-langs?username=hisham-pp&type=treemap-badge&v=2" alt="Top Languages Treemap Badges" className="max-w-full mx-auto" />
             </div>
           </div>
           <p className="text-sm text-zinc-400">
