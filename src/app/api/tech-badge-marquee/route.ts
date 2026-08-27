@@ -13,6 +13,7 @@ export async function GET(request: NextRequest) {
 
     const { searchParams } = new URL(request.url);
     const techsParam = searchParams.get('techs');
+    const widthParam = searchParams.get('width');
 
     let files: string[] = [];
     if (techsParam) {
@@ -53,7 +54,7 @@ export async function GET(request: NextRequest) {
       totalWidth += badge.width + gap;
     });
 
-    const viewBoxWidth = 850;
+    const viewBoxWidth = widthParam ? parseInt(widthParam, 10) || 850 : 850;
 
     // To prevent empty space on short lists, we must repeat the items enough times.
     // We need the remaining width after the first set scrolls out to be at least viewBoxWidth.

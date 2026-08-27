@@ -80,7 +80,7 @@ export default function Home() {
                 
                 {/* Marquee Preview */}
                 <div className="w-full bg-[#0d1117] p-8 rounded-lg flex flex-col items-center justify-center overflow-hidden border border-zinc-800 mb-8">
-                  <img src={`/api/tech-badge-marquee?techs=${queryStr}`} alt={`${group.title} Marquee`} className="max-w-full" />
+                  <img src={`/api/tech-badge-marquee?techs=&v=2`} alt={`${group.title} Marquee`} className="max-w-full" />
                 </div>
                 
                 {/* Available Technologies Grid for this Group */}
