@@ -52,7 +52,7 @@ export default function Home() {
             Tech Stack Marquee Combinations
           </h1>
           <p className="text-sm text-zinc-400 max-w-xl mx-auto mb-6">
-            These SVGs are generated entirely on the server via the <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">/api/tech-badge-marquee</code> endpoint. 
+            These SVGs are generated entirely on the server via the <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">/api/tech-badge-marquee</code> and <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">/api/tech-icon-marquee</code> endpoints. 
             When deployed to Vercel, you can use the absolute URL in your GitHub <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">README.md</code>.
             Use the <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">?techs=</code> query parameter to select specific technologies.
           </p>
@@ -78,9 +78,16 @@ export default function Home() {
                   {group.title}
                 </h2>
                 
-                {/* Marquee Preview */}
-                <div className="w-full bg-[#0d1117] p-8 rounded-lg flex flex-col items-center justify-center overflow-hidden border border-zinc-800 mb-8">
-                  <img src={`/api/tech-badge-marquee?techs=&v=2`} alt={`${group.title} Marquee`} className="max-w-full" />
+                {/* Marquee Previews */}
+                <div className="w-full bg-[#0d1117] p-8 rounded-lg flex flex-col items-center justify-center gap-8 overflow-hidden border border-zinc-800 mb-8">
+                  <div className="w-full">
+                    <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">Badge Marquee</p>
+                    <img src={`/api/tech-badge-marquee?techs=${queryStr}&v=2`} alt={`${group.title} Badge Marquee`} className="max-w-full mx-auto" />
+                  </div>
+                  <div className="w-full">
+                    <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">Icon Marquee</p>
+                    <img src={`/api/tech-icon-marquee?techs=${queryStr}&v=2`} alt={`${group.title} Icon Marquee`} className="max-w-full mx-auto" />
+                  </div>
                 </div>
                 
                 {/* Available Technologies Grid for this Group */}
