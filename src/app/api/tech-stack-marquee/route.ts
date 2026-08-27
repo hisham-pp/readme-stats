@@ -48,13 +48,27 @@ export async function GET(request: NextRequest) {
       };
     });
 
+    // Calculate totalWidth of a single set of badges
+    badgeElements.forEach(badge => {
+      totalWidth += badge.width + gap;
+    });
+
+    const viewBoxWidth = 850;
+
+    // To prevent empty space on short lists, we must repeat the items enough times.
+    // We need the remaining width after the first set scrolls out to be at least viewBoxWidth.
+    const repeats = totalWidth > 0 ? Math.max(2, Math.ceil(viewBoxWidth / totalWidth) + 1) : 2;
+
     let currentX = 0;
     let stitchedSvgInner = '';
 
-    // We render the list of badges twice to create a seamless infinite loop
-    const allElements = [...badgeElements, ...badgeElements];
+    // We render the list of badges multiple times to create a seamless infinite loop
+    let allElements: typeof badgeElements = [];
+    for (let i = 0; i < repeats; i++) {
+      allElements = allElements.concat(badgeElements);
+    }
 
-    allElements.forEach((badge, index) => {
+    allElements.forEach((badge) => {
       // Nested SVG element inherits x and y naturally
       stitchedSvgInner += `
         <g transform="translate(${currentX}, 0)">
@@ -62,16 +76,7 @@ export async function GET(request: NextRequest) {
         </g>
       `;
       currentX += badge.width + gap;
-      
-      // Keep track of the total width of just the first set for the animation
-      if (index === badgeElements.length - 1) {
-        totalWidth = currentX; 
-      }
     });
-
-    // The container width is essentially infinite, but we set it to the max we want to display.
-    // GitHub typically caps image width at 800-900px on readmes.
-    const viewBoxWidth = 850;
     const height = 24; // standard flat-square badge height is usually 20, we give it a bit of padding
 
     const wrapperSvg = `
