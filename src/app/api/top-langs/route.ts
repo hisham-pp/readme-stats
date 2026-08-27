@@ -17,8 +17,8 @@ export async function GET(request: NextRequest) {
   try {
     const langs: any[] = await fetchTopLanguages(username);
     
-    // Inject custom SVG assets if type is 'icon' or 'badge'
-    if (type === 'icon' || type === 'badge') {
+    // Inject custom SVG assets if type includes 'icon' or 'badge'
+    if (type.includes('icon') || type.includes('badge')) {
       const publicDir = path.join(process.cwd(), 'public');
       
       for (const lang of langs) {
@@ -26,9 +26,9 @@ export async function GET(request: NextRequest) {
           const techItem = techMap[lang.techKey];
           let svgFile = '';
           
-          if (type === 'icon' && techItem.icon) {
+          if (type.includes('icon') && techItem.icon) {
             svgFile = path.join(publicDir, 'icons', techItem.icon);
-          } else if (type === 'badge' && techItem.badge) {
+          } else if (type.includes('badge') && techItem.badge) {
             svgFile = path.join(publicDir, 'badges', techItem.badge);
           }
           

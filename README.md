@@ -30,6 +30,16 @@ You can render your most-used languages using your custom icons or badges by app
 <img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username&type=badge" alt="Top Languages Badges" />
 ```
 
+**Treemap Icons (`?type=treemap-icon`):**
+```markdown
+<img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username&type=treemap-icon" alt="Top Languages Treemap Icons" />
+```
+
+**Treemap Badges (`?type=treemap-badge`):**
+```markdown
+<img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username&type=treemap-badge" alt="Top Languages Treemap Badges" />
+```
+
 ## Getting Started
 
 First, install dependencies:

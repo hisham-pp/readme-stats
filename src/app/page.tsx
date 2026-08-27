@@ -86,9 +86,17 @@ export default function Home() {
               <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">Badge Style</p>
               <img src="/api/top-langs?username=hisham-pp&type=badge&v=1" alt="Top Languages Badges" className="max-w-full mx-auto" />
             </div>
+            <div className="w-full">
+              <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">Treemap Icon Style</p>
+              <img src="/api/top-langs?username=hisham-pp&type=treemap-icon&v=1" alt="Top Languages Treemap Icons" className="max-w-full mx-auto" />
+            </div>
+            <div className="w-full">
+              <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">Treemap Badge Style</p>
+              <img src="/api/top-langs?username=hisham-pp&type=treemap-badge&v=1" alt="Top Languages Treemap Badges" className="max-w-full mx-auto" />
+            </div>
           </div>
           <p className="text-sm text-zinc-400">
-            Render your most-used languages using standard dots, detailed icons <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">?type=icon</code>, or bold badges <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">?type=badge</code>.
+            Render your most-used languages using standard dots, detailed icons <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">?type=icon</code>, bold badges <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">?type=badge</code>, or a beautiful Treemap visualization <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">?type=treemap-icon</code> / <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">?type=treemap-badge</code>.
           </p>
         </section>
 
