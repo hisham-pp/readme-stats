@@ -66,7 +66,7 @@ export async function GET(request: NextRequest) {
     let totalWidth = 0;
     const gap = 10;
     
-    const targetHeight = 40; // Uniform height for all icons
+    const targetHeight = 24; // Uniform height for all icons
     
     // First, calculate total width and prepare inner SVG tags
     let allDefs = '';
@@ -108,7 +108,7 @@ export async function GET(request: NextRequest) {
       if (hasbg) {
         // We'll wrap the icon inside a rounded rectangle
         // Let's add some padding
-        const padding = 12;
+        const padding = 6;
         containerWidth = iconWidth + padding * 2;
         const containerHeight = targetHeight + padding * 2;
         
