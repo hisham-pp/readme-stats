@@ -69,6 +69,29 @@ export default function Home() {
           </a>
         </div>
 
+        <section className="w-full bg-zinc-950 p-8 rounded-xl border border-zinc-800 shadow-2xl mb-12">
+          <h2 className="text-xl font-semibold text-zinc-100 mb-6 border-b border-zinc-800 pb-2">
+            Top Languages Stats
+          </h2>
+          <div className="w-full bg-[#0d1117] p-8 rounded-lg flex flex-col items-center justify-center gap-8 overflow-hidden border border-zinc-800 mb-8">
+            <div className="w-full">
+              <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">Default Style</p>
+              <img src="/api/top-langs?username=hisham-pp&v=1" alt="Top Languages Default" className="max-w-full mx-auto" />
+            </div>
+            <div className="w-full">
+              <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">Icon Style</p>
+              <img src="/api/top-langs?username=hisham-pp&type=icon&v=1" alt="Top Languages Icons" className="max-w-full mx-auto" />
+            </div>
+            <div className="w-full">
+              <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">Badge Style</p>
+              <img src="/api/top-langs?username=hisham-pp&type=badge&v=1" alt="Top Languages Badges" className="max-w-full mx-auto" />
+            </div>
+          </div>
+          <p className="text-sm text-zinc-400">
+            Render your most-used languages using standard dots, detailed icons <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">?type=icon</code>, or bold badges <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">?type=badge</code>.
+          </p>
+        </section>
+
         <div className="w-full flex flex-col gap-12">
           {techGroups.map((group) => {
             const queryStr = group.keys.join(",");

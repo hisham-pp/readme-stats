@@ -10,6 +10,26 @@ A dynamic GitHub profile statistics generator built with Next.js. This applicati
 - `https://readme-stats-theta-sepia.vercel.app/api/top-langs` - Generates a top languages card.
 - `https://readme-stats-theta-sepia.vercel.app/api/tech-badge-marquee` - Generates an animated tech stack badge marquee.
 
+## Features
+
+### Top Languages with Custom Icons/Badges
+You can render your most-used languages using your custom icons or badges by appending the `?type=` query parameter.
+
+**Default Dots:**
+```markdown
+<img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username" alt="Top Languages" />
+```
+
+**Custom Icons (`?type=icon`):**
+```markdown
+<img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username&type=icon" alt="Top Languages Icons" />
+```
+
+**Custom Badges (`?type=badge`):**
+```markdown
+<img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username&type=badge" alt="Top Languages Badges" />
+```
+
 ## Getting Started
 
 First, install dependencies:

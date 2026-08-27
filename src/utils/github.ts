@@ -1,3 +1,28 @@
+export const githubLanguageToTechMapKey: Record<string, string> = {
+  "TypeScript": "typescript",
+  "JavaScript": "javascript",
+  "HTML": "html5",
+  "CSS": "css3",
+  "Shell": "bash",
+  "Python": "python",
+  "C++": "cpp",
+  "C#": "csharp",
+  "C": "c",
+  "Java": "java",
+  "Go": "go",
+  "Rust": "rust",
+  "Ruby": "ruby",
+  "PHP": "php",
+  "Swift": "swift",
+  "Kotlin": "kotlin",
+  "Dart": "dart",
+  "Vue": "vuejs",
+  "Svelte": "svelte",
+  "Jupyter Notebook": "python",
+  "SCSS": "css3",
+  "Less": "css3"
+};
+
 export async function fetchGitHubStats(username: string) {
   const token = process.env.GITHUB_TOKEN;
   
@@ -119,13 +144,18 @@ export async function fetchTopLanguages(username: string) {
   }
 
   const repos = data.data.user.repositories.nodes;
-  const langMap: Record<string, { name: string; color: string; size: number }> = {};
+  const langMap: Record<string, { name: string; color: string; size: number; techKey?: string | null }> = {};
 
   repos.forEach((repo: any) => {
     repo.languages.edges.forEach((edge: any) => {
       const { size, node } = edge;
       if (!langMap[node.name]) {
-        langMap[node.name] = { name: node.name, color: node.color, size: 0 };
+        langMap[node.name] = { 
+          name: node.name, 
+          color: node.color, 
+          size: 0,
+          techKey: githubLanguageToTechMapKey[node.name] || null
+        };
       }
       langMap[node.name].size += size;
     });
