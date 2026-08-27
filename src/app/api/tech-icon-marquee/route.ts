@@ -112,8 +112,10 @@ export async function GET(request: NextRequest) {
         containerWidth = iconWidth + padding * 2;
         const containerHeight = targetHeight + padding * 2;
         
-        // Re-scale the inner icon so it's centered in the rect
-        const innerIcon = cleanedSvgContent.replace(/<svg/, `<svg x="${padding}" y="${padding}" width="${iconWidth}" height="${targetHeight}"`);
+        // Remove the previously added width/height from cleanedSvgContent to avoid duplicates
+        let innerIcon = cleanedSvgContent.replace(/<svg\s+width="[^"]*"\s+height="[^"]*"/, '<svg');
+        // Now add the new positioned ones
+        innerIcon = innerIcon.replace(/<svg/, `<svg x="${padding}" y="${padding}" width="${iconWidth}" height="${targetHeight}"`);
         
         finalSvgContent = `
           <g>
