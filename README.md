@@ -8,7 +8,7 @@ A dynamic GitHub profile statistics generator built with Next.js. This applicati
 
 - `https://readme-stats-theta-sepia.vercel.app/api/stats` - Generates a GitHub stats card.
 - `https://readme-stats-theta-sepia.vercel.app/api/top-langs` - Generates a top languages card.
-- `https://readme-stats-theta-sepia.vercel.app/api/tech-stack-marquee` - Generates an animated tech stack marquee.
+- `https://readme-stats-theta-sepia.vercel.app/api/tech-badge-marquee` - Generates an animated tech stack badge marquee.
 
 ## Getting Started
 

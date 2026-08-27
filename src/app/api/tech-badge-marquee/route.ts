@@ -18,10 +18,10 @@ export async function GET(request: NextRequest) {
     if (techsParam) {
       const requestedTechs = techsParam.split(',').map(t => t.trim().toLowerCase());
       files = requestedTechs
-        .map(tech => techMap[tech])
+        .map(tech => techMap[tech]?.badge)
         .filter(Boolean) as string[];
     } else {
-      files = Object.values(techMap).sort();
+      files = Object.values(techMap).map(tech => tech.badge).filter(Boolean).sort();
     }
 
     if (files.length === 0) {

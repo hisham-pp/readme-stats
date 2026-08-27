@@ -52,7 +52,7 @@ export default function Home() {
             Tech Stack Marquee Combinations
           </h1>
           <p className="text-sm text-zinc-400 max-w-xl mx-auto mb-6">
-            These SVGs are generated entirely on the server via the <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">/api/tech-stack-marquee</code> endpoint. 
+            These SVGs are generated entirely on the server via the <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">/api/tech-badge-marquee</code> endpoint. 
             When deployed to Vercel, you can use the absolute URL in your GitHub <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">README.md</code>.
             Use the <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">?techs=</code> query parameter to select specific technologies.
           </p>
@@ -80,7 +80,7 @@ export default function Home() {
                 
                 {/* Marquee Preview */}
                 <div className="w-full bg-[#0d1117] p-8 rounded-lg flex flex-col items-center justify-center overflow-hidden border border-zinc-800 mb-8">
-                  <img src={`/api/tech-stack-marquee?techs=${queryStr}`} alt={`${group.title} Marquee`} className="max-w-full" />
+                  <img src={`/api/tech-badge-marquee?techs=${queryStr}`} alt={`${group.title} Marquee`} className="max-w-full" />
                 </div>
                 
                 {/* Available Technologies Grid for this Group */}
@@ -89,12 +89,12 @@ export default function Home() {
                 </h3>
                 <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
                   {group.keys.map((tech) => {
-                    const filename = techMap[tech];
-                    if (!filename) return null; // In case of a typo in the array
+                    const techData = techMap[tech];
+                    if (!techData || !techData.badge) return null; // In case of a typo in the array
                     return (
                       <div key={tech} className="flex flex-col items-center justify-center p-3 bg-zinc-900 border border-zinc-800 rounded-lg hover:border-zinc-700 transition-colors">
                         <div className="h-8 flex items-center justify-center mb-2">
-                          <img src={`/badges/${filename}`} alt={tech} className="max-h-full" />
+                          <img src={`/badges/${techData.badge}`} alt={tech} className="max-h-full" />
                         </div>
                         <code className="text-[10px] text-zinc-400 bg-zinc-950 border border-zinc-800 px-1.5 py-0.5 rounded truncate max-w-full">
                           {tech}
