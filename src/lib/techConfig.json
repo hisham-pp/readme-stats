@@ -1869,5 +1869,21 @@
     "icon": "venv-icon.svg",
     "showText": true,
     "id": "251_venv"
+  },
+  "vercel": {
+    "name": "Vercel",
+    "color": "#000000",
+    "iconPosition": "left",
+    "icon": "vercel-icon.svg",
+    "showText": true,
+    "id": "27_vercel"
+  },
+  "v0": {
+    "name": "v0",
+    "color": "#000000",
+    "iconPosition": "left",
+    "icon": "v0-icon.svg",
+    "showText": true,
+    "id": "122_v0"
   }
 }

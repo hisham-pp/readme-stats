@@ -19,7 +19,7 @@ const techGroups = [
   },
   {
     title: "Cloud & DevOps",
-    keys: "gcp,netlify,cloudflare,railway,kubernetes,ansible,nginx,rabbitmq".split(",")
+    keys: "gcp,vercel,netlify,cloudflare,railway,kubernetes,ansible,nginx,rabbitmq".split(",")
   },
   {
     title: "Tools & Development",
@@ -31,7 +31,7 @@ const techGroups = [
   },
   {
     title: "AI & ML",
-    keys: "pytorch,numpy,pandas,openai_sdk".split(",")
+    keys: "pytorch,numpy,pandas,openai_sdk,v0".split(",")
   },
   {
     title: "Testing",
@@ -82,11 +82,11 @@ export default function Home() {
                 <div className="w-full bg-[#0d1117] p-8 rounded-lg flex flex-col items-center justify-center gap-8 overflow-hidden border border-zinc-800 mb-8">
                   <div className="w-full">
                     <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">Badge Marquee</p>
-                    <img src={`/api/tech-badge-marquee?techs=${queryStr}&v=2`} alt={`${group.title} Badge Marquee`} className="max-w-full mx-auto" />
+                    <img src={`/api/tech-badge-marquee?techs=${queryStr}&v=4`} alt={`${group.title} Badge Marquee`} className="max-w-full mx-auto" />
                   </div>
                   <div className="w-full">
                     <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">Icon Marquee</p>
-                    <img src={`/api/tech-icon-marquee?techs=${queryStr}&v=2`} alt={`${group.title} Icon Marquee`} className="max-w-full mx-auto" />
+                    <img src={`/api/tech-icon-marquee?techs=${queryStr}&v=4`} alt={`${group.title} Icon Marquee`} className="max-w-full mx-auto" />
                   </div>
                 </div>
                 
