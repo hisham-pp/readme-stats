@@ -1,62 +1,16 @@
-export const githubLanguageToTechMapKey: Record<string, string> = {
-  "TypeScript": "typescript",
-  "JavaScript": "javascript",
-  "HTML": "html5",
-  "CSS": "css3",
-  "Shell": "bash",
-  "Python": "python",
-  "C++": "cpp",
-  "C#": "csharp",
-  "C": "c",
-  "Java": "java",
-  "Go": "go",
-  "Rust": "rust",
-  "Ruby": "ruby",
-  "PHP": "php",
-  "Swift": "swift",
-  "Kotlin": "kotlin",
-  "Dart": "dart",
-  "Vue": "vuejs",
-  "Svelte": "svelte",
-  "Jupyter Notebook": "python",
-  "SCSS": "css3",
-  "Less": "css3"
-};
+import { GitHubStats, GitHubLanguage } from '@/types/github.types';
+import { USER_INFO_QUERY, TOP_LANGS_QUERY } from './github.queries';
 
-export async function fetchGitHubStats(username: string) {
+import { githubLanguageToTechMapKey } from '@/config/github.config';
+
+export async function fetchGitHubStats(username: string): Promise<GitHubStats> {
   const token = process.env.GITHUB_TOKEN;
   
   if (!token) {
     throw new Error("GITHUB_TOKEN is missing");
   }
 
-  const query = `
-    query userInfo($login: String!) {
-      user(login: $login) {
-        name
-        login
-        contributionsCollection {
-          totalCommitContributions
-        }
-        pullRequests(first: 1) {
-          totalCount
-        }
-        issues(first: 1) {
-          totalCount
-        }
-        followers {
-          totalCount
-        }
-        repositories(first: 100, ownerAffiliations: OWNER, orderBy: {direction: DESC, field: STARGAZERS}) {
-          nodes {
-            stargazers {
-              totalCount
-            }
-          }
-        }
-      }
-    }
-  `;
+  const query = USER_INFO_QUERY;
 
   const response = await fetch("https://api.github.com/graphql", {
     method: "POST",
@@ -95,33 +49,14 @@ export async function fetchGitHubStats(username: string) {
   };
 }
 
-export async function fetchTopLanguages(username: string) {
+export async function fetchTopLanguages(username: string): Promise<GitHubLanguage[]> {
   const token = process.env.GITHUB_TOKEN;
   
   if (!token) {
     throw new Error("GITHUB_TOKEN is missing");
   }
 
-  const query = `
-    query topLangs($login: String!) {
-      user(login: $login) {
-        repositories(ownerAffiliations: OWNER, isFork: false, first: 100) {
-          nodes {
-            name
-            languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
-              edges {
-                size
-                node {
-                  color
-                  name
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `;
+  const query = TOP_LANGS_QUERY;
 
   const response = await fetch("https://api.github.com/graphql", {
     method: "POST",

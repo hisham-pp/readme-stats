@@ -1,4 +1,6 @@
-export const techMap: Record<string, { badge: string; icon: string }> = {
+import { TechItem } from '@/types/tech.types';
+
+export const techMap: Record<string, TechItem> = {
   react: { badge: "00_react_js.svg", icon: "react-icon.svg" },
   react_native: { badge: "01_react_native.svg", icon: "" },
   nextjs: { badge: "02_next_js.svg", icon: "nextjs-icon.svg" },

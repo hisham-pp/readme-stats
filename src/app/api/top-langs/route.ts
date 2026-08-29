@@ -1,8 +1,9 @@
-import { NextRequest } from "next/server";
-import { fetchTopLanguages } from "@/utils/github";
-import { generateTopLangsSvg } from "@/utils/svg";
-import { techMap } from "@/lib/techs";
+import { NextRequest, NextResponse } from "next/server";
+import { fetchTopLanguages } from "@/services/github.service";
+import { generateTopLangsSvg } from "@/templates/top-langs.template";
 import { svgBundle } from "@/lib/svgBundle";
+import { techMap } from "@/config/techs.config";
+import { COMMON_CACHE_CONTROL } from "@/config/constants";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -10,41 +11,42 @@ export async function GET(request: NextRequest) {
   const type = searchParams.get("type") || "default";
 
   if (!username) {
-    return new Response("Missing username parameter", { status: 400 });
+    return new NextResponse("Missing username parameter", { status: 400 });
   }
 
   try {
-    const langs: any[] = await fetchTopLanguages(username);
+    const langs = await fetchTopLanguages(username);
     
-    // Inject custom SVG assets if type includes 'icon' or 'badge'
-    if (type.includes('icon') || type.includes('badge')) {
-      for (const lang of langs) {
-        if (lang.techKey && techMap[lang.techKey]) {
-          const techItem = techMap[lang.techKey];
-          let svgFile = '';
-          
-          if (type.includes('icon') && techItem.icon) {
-            svgFile = techItem.icon;
-          } else if (type.includes('badge') && techItem.badge) {
-            svgFile = techItem.badge;
+    // Inject SVGs for badges or icons
+    const langsWithSvg = langs.map(lang => {
+      let embeddedSvg = undefined;
+      
+      if (lang.techKey && techMap[lang.techKey]) {
+        if (type === 'badge' || type === 'treemap_badge') {
+          const badgeKey = techMap[lang.techKey].badge;
+          if (badgeKey && svgBundle[badgeKey as keyof typeof svgBundle]) {
+            embeddedSvg = (svgBundle[badgeKey as keyof typeof svgBundle] as any).contentNoDimensions;
           }
-          
-          if (svgFile && svgBundle[svgFile]) {
-            lang.embeddedSvg = svgBundle[svgFile].contentNoDimensions;
+        } else if (type === 'icon' || type === 'treemap_icon') {
+          const iconKey = techMap[lang.techKey].icon;
+          if (iconKey && svgBundle[iconKey as keyof typeof svgBundle]) {
+            embeddedSvg = (svgBundle[iconKey as keyof typeof svgBundle] as any).contentNoDimensions;
           }
         }
       }
-    }
+      
+      return { ...lang, embeddedSvg };
+    });
 
-    const svg = generateTopLangsSvg(langs, type);
+    const svg = generateTopLangsSvg(langsWithSvg, type);
 
-    return new Response(svg, {
+    return new NextResponse(svg, {
       headers: {
         "Content-Type": "image/svg+xml",
-        "Cache-Control": "public, max-age=7200, s-maxage=7200, stale-while-revalidate=86400",
+        "Cache-Control": COMMON_CACHE_CONTROL,
       },
     });
   } catch (error: any) {
-    return new Response(`Error: ${error.message}`, { status: 500 });
+    return new NextResponse(`Error: ${error.message}`, { status: 500 });
   }
 }
