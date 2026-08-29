@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "pnpm run badges:generate && pnpm run bundle:svgs",
+    "prebuild": "pnpm run badges:generate && pnpm run icons:generate && pnpm run bundle:svgs",
     "build:llms": "npx tsx scripts/generate-llms-docs.ts",
     "build": "next build",
     "start": "next start",
