@@ -5,21 +5,21 @@ import { techMap } from "@/config/techs.config";
 import { COMMON_CACHE_CONTROL } from "@/config/constants";
 import { THEMES } from "@/types/github.types";
 
-import { iconsDefaultBundle } from '@/lib/bundles/icons-default.bundle';
+import { iconsBrandBundle } from '@/lib/bundles/icons-brand.bundle';
 import { iconsDarkBundle } from '@/lib/bundles/icons-dark.bundle';
 import { iconsLightBundle } from '@/lib/bundles/icons-light.bundle';
-import { badgesDefaultBundle } from '@/lib/bundles/badges-default.bundle';
+import { badgesBrandBundle } from '@/lib/bundles/badges-brand.bundle';
 import { badgesDarkBundle } from '@/lib/bundles/badges-dark.bundle';
 import { badgesLightBundle } from '@/lib/bundles/badges-light.bundle';
 
 const iconBundles: Record<string, Record<string, string>> = {
-  default: iconsDefaultBundle,
+  brand: iconsBrandBundle,
   dark: iconsDarkBundle,
   light: iconsLightBundle,
 };
 
 const badgeBundles: Record<string, Record<string, string>> = {
-  default: badgesDefaultBundle,
+  brand: badgesBrandBundle,
   dark: badgesDarkBundle,
   light: badgesLightBundle,
 };
@@ -30,7 +30,7 @@ export async function GET(request: NextRequest) {
   const type = searchParams.get("type") || "default";
   
   const globalThemeQuery = searchParams.get("theme") as any;
-  const theme = THEMES.includes(globalThemeQuery) ? globalThemeQuery : 'default';
+  const theme = THEMES.includes(globalThemeQuery) ? globalThemeQuery : 'brand';
 
   if (!username) {
     return new NextResponse("Missing username parameter", { status: 400 });
@@ -47,7 +47,7 @@ export async function GET(request: NextRequest) {
         if (type === 'badge' || type === 'treemap_badge') {
           const badgeKey = techMap[lang.techKey].badge;
           if (badgeKey) {
-            const bundle = badgeBundles[theme] || badgeBundles.default;
+            const bundle = badgeBundles[theme] || badgeBundles.brand;
             let rawContent = bundle[badgeKey];
             try {
               if (rawContent) {
@@ -61,7 +61,7 @@ export async function GET(request: NextRequest) {
         } else if (type === 'icon' || type === 'treemap_icon') {
           const iconKey = techMap[lang.techKey].icon;
           if (iconKey) {
-            const bundle = iconBundles[theme] || iconBundles.default;
+            const bundle = iconBundles[theme] || iconBundles.brand;
             let rawContent = bundle[iconKey];
             try {
               if (rawContent) {

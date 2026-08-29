@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const themes = ['default', 'dark', 'light'];
+const themes = ['brand', 'dark', 'light'];
 const types = ['icons', 'badges'];
 
 const rootDir = path.join(__dirname, '..');
@@ -38,7 +38,7 @@ export const ${bundleName}: Record<string, string> = ${JSON.stringify(bundleObje
 `;
 
     fs.writeFileSync(outputFile, fileContent);
-    console.log(`\u2705 Generated ${type}-${theme}.bundle.ts with ${Object.keys(bundleObject).length} SVGs`);
+    console.log(`✅ Generated ${type}-${theme}.bundle.ts with ${Object.keys(bundleObject).length} SVGs`);
   });
 });
 

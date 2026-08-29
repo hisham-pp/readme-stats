@@ -4,12 +4,12 @@ import { generateMarqueeSvg } from '@/templates/marquee.template';
 import { MARQUEE_CACHE_CONTROL } from '@/config/constants';
 import { THEMES } from '@/types/github.types';
 
-import { badgesDefaultBundle } from '@/lib/bundles/badges-default.bundle';
+import { badgesBrandBundle } from '@/lib/bundles/badges-brand.bundle';
 import { badgesDarkBundle } from '@/lib/bundles/badges-dark.bundle';
 import { badgesLightBundle } from '@/lib/bundles/badges-light.bundle';
 
 const bundles: Record<string, Record<string, string>> = {
-  default: badgesDefaultBundle,
+  brand: badgesBrandBundle,
   dark: badgesDarkBundle,
   light: badgesLightBundle,
 };
@@ -20,8 +20,9 @@ export async function GET(request: NextRequest) {
     const techsParam = searchParams.get('techs');
     const widthParam = searchParams.get('width');
 
+    // Determine global theme from URL query, fallback to brand
     const globalThemeQuery = searchParams.get('theme') as any;
-    const globalTheme = THEMES.includes(globalThemeQuery) ? globalThemeQuery : 'default';
+    const globalTheme = THEMES.includes(globalThemeQuery) ? globalThemeQuery : 'brand';
 
     let files: { file: string, theme: string }[] = [];
     if (techsParam) {
@@ -58,14 +59,13 @@ export async function GET(request: NextRequest) {
     }
     
     const badgeElements = files.map(item => {
-      const bundle = bundles[item.theme] || bundles.default;
+      const bundle = bundles[item.theme] || bundles.brand;
       let rawContent = bundle[item.file];
       
       let content = '';
       let width = 100;
       
       try {
-        if (rawContent) {
            content = rawContent.replace(/<\?xml.*?\?>/g, '').trim();
            const widthMatch = content.match(/<svg[^>]*width="([0-9.]+)"/);
            if (widthMatch) {

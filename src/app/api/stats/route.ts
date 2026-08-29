@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
   const username = searchParams.get("username");
   
   const globalThemeQuery = searchParams.get("theme") as any;
-  const theme = THEMES.includes(globalThemeQuery) ? globalThemeQuery : 'default';
+  const theme = THEMES.includes(globalThemeQuery) ? globalThemeQuery : 'brand';
 
   if (!username) {
     return new NextResponse("Missing username parameter", { status: 400 });

@@ -6,12 +6,12 @@ import { generateMarqueeSvg } from '@/templates/marquee.template';
 import { MARQUEE_CACHE_CONTROL } from '@/config/constants';
 import { THEMES } from '@/types/github.types';
 
-import { iconsDefaultBundle } from '@/lib/bundles/icons-default.bundle';
+import { iconsBrandBundle } from '@/lib/bundles/icons-brand.bundle';
 import { iconsDarkBundle } from '@/lib/bundles/icons-dark.bundle';
 import { iconsLightBundle } from '@/lib/bundles/icons-light.bundle';
 
 const bundles: Record<string, Record<string, string>> = {
-  default: iconsDefaultBundle,
+  brand: iconsBrandBundle,
   dark: iconsDarkBundle,
   light: iconsLightBundle,
 };
@@ -29,9 +29,9 @@ export async function GET(request: NextRequest) {
 
     let files: { file: string, color: string, defs?: string, theme: string }[] = [];
     
-    // Determine global theme from URL query, fallback to default
+    // Determine global theme from URL query, fallback to brand
     const globalThemeQuery = searchParams.get('theme') as any;
-    const globalTheme = THEMES.includes(globalThemeQuery) ? globalThemeQuery : 'default';
+    const globalTheme = THEMES.includes(globalThemeQuery) ? globalThemeQuery : 'brand';
 
     if (techsParam) {
       const requestedTechs = techsParam.split(',').map(t => t.trim().toLowerCase());
@@ -93,7 +93,7 @@ export async function GET(request: NextRequest) {
     // First, calculate total width and prepare inner SVG tags
     let allDefs = '';
     const iconElements = files.map(item => {
-      const bundle = bundles[item.theme] || bundles.default;
+      const bundle = bundles[item.theme] || bundles.brand;
       const svgContent = bundle[item.file];
       
       if (!svgContent) {

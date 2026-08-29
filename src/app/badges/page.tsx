@@ -47,12 +47,12 @@ export default function BadgesPage() {
               </div>
               
               <div className="grid grid-cols-1 gap-3">
-                {/* Default Theme */}
-                <div className="flex items-center justify-between w-full h-12 px-4 bg-[#0d1117] rounded border border-zinc-800 group-hover:bg-[#161b22] transition-colors" title="Default Theme">
-                  <span className="text-[10px] font-medium text-zinc-500 uppercase tracking-wider">Default</span>
+                {/* Brand Theme */}
+                <div className="flex items-center justify-between w-full h-12 px-4 bg-[#0d1117] rounded border border-zinc-800 group-hover:bg-[#161b22] transition-colors" title="Brand Theme">
+                  <span className="text-[10px] font-medium text-zinc-500 uppercase tracking-wider">Brand</span>
                   <img
-                    src={`/badges/default/${item.badge}`}
-                    alt={`${item.name} default`}
+                    src={`/badges/brand/${item.badge}`}
+                    alt={`${item.name} brand`}
                     className="max-h-6 transition-transform group-hover:scale-105"
                   />
                 </div>

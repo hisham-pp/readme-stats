@@ -47,16 +47,16 @@ export default function IconsPage() {
               </div>
               
               <div className="grid grid-cols-3 gap-3">
-                {/* Default Theme */}
+                {/* Brand Theme */}
                 <div className="flex flex-col items-center gap-2">
-                  <div className="w-full h-14 flex items-center justify-center bg-[#0d1117] rounded border border-zinc-800 group-hover:bg-[#161b22] transition-colors" title="Default Theme">
+                  <div className="w-full h-14 flex items-center justify-center bg-[#0d1117] rounded border border-zinc-800 group-hover:bg-[#161b22] transition-colors" title="Brand Theme">
                     <img
-                      src={`/icons/default/${item.icon}`}
-                      alt={`${item.name} default`}
+                      src={`/icons/brand/${item.icon}`}
+                      alt={`${item.name} brand`}
                       className="max-h-8 transition-transform group-hover:scale-110"
                     />
                   </div>
-                  <span className="text-[9px] font-medium text-zinc-500 uppercase tracking-wider">Default</span>
+                  <span className="text-[9px] font-medium text-zinc-500 uppercase tracking-wider">Brand</span>
                 </div>
                 
                 {/* Dark Theme */}

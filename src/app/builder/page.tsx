@@ -9,7 +9,7 @@ type ApiType = "tech-icon-marquee" | "tech-badge-marquee" | "top-langs" | "stats
 
 export default function BuilderPage() {
   const [apiType, setApiType] = useState<ApiType>("tech-icon-marquee");
-  const [theme, setTheme] = useState<Theme>("default");
+  const [theme, setTheme] = useState<Theme>("brand");
   const [selectedTechs, setSelectedTechs] = useState<{value: string, label: string, icon?: string}[]>([]);
   const [width, setWidth] = useState("850");
   const [hasBg, setHasBg] = useState(false);

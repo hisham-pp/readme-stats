@@ -7,7 +7,7 @@ const CustomOption = (props: OptionProps<any>) => {
     <components.Option {...props}>
       <div className="flex items-center gap-2">
         {props.data.icon && (
-          <img src={`/icons/default/${props.data.icon}`} alt="" className="w-4 h-4 object-contain" />
+          <img src={`/icons/brand/${props.data.icon}`} alt={props.data.label} className="w-4 h-4 object-contain" />
         )}
         <span>{props.data.label}</span>
       </div>
@@ -20,7 +20,7 @@ const CustomMultiValueLabel = (props: MultiValueGenericProps<any>) => {
     <components.MultiValueLabel {...props}>
       <div className="flex items-center gap-1.5 px-1">
         {props.data.icon && (
-          <img src={`/icons/default/${props.data.icon}`} alt="" className="w-3.5 h-3.5 object-contain" />
+          <img src={`/icons/brand/${props.data.icon}`} alt="" className="w-3.5 h-3.5 object-contain" />
         )}
         <span>{props.data.label}</span>
       </div>
