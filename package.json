@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "pnpm run badges:generate && pnpm run icons:generate && pnpm run bundle:svgs",
+    "prebuild": "pnpm run config:merge && pnpm run badges:generate && pnpm run icons:generate && pnpm run bundle:svgs",
     "build:llms": "npx tsx scripts/generate-llms-docs.ts",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "badges:generate": "npx tsx scripts/generate-badges.ts",
-    "icons:generate": "npx tsx scripts/generate-icons.ts",
+    "config:merge": "npx tsx scripts/merge-tech-config.ts",
+    "badges:generate": "pnpm run config:merge && npx tsx scripts/generate-badges.ts",
+    "icons:generate": "pnpm run config:merge && npx tsx scripts/generate-icons.ts",
     "bundle:svgs": "npx tsx scripts/bundle-svgs.ts",
     "postinstall": "lefthook install"
   },

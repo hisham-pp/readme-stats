@@ -1,0 +1,7 @@
+import type { TechBadge } from "../_types";
+
+export default {
+  color: "#FE0902",
+  iconPosition: "left",
+  showText: true,
+} satisfies TechBadge;

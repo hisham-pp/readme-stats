@@ -20,7 +20,7 @@ for (const [key, config] of Object.entries(techConfig)) {
       icon,
       color = "#333333",
       iconBgColor,
-      iconBgTheme = "brand",
+      iconTheme = "brand",
       defs = "",
     } = config as any;
     if (!icon) {
@@ -30,7 +30,7 @@ for (const [key, config] of Object.entries(techConfig)) {
     const finalBgColor = iconBgColor || color;
     let rawIconSvg = "";
 
-    const iconsDir = path.join(__dirname, `../public/icons/${iconBgTheme}`);
+    const iconsDir = path.join(__dirname, `../public/icons/${iconTheme}`);
     const iconPath = path.join(iconsDir, icon);
 
     if (fs.existsSync(iconPath)) {

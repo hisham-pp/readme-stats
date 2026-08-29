@@ -40,3 +40,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Generated — rebuilt from src/config/tech/ by config:merge
+src/lib/techConfig.json
