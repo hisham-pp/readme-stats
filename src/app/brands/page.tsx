@@ -5,6 +5,13 @@ import { useState } from "react";
 
 export default function BrandsPage() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [copied, setCopied] = useState<string | null>(null);
+
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text);
+    setCopied(text);
+    setTimeout(() => setCopied(null), 2000);
+  };
 
   const brandsList = techStack.filter((t) => {
     if (!searchQuery) return true;
@@ -61,10 +68,13 @@ export default function BrandsPage() {
                       Icons
                     </h4>
                     <div className="grid grid-cols-4 gap-3">
-                      <div className="flex flex-col items-center gap-2 group">
+                      <div
+                        className="flex flex-col items-center gap-2 group cursor-pointer"
+                        onClick={() => copyToClipboard(`${item.id}:brand`)}
+                      >
                         <div
                           className="w-full h-14 flex items-center justify-center bg-[#0d1117] rounded border border-zinc-800 group-hover:bg-[#161b22] transition-colors"
-                          title="Brand Theme"
+                          title="Click to copy: Brand Theme"
                         >
                           <img
                             src={`/icons/brand/${item.icon}`}
@@ -77,10 +87,13 @@ export default function BrandsPage() {
                         </span>
                       </div>
 
-                      <div className="flex flex-col items-center gap-2 group">
+                      <div
+                        className="flex flex-col items-center gap-2 group cursor-pointer"
+                        onClick={() => copyToClipboard(`${item.id}:dark`)}
+                      >
                         <div
                           className="w-full h-14 flex items-center justify-center bg-zinc-100 rounded border border-zinc-300 group-hover:bg-white transition-colors"
-                          title="Dark Theme"
+                          title="Click to copy: Dark Theme"
                         >
                           <img
                             src={`/icons/dark/${item.icon}`}
@@ -93,10 +106,13 @@ export default function BrandsPage() {
                         </span>
                       </div>
 
-                      <div className="flex flex-col items-center gap-2 group">
+                      <div
+                        className="flex flex-col items-center gap-2 group cursor-pointer"
+                        onClick={() => copyToClipboard(`${item.id}:light`)}
+                      >
                         <div
                           className="w-full h-14 flex items-center justify-center bg-zinc-950 rounded border border-black group-hover:bg-zinc-900 transition-colors"
-                          title="Light Theme"
+                          title="Click to copy: Light Theme"
                         >
                           <img
                             src={`/icons/light/${item.icon}`}
@@ -109,10 +125,13 @@ export default function BrandsPage() {
                         </span>
                       </div>
 
-                      <div className="flex flex-col items-center gap-2 group">
+                      <div
+                        className="flex flex-col items-center gap-2 group cursor-pointer"
+                        onClick={() => copyToClipboard(`${item.id}:bg`)}
+                      >
                         <div
                           className="w-full h-14 flex items-center justify-center bg-[#0d1117] rounded border border-zinc-800 group-hover:bg-[#161b22] transition-colors"
-                          title="BG Theme"
+                          title="Click to copy: BG Theme"
                         >
                           <img
                             src={`/icons/bg/${item.icon}`}
@@ -136,8 +155,9 @@ export default function BrandsPage() {
                     </h4>
                     <div className="grid grid-cols-1 gap-3">
                       <div
-                        className="flex items-center justify-between w-full h-12 px-4 bg-[#0d1117] rounded border border-zinc-800 group-hover:bg-[#161b22] transition-colors group"
-                        title="Brand Theme Badge"
+                        className="flex items-center justify-between w-full h-12 px-4 bg-[#0d1117] rounded border border-zinc-800 group-hover:bg-[#161b22] transition-colors group cursor-pointer"
+                        title="Click to copy: Brand Theme Badge"
+                        onClick={() => copyToClipboard(`${item.id}:brand`)}
                       >
                         <span className="text-[10px] font-medium text-zinc-500 uppercase tracking-wider group-hover:text-zinc-300">
                           Brand
@@ -161,6 +181,25 @@ export default function BrandsPage() {
             </div>
           ))}
         </div>
+
+        {/* Toast Notification */}
+        {copied && (
+          <div className="fixed bottom-6 right-6 bg-zinc-100 text-zinc-900 px-4 py-2 rounded-lg shadow-lg font-medium text-sm flex items-center gap-2 z-50 animate-in fade-in slide-in-from-bottom-4">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Copied {copied}
+          </div>
+        )}
       </main>
     </div>
   );

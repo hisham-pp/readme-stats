@@ -1,6 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
 import { techMap } from "@/config/techs.config";
 import { generateMarqueeSvg } from "@/templates/marquee.template";
 import { MARQUEE_CACHE_CONTROL } from "@/config/constants";

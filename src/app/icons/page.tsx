@@ -5,6 +5,13 @@ import { useState } from "react";
 
 export default function IconsPage() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [copied, setCopied] = useState<string | null>(null);
+
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text);
+    setCopied(text);
+    setTimeout(() => setCopied(null), 2000);
+  };
 
   const iconsList = techStack.filter((t) => {
     if (!t.icon) return false;
@@ -56,10 +63,13 @@ export default function IconsPage() {
 
               <div className="grid grid-cols-4 gap-3">
                 {/* Brand Theme */}
-                <div className="flex flex-col items-center gap-2">
+                <div
+                  className="flex flex-col items-center gap-2 group cursor-pointer"
+                  onClick={() => copyToClipboard(`${item.id}:brand`)}
+                >
                   <div
                     className="w-full h-14 flex items-center justify-center bg-[#0d1117] rounded border border-zinc-800 group-hover:bg-[#161b22] transition-colors"
-                    title="Brand Theme"
+                    title="Click to copy: Brand Theme"
                   >
                     <img
                       src={`/icons/brand/${item.icon}`}
@@ -73,10 +83,13 @@ export default function IconsPage() {
                 </div>
 
                 {/* Dark Theme */}
-                <div className="flex flex-col items-center gap-2">
+                <div
+                  className="flex flex-col items-center gap-2 group cursor-pointer"
+                  onClick={() => copyToClipboard(`${item.id}:dark`)}
+                >
                   <div
                     className="w-full h-14 flex items-center justify-center bg-zinc-100 rounded border border-zinc-300 group-hover:bg-white transition-colors"
-                    title="Dark Theme (Best on Light Backgrounds)"
+                    title="Click to copy: Dark Theme (Best on Light Backgrounds)"
                   >
                     <img
                       src={`/icons/dark/${item.icon}`}
@@ -90,10 +103,13 @@ export default function IconsPage() {
                 </div>
 
                 {/* Light Theme */}
-                <div className="flex flex-col items-center gap-2">
+                <div
+                  className="flex flex-col items-center gap-2 group cursor-pointer"
+                  onClick={() => copyToClipboard(`${item.id}:light`)}
+                >
                   <div
                     className="w-full h-14 flex items-center justify-center bg-zinc-950 rounded border border-black group-hover:bg-zinc-900 transition-colors"
-                    title="Light Theme (Best on Dark Backgrounds)"
+                    title="Click to copy: Light Theme (Best on Dark Backgrounds)"
                   >
                     <img
                       src={`/icons/light/${item.icon}`}
@@ -107,10 +123,13 @@ export default function IconsPage() {
                 </div>
 
                 {/* BG Theme */}
-                <div className="flex flex-col items-center gap-2">
+                <div
+                  className="flex flex-col items-center gap-2 group cursor-pointer"
+                  onClick={() => copyToClipboard(`${item.id}:bg`)}
+                >
                   <div
                     className="w-full h-14 flex items-center justify-center bg-[#0d1117] rounded border border-zinc-800 group-hover:bg-[#161b22] transition-colors"
-                    title="BG Theme"
+                    title="Click to copy: BG Theme"
                   >
                     <img
                       src={`/icons/bg/${item.icon}`}
@@ -126,6 +145,25 @@ export default function IconsPage() {
             </div>
           ))}
         </div>
+
+        {/* Toast Notification */}
+        {copied && (
+          <div className="fixed bottom-6 right-6 bg-zinc-100 text-zinc-900 px-4 py-2 rounded-lg shadow-lg font-medium text-sm flex items-center gap-2 z-50 animate-in fade-in slide-in-from-bottom-4">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Copied {copied}
+          </div>
+        )}
       </main>
     </div>
   );
