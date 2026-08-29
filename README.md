@@ -4,13 +4,20 @@ A dynamic GitHub profile statistics generator built with Next.js. This applicati
 
 **Live Deployment:** [https://readme-stats-theta-sepia.vercel.app/](https://readme-stats-theta-sepia.vercel.app/)
 
-## Endpoints
+## 🎨 Interactive API Builder
+Don't want to type out query parameters manually? We have a visual builder!
+Navigate to the **`/builder`** route on the live deployment to visually select your technologies, customize your themes, and instantly generate the exact Markdown and HTML code to paste into your GitHub README.
 
-- `https://readme-stats-theta-sepia.vercel.app/api/stats` - Generates a GitHub stats card.
-- `https://readme-stats-theta-sepia.vercel.app/api/top-langs` - Generates a top languages card.
-- `https://readme-stats-theta-sepia.vercel.app/api/tech-badge-marquee` - Generates an animated tech stack badge marquee.
+You can also browse all supported icons and badges visually at the **`/icons`** and **`/badges`** routes!
 
-## Features
+## 🚀 Endpoints
+
+- `/api/stats` - Generates a GitHub stats card.
+- `/api/top-langs` - Generates a top languages card.
+- `/api/tech-icon-marquee` - Generates an animated tech stack **icon** marquee.
+- `/api/tech-badge-marquee` - Generates an animated tech stack **badge** marquee.
+
+## ✨ Features
 
 ### Top Languages with Custom Icons/Badges
 You can render your most-used languages using your custom icons or badges by appending the `?type=` query parameter.
@@ -40,42 +47,30 @@ You can render your most-used languages using your custom icons or badges by app
 <img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username&type=treemap-badge" alt="Top Languages Treemap Badges" />
 ```
 
-## Getting Started
+## 🤖 AI Agents
+This repository is optimized for AI agents! We provide a comprehensive `llms.txt` at the root of the domain. 
+AI Agents can visit `/llms.txt` and `/tech-list.txt` to learn how to interact with this API and get the full list of supported technology IDs.
+
+## 🛠️ Getting Started
 
 First, install dependencies:
 
 ```bash
-npm install
-# or
-yarn install
-# or
 pnpm install
-# or
-bun install
 ```
 
 Then, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Configuration
+## Configuration (For Local Development)
 
-You may need to configure a GitHub Personal Access Token (PAT) in your `.env.local` file to avoid rate limits from the GitHub API.
+If you wish to run this locally, you may need to configure a GitHub Personal Access Token (PAT) in your `.env.local` file to avoid rate limits from the GitHub API.
 
 ```
 GITHUB_TOKEN=your_token_here
 ```
-
-## Deployment
-
-The easiest way to deploy this Next.js app is to use the [Vercel Platform](https://vercel.com/new).
