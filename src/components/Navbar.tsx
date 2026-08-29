@@ -14,6 +14,9 @@ export default function Navbar() {
           <Link href="/badges" className="text-zinc-400 hover:text-zinc-100 transition-colors">
             Badges
           </Link>
+          <Link href="/docs" className="text-zinc-400 hover:text-zinc-100 transition-colors">
+            Docs
+          </Link>
           <Link href="/builder" className="px-4 py-2 bg-zinc-100 text-zinc-900 rounded hover:bg-white transition-colors">
             API Builder
           </Link>
