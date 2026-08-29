@@ -1885,5 +1885,37 @@
     "icon": "v0-icon.svg",
     "showText": true,
     "id": "122_v0"
+  },
+  "aws_sam": {
+    "name": "AWS SAM",
+    "color": "#232F3E",
+    "iconPosition": "left",
+    "icon": "aws-lambda-icon.svg",
+    "showText": true,
+    "id": "23_aws_sam"
+  },
+  "docker": {
+    "name": "Docker",
+    "color": "#2496ED",
+    "iconPosition": "left",
+    "icon": "docker-icon.svg",
+    "showText": true,
+    "id": "24_docker"
+  },
+  "gitlab_ci": {
+    "name": "GitLab CI",
+    "color": "#FC6D26",
+    "iconPosition": "left",
+    "icon": "gitlab-ci-icon.svg",
+    "showText": true,
+    "id": "25_gitlab_ci"
+  },
+  "github_actions": {
+    "name": "GitHub Actions",
+    "color": "#2088FF",
+    "iconPosition": "left",
+    "icon": "github-actions-icon.svg",
+    "showText": true,
+    "id": "26_github_actions"
   }
 }

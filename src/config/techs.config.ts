@@ -16,7 +16,7 @@ export const techStack: TechItem[] = [
     "id": "react_native",
     "name": "React Native",
     "badge": "01_react_native.svg",
-    "icon": "",
+    "icon": "react-icon.svg",
     "category": "Uncategorized",
     "tags": [
       "react_native",
@@ -258,7 +258,7 @@ export const techStack: TechItem[] = [
     "id": "aws_sam",
     "name": "Aws Sam",
     "badge": "23_aws_sam.svg",
-    "icon": "",
+    "icon": "aws-lambda-icon.svg",
     "category": "Uncategorized",
     "tags": [
       "aws_sam",
@@ -269,7 +269,7 @@ export const techStack: TechItem[] = [
     "id": "docker",
     "name": "Docker",
     "badge": "24_docker.svg",
-    "icon": "",
+    "icon": "docker-icon.svg",
     "category": "Uncategorized",
     "tags": [
       "docker",
@@ -280,7 +280,7 @@ export const techStack: TechItem[] = [
     "id": "gitlab_ci",
     "name": "Gitlab Ci",
     "badge": "25_gitlab_ci.svg",
-    "icon": "",
+    "icon": "gitlab-ci-icon.svg",
     "category": "Uncategorized",
     "tags": [
       "gitlab_ci",
@@ -291,7 +291,7 @@ export const techStack: TechItem[] = [
     "id": "github_actions",
     "name": "Github Actions",
     "badge": "26_github_actions.svg",
-    "icon": "",
+    "icon": "github-actions-icon.svg",
     "category": "Uncategorized",
     "tags": [
       "github_actions",

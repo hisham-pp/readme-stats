@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="65" height="20" role="img" aria-label="AWS SAM"><title>AWS SAM</title><g shape-rendering="crispEdges"><rect width="0" height="20" fill="#232f3e"/><rect x="0" width="65" height="20" fill="#232f3e"/></g><g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110"><text x="325" y="140" textLength="550" transform="scale(.1)">AWS SAM</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="20" role="img" aria-label="AWS SAM">
+  <title>AWS SAM</title>
+  
+  <rect width="88" height="20" fill="#232F3E" rx="3" />
+  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
+    <g transform="translate(6, 3)"><svg x="0" y="0" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" font-family="Verdana, sans-serif" font-size="18" font-weight="bold">λ</text>
+</svg></g>
+    <text x="530" y="140" transform="scale(.1)" font-weight="bold">AWS SAM</text>
+  </g>
+</svg>
