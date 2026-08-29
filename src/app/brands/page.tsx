@@ -1,16 +1,33 @@
 "use client";
 
+import BrandModal from "@/components/BrandModal";
 import { techStack } from "@/config/techs.config";
-import { useState } from "react";
+import type { TechItem } from "@/types/tech.types";
+import { Maximize2 } from "lucide-react";
+import { useRef, useState } from "react";
 
 export default function BrandsPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [copied, setCopied] = useState<string | null>(null);
+  const [selectedBrand, setSelectedBrand] = useState<TechItem | null>(null);
+  const [isBrandModalOpen, setIsBrandModalOpen] = useState(false);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
     setCopied(text);
     setTimeout(() => setCopied(null), 2000);
+  };
+
+  const openBrandModal = (brand: TechItem) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setSelectedBrand(brand);
+    requestAnimationFrame(() => setIsBrandModalOpen(true));
+  };
+
+  const closeBrandModal = () => {
+    setIsBrandModalOpen(false);
+    closeTimer.current = setTimeout(() => setSelectedBrand(null), 180);
   };
 
   const brandsList = techStack.filter((t) => {
@@ -51,13 +68,24 @@ export default function BrandsPage() {
               key={item.id}
               className="flex flex-col p-6 bg-zinc-950 border border-zinc-800 rounded-xl hover:border-zinc-700 transition-colors shadow-lg"
             >
-              <div className="flex justify-between items-center mb-6 border-b border-zinc-800 pb-4">
-                <h3 className="text-lg font-bold text-zinc-100 truncate pr-2">
-                  {item.name}
-                </h3>
-                <code className="text-xs text-zinc-500 bg-zinc-900 px-2 py-1 rounded border border-zinc-800">
-                  {item.id}
-                </code>
+              <div className="flex justify-between items-start gap-3 mb-6 border-b border-zinc-800 pb-4">
+                <div className="min-w-0">
+                  <h3 className="text-lg font-bold text-zinc-100 truncate pr-2">
+                    {item.name}
+                  </h3>
+                  <code className="mt-2 inline-flex max-w-full text-xs text-zinc-500 bg-zinc-900 px-2 py-1 rounded border border-zinc-800">
+                    <span className="truncate">{item.id}</span>
+                  </code>
+                </div>
+                <button
+                  type="button"
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded border border-zinc-800 bg-zinc-900 text-zinc-400 transition-colors hover:border-zinc-700 hover:text-zinc-100"
+                  onClick={() => openBrandModal(item)}
+                  title={`Expand ${item.name}`}
+                  aria-label={`Expand ${item.name}`}
+                >
+                  <Maximize2 className="h-4 w-4" aria-hidden />
+                </button>
               </div>
 
               <div className="flex flex-col gap-6">
@@ -199,6 +227,15 @@ export default function BrandsPage() {
             </svg>
             Copied {copied}
           </div>
+        )}
+
+        {selectedBrand && (
+          <BrandModal
+            brand={selectedBrand}
+            isOpen={isBrandModalOpen}
+            onClose={closeBrandModal}
+            onCopy={copyToClipboard}
+          />
         )}
       </main>
     </div>

@@ -77,7 +77,7 @@ for (const [key, config] of Object.entries(techConfig)) {
       `<svg x="${padding}" y="${padding}" width="${iconWidth}" height="${targetHeight}"`,
     );
 
-    const finalSvgContent = `<svg width="${containerWidth}" height="${containerHeight}" viewBox="0 0 ${containerWidth} ${containerHeight}" fill="none" xmlns="http://www.w3.org/2000/svg">
+    const finalSvgContent = `<svg viewBox="0 0 ${containerWidth} ${containerHeight}" fill="none" xmlns="http://www.w3.org/2000/svg">
   ${defs ? `<defs>${defs}</defs>` : ""}
   <rect x="0" y="0" width="${containerWidth}" height="${containerHeight}" rx="12" fill="${finalBgColor}" />
   ${innerIcon}
