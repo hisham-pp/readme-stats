@@ -18,18 +18,6 @@ export default function Navbar() {
             Brands
           </Link>
           <Link
-            href="/icons"
-            className="text-zinc-400 hover:text-zinc-100 transition-colors"
-          >
-            Icons
-          </Link>
-          <Link
-            href="/badges"
-            className="text-zinc-400 hover:text-zinc-100 transition-colors"
-          >
-            Badges
-          </Link>
-          <Link
             href="/docs"
             className="text-zinc-400 hover:text-zinc-100 transition-colors"
           >
