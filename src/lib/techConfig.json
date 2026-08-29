@@ -1438,7 +1438,8 @@
     "icon": "redux-icon.svg",
     "color": "#764abc",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "iconTheme": "light"
   },
   "redux_saga": {
     "name": "Redux Saga",
