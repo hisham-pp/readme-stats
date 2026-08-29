@@ -94,7 +94,9 @@ for (const [key, config] of Object.entries(techConfig)) {
     if (!fs.existsSync(aliasPath)) {
       fs.writeFileSync(aliasPath, finalSvgContent);
     }
-    console.log(`\u2705 Successfully generated bg/${outputFilename} for ${config.name}`);
+    console.log(
+      `\u2705 Successfully generated bg/${outputFilename} for ${config.name}`,
+    );
   } catch (error) {
     console.error(`\u274C Failed to generate bg icon for ${key}:`, error);
   }
