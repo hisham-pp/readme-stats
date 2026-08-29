@@ -780,7 +780,7 @@
     "id": "05_javascript",
     "icon": "javascript-icon.svg",
     "color": "#f7df1e",
-    "textColor": "#333333",
+    "textColor": "#000000",
     "iconPosition": "left",
     "showText": true,
     "iconWidth": 18,
