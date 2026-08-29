@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "pnpm run bundle:svgs && next build",
     "start": "next start",
     "lint": "eslint",
-    "badges:generate": "npx tsx scripts/generate-badges.ts"
+    "badges:generate": "npx tsx scripts/generate-badges.ts",
+    "bundle:svgs": "npx tsx scripts/bundle-svgs.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

@@ -1,16 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
 import { techMap } from '@/lib/techs';
+import { svgBundle } from '@/lib/svgBundle';
 
 export async function GET(request: NextRequest) {
   try {
-    const badgesDir = path.join(process.cwd(), 'public', 'badges');
-    
-    if (!fs.existsSync(badgesDir)) {
-      return new NextResponse('Badges not found', { status: 404 });
-    }
-
     const { searchParams } = new URL(request.url);
     const techsParam = searchParams.get('techs');
     const widthParam = searchParams.get('width');
@@ -32,20 +25,13 @@ export async function GET(request: NextRequest) {
     let totalWidth = 0;
     const gap = 10;
     
-    // First, calculate total width and prepare inner SVG tags
+    // Use bundled SVGs from memory
     const badgeElements = files.map(file => {
-      const filePath = path.join(badgesDir, file);
-      const svgContent = fs.readFileSync(filePath, 'utf8');
+      const bundled = svgBundle[file];
       
-      // Extract width from the SVG tag (e.g. width="73")
-      const widthMatch = svgContent.match(/<svg[^>]*width="([0-9.]+)"/);
-      const badgeWidth = widthMatch ? parseFloat(widthMatch[1]) : 100;
-      
-      const cleanedSvgContent = svgContent.replace(/<\?xml.*?\?>/g, '').trim();
-
       return {
-        svgContent: cleanedSvgContent,
-        width: badgeWidth
+        svgContent: bundled ? bundled.content : '',
+        width: bundled ? bundled.width : 100
       };
     });
 

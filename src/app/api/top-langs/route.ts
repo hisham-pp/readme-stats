@@ -2,8 +2,7 @@ import { NextRequest } from "next/server";
 import { fetchTopLanguages } from "@/utils/github";
 import { generateTopLangsSvg } from "@/utils/svg";
 import { techMap } from "@/lib/techs";
-import fs from "fs";
-import path from "path";
+import { svgBundle } from "@/lib/svgBundle";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -19,26 +18,19 @@ export async function GET(request: NextRequest) {
     
     // Inject custom SVG assets if type includes 'icon' or 'badge'
     if (type.includes('icon') || type.includes('badge')) {
-      const publicDir = path.join(process.cwd(), 'public');
-      
       for (const lang of langs) {
         if (lang.techKey && techMap[lang.techKey]) {
           const techItem = techMap[lang.techKey];
           let svgFile = '';
           
           if (type.includes('icon') && techItem.icon) {
-            svgFile = path.join(publicDir, 'icons', techItem.icon);
+            svgFile = techItem.icon;
           } else if (type.includes('badge') && techItem.badge) {
-            svgFile = path.join(publicDir, 'badges', techItem.badge);
+            svgFile = techItem.badge;
           }
           
-          if (svgFile && fs.existsSync(svgFile)) {
-            let svgContent = fs.readFileSync(svgFile, 'utf8');
-            svgContent = svgContent.replace(/<\?xml.*?\?>/g, '').trim();
-            // Remove hardcoded dimensions ONLY from the root svg tag
-            svgContent = svgContent.replace(/<svg([^>]*)width="[^"]*"/, '<svg$1');
-            svgContent = svgContent.replace(/<svg([^>]*)height="[^"]*"/, '<svg$1');
-            lang.embeddedSvg = svgContent;
+          if (svgFile && svgBundle[svgFile]) {
+            lang.embeddedSvg = svgBundle[svgFile].contentNoDimensions;
           }
         }
       }
