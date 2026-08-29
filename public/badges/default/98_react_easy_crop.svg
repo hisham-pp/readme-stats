@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="127" height="20" role="img" aria-label="React Easy Crop">
-  <title>React Easy Crop</title>
-  
-  <rect width="127" height="20" fill="#222222" rx="3" />
-  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-    
-    <text x="635" y="140" transform="scale(.1)" font-weight="bold">React Easy Crop</text>
-  </g>
-</svg>

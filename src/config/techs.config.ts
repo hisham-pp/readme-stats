@@ -4,7 +4,7 @@ export const techStack: TechItem[] = [
   {
     id: "react",
     name: "React",
-    badge: "00_react_js.svg",
+    badge: "react_js.svg",
     icon: "react-icon.svg",
     category: "Frontend",
     tags: ["react", "frontend"],
@@ -12,7 +12,7 @@ export const techStack: TechItem[] = [
   {
     id: "react_native",
     name: "React Native",
-    badge: "01_react_native.svg",
+    badge: "react_native.svg",
     icon: "react-icon.svg",
     category: "Uncategorized",
     tags: ["react_native", "uncategorized"],
@@ -20,7 +20,7 @@ export const techStack: TechItem[] = [
   {
     id: "nextjs",
     name: "Next.js",
-    badge: "02_next_js.svg",
+    badge: "next_js.svg",
     icon: "nextjs-icon.svg",
     category: "Frontend",
     tags: ["nextjs", "frontend"],
@@ -28,7 +28,7 @@ export const techStack: TechItem[] = [
   {
     id: "angular",
     name: "Angular",
-    badge: "03_angular.svg",
+    badge: "angular.svg",
     icon: "angular-icon.svg",
     category: "Frontend",
     tags: ["angular", "frontend"],
@@ -36,7 +36,7 @@ export const techStack: TechItem[] = [
   {
     id: "typescript",
     name: "TypeScript",
-    badge: "04_typescript.svg",
+    badge: "typescript.svg",
     icon: "typescript-icon.svg",
     category: "Frontend",
     tags: ["typescript", "frontend"],
@@ -44,7 +44,7 @@ export const techStack: TechItem[] = [
   {
     id: "javascript",
     name: "JavaScript",
-    badge: "05_javascript.svg",
+    badge: "javascript.svg",
     icon: "javascript-icon.svg",
     category: "Frontend",
     tags: ["javascript", "frontend"],
@@ -52,7 +52,7 @@ export const techStack: TechItem[] = [
   {
     id: "tailwindcss",
     name: "Tailwind CSS",
-    badge: "06_tailwind_css.svg",
+    badge: "tailwind_css.svg",
     icon: "tailwind-icon.svg",
     category: "Frontend",
     tags: ["tailwindcss", "frontend"],
@@ -60,7 +60,7 @@ export const techStack: TechItem[] = [
   {
     id: "redux",
     name: "Redux",
-    badge: "07_redux.svg",
+    badge: "redux.svg",
     icon: "redux-icon.svg",
     category: "Frontend",
     tags: ["redux", "frontend"],
@@ -68,7 +68,7 @@ export const techStack: TechItem[] = [
   {
     id: "zustand",
     name: "Zustand",
-    badge: "08_zustand.svg",
+    badge: "zustand.svg",
     icon: "zustand-icon.svg",
     category: "Frontend",
     tags: ["zustand", "frontend"],
@@ -76,7 +76,7 @@ export const techStack: TechItem[] = [
   {
     id: "mui",
     name: "MUI",
-    badge: "09_mui.svg",
+    badge: "mui.svg",
     icon: "mui-icon.svg",
     category: "Frontend",
     tags: ["mui", "frontend"],
@@ -84,7 +84,7 @@ export const techStack: TechItem[] = [
   {
     id: "chakra",
     name: "Chakra",
-    badge: "10_chakra_ui.svg",
+    badge: "chakra_ui.svg",
     icon: "chakraui-icon.svg",
     category: "Frontend",
     tags: ["chakra", "frontend"],
@@ -92,7 +92,7 @@ export const techStack: TechItem[] = [
   {
     id: "python",
     name: "Python",
-    badge: "11_python.svg",
+    badge: "python.svg",
     icon: "python-icon.svg",
     category: "Backend",
     tags: ["python", "backend"],
@@ -100,7 +100,7 @@ export const techStack: TechItem[] = [
   {
     id: "nodejs",
     name: "Node.js",
-    badge: "12_node_js.svg",
+    badge: "nodejs.svg",
     icon: "node-js-icon.svg",
     category: "Backend",
     tags: ["nodejs", "backend"],
@@ -108,7 +108,7 @@ export const techStack: TechItem[] = [
   {
     id: "nestjs",
     name: "NestJS",
-    badge: "13_nestjs.svg",
+    badge: "nestjs.svg",
     icon: "nestjs-icon.svg",
     category: "Backend",
     tags: ["nestjs", "backend"],
@@ -116,7 +116,7 @@ export const techStack: TechItem[] = [
   {
     id: "postgresql",
     name: "PostgreSQL",
-    badge: "14_postgresql.svg",
+    badge: "postgresql.svg",
     icon: "postgresql-icon.svg",
     category: "Databases",
     tags: ["postgresql", "databases"],
@@ -124,7 +124,7 @@ export const techStack: TechItem[] = [
   {
     id: "mongodb",
     name: "MongoDB",
-    badge: "15_mongodb.svg",
+    badge: "mongodb.svg",
     icon: "mongodb-icon.svg",
     category: "Databases",
     tags: ["mongodb", "databases"],
@@ -132,7 +132,7 @@ export const techStack: TechItem[] = [
   {
     id: "sqlite",
     name: "Sqlite",
-    badge: "16_sqlite.svg",
+    badge: "sqlite.svg",
     icon: "sqlite-icon.svg",
     category: "Databases",
     tags: ["sqlite", "databases"],
@@ -140,7 +140,7 @@ export const techStack: TechItem[] = [
   {
     id: "dynamodb",
     name: "Dynamodb",
-    badge: "17_dynamodb.svg",
+    badge: "dynamodb.svg",
     icon: "dynamodb-icon.svg",
     category: "Databases",
     tags: ["dynamodb", "databases"],
@@ -148,7 +148,7 @@ export const techStack: TechItem[] = [
   {
     id: "supabase",
     name: "Supabase",
-    badge: "18_supabase.svg",
+    badge: "supabase.svg",
     icon: "supabase-icon.svg",
     category: "Databases",
     tags: ["supabase", "databases"],
@@ -156,7 +156,7 @@ export const techStack: TechItem[] = [
   {
     id: "prisma",
     name: "Prisma",
-    badge: "19_prisma.svg",
+    badge: "prisma.svg",
     icon: "prisma-icon.svg",
     category: "Databases",
     tags: ["prisma", "databases"],
@@ -164,7 +164,7 @@ export const techStack: TechItem[] = [
   {
     id: "typeorm",
     name: "Typeorm",
-    badge: "20_typeorm.svg",
+    badge: "typeorm.svg",
     icon: "typeorm-icon.svg",
     category: "Databases",
     tags: ["typeorm", "databases"],
@@ -172,7 +172,7 @@ export const techStack: TechItem[] = [
   {
     id: "aws",
     name: "AWS",
-    badge: "21_aws.svg",
+    badge: "aws.svg",
     icon: "aws-lambda-icon.svg",
     category: "Uncategorized",
     tags: ["aws", "uncategorized"],
@@ -180,7 +180,7 @@ export const techStack: TechItem[] = [
   {
     id: "terraform",
     name: "Terraform",
-    badge: "135_terraform.svg",
+    badge: "terraform.svg",
     icon: "terraform-icon.svg",
     category: "Languages & Scripting",
     tags: ["terraform", "languagesscripting"],
@@ -188,7 +188,7 @@ export const techStack: TechItem[] = [
   {
     id: "aws_sam",
     name: "Aws Sam",
-    badge: "23_aws_sam.svg",
+    badge: "aws_sam.svg",
     icon: "aws-lambda-icon.svg",
     category: "Uncategorized",
     tags: ["aws_sam", "uncategorized"],
@@ -196,7 +196,7 @@ export const techStack: TechItem[] = [
   {
     id: "docker",
     name: "Docker",
-    badge: "24_docker.svg",
+    badge: "docker.svg",
     icon: "docker-icon.svg",
     category: "Uncategorized",
     tags: ["docker", "uncategorized"],
@@ -204,7 +204,7 @@ export const techStack: TechItem[] = [
   {
     id: "gitlab_ci",
     name: "Gitlab Ci",
-    badge: "25_gitlab_ci.svg",
+    badge: "gitlab_ci.svg",
     icon: "gitlab-ci-icon.svg",
     category: "Uncategorized",
     tags: ["gitlab_ci", "uncategorized"],
@@ -212,7 +212,7 @@ export const techStack: TechItem[] = [
   {
     id: "github_actions",
     name: "Github Actions",
-    badge: "26_github_actions.svg",
+    badge: "github_actions.svg",
     icon: "github-actions-icon.svg",
     category: "Uncategorized",
     tags: ["github_actions", "uncategorized"],
@@ -220,7 +220,7 @@ export const techStack: TechItem[] = [
   {
     id: "vercel",
     name: "Vercel",
-    badge: "27_vercel.svg",
+    badge: "vercel.svg",
     icon: "vercel-icon.svg",
     category: "Cloud & DevOps",
     tags: ["vercel", "clouddevops"],
@@ -228,7 +228,7 @@ export const techStack: TechItem[] = [
   {
     id: "html5",
     name: "HTML5",
-    badge: "28_html5.svg",
+    badge: "html5.svg",
     icon: "html5-icon.svg",
     category: "Frontend",
     tags: ["html5", "frontend"],
@@ -236,7 +236,7 @@ export const techStack: TechItem[] = [
   {
     id: "css3",
     name: "CSS3",
-    badge: "29_css3.svg",
+    badge: "css3.svg",
     icon: "css3-icon.svg",
     category: "Frontend",
     tags: ["css3", "frontend"],
@@ -244,7 +244,7 @@ export const techStack: TechItem[] = [
   {
     id: "radix_ui",
     name: "Radix Ui",
-    badge: "30_radix_ui.svg",
+    badge: "radix_ui.svg",
     icon: "radix-icon.svg",
     category: "Frontend",
     tags: ["radix_ui", "frontend"],
@@ -252,7 +252,7 @@ export const techStack: TechItem[] = [
   {
     id: "redux_saga",
     name: "Redux Saga",
-    badge: "31_redux_saga.svg",
+    badge: "redux_saga.svg",
     icon: "reduxsaga-icon.svg",
     category: "Frontend",
     tags: ["redux_saga", "frontend"],
@@ -260,7 +260,7 @@ export const techStack: TechItem[] = [
   {
     id: "react_hook_form",
     name: "React Hook Form",
-    badge: "32_react_hook_form.svg",
+    badge: "react_hook_form.svg",
     icon: "reacthookform-icon.svg",
     category: "Frontend",
     tags: ["react_hook_form", "frontend"],
@@ -268,7 +268,7 @@ export const techStack: TechItem[] = [
   {
     id: "react_query",
     name: "React Query",
-    badge: "33_react_query.svg",
+    badge: "react_query.svg",
     icon: "reactquery-icon.svg",
     category: "Frontend",
     tags: ["react_query", "frontend"],
@@ -276,7 +276,7 @@ export const techStack: TechItem[] = [
   {
     id: "rtk_query",
     name: "Rtk Query",
-    badge: "34_rtk_query.svg",
+    badge: "rtk_query.svg",
     icon: "redux-icon.svg",
     category: "Frontend",
     tags: ["rtk_query", "frontend"],
@@ -284,7 +284,7 @@ export const techStack: TechItem[] = [
   {
     id: "react_select",
     name: "React Select",
-    badge: "35_react_select.svg",
+    badge: "react_select.svg",
     icon: "react-icon.svg",
     category: "Frontend",
     tags: ["react_select", "frontend"],
@@ -292,7 +292,7 @@ export const techStack: TechItem[] = [
   {
     id: "react_datepicker",
     name: "React Datepicker",
-    badge: "36_react_datepicker.svg",
+    badge: "react_datepicker.svg",
     icon: "react-icon.svg",
     category: "Frontend",
     tags: ["react_datepicker", "frontend"],
@@ -300,7 +300,7 @@ export const techStack: TechItem[] = [
   {
     id: "apexcharts",
     name: "Apexcharts",
-    badge: "37_apexcharts.svg",
+    badge: "apexcharts.svg",
     icon: "apexcharts-icon.svg",
     category: "Frontend",
     tags: ["apexcharts", "frontend"],
@@ -308,7 +308,7 @@ export const techStack: TechItem[] = [
   {
     id: "sql",
     name: "Sql",
-    badge: "131_sql.svg",
+    badge: "sql.svg",
     icon: "sql-icon.svg",
     category: "Languages & Scripting",
     tags: ["sql", "languagesscripting"],
@@ -316,7 +316,7 @@ export const techStack: TechItem[] = [
   {
     id: "json",
     name: "Json",
-    badge: "132_json.svg",
+    badge: "json.svg",
     icon: "json-icon.svg",
     category: "Languages & Scripting",
     tags: ["json", "languagesscripting"],
@@ -324,7 +324,7 @@ export const techStack: TechItem[] = [
   {
     id: "yaml",
     name: "Yaml",
-    badge: "133_yaml.svg",
+    badge: "yaml.svg",
     icon: "yaml-icon.svg",
     category: "Languages & Scripting",
     tags: ["yaml", "languagesscripting"],
@@ -332,7 +332,7 @@ export const techStack: TechItem[] = [
   {
     id: "xml",
     name: "Xml",
-    badge: "134_xml.svg",
+    badge: "xml.svg",
     icon: "xml-icon.svg",
     category: "Languages & Scripting",
     tags: ["xml", "languagesscripting"],
@@ -340,7 +340,7 @@ export const techStack: TechItem[] = [
   {
     id: "bash",
     name: "Bash",
-    badge: "136_bash.svg",
+    badge: "bash.svg",
     icon: "bash-icon.svg",
     category: "Languages & Scripting",
     tags: ["bash", "languagesscripting"],
@@ -348,7 +348,7 @@ export const techStack: TechItem[] = [
   {
     id: "zsh",
     name: "Zsh",
-    badge: "137_zsh.svg",
+    badge: "zsh.svg",
     icon: "zsh-icon.svg",
     category: "Languages & Scripting",
     tags: ["zsh", "languagesscripting"],
@@ -356,7 +356,7 @@ export const techStack: TechItem[] = [
   {
     id: "powershell",
     name: "Powershell",
-    badge: "138_powershell.svg",
+    badge: "powershell.svg",
     icon: "powershell-icon.svg",
     category: "Languages & Scripting",
     tags: ["powershell", "languagesscripting"],
@@ -364,7 +364,7 @@ export const techStack: TechItem[] = [
   {
     id: "rest_api",
     name: "Rest Api",
-    badge: "45_rest_api.svg",
+    badge: "rest_api.svg",
     icon: "rest-api-icon.svg",
     category: "Backend",
     tags: ["rest_api", "backend"],
@@ -372,7 +372,7 @@ export const techStack: TechItem[] = [
   {
     id: "api_integration",
     name: "Api Integration",
-    badge: "46_api_integration.svg",
+    badge: "api_integration.svg",
     icon: "api-integration-icon.svg",
     category: "Backend",
     tags: ["api_integration", "backend"],
@@ -380,7 +380,7 @@ export const techStack: TechItem[] = [
   {
     id: "webhooks",
     name: "Webhooks",
-    badge: "47_webhooks.svg",
+    badge: "webhooks.svg",
     icon: "webhooks-icon.svg",
     category: "Backend",
     tags: ["webhooks", "backend"],
@@ -388,7 +388,7 @@ export const techStack: TechItem[] = [
   {
     id: "serverless",
     name: "Serverless",
-    badge: "48_serverless.svg",
+    badge: "serverless.svg",
     icon: "serverless-icon.svg",
     category: "Backend",
     tags: ["serverless", "backend"],
@@ -396,7 +396,7 @@ export const techStack: TechItem[] = [
   {
     id: "aws_lambda",
     name: "Aws Lambda",
-    badge: "49_aws_lambda.svg",
+    badge: "aws_lambda.svg",
     icon: "aws-lambda-icon.svg",
     category: "Backend",
     tags: ["aws_lambda", "backend"],
@@ -404,7 +404,7 @@ export const techStack: TechItem[] = [
   {
     id: "soap",
     name: "Soap",
-    badge: "50_soap.svg",
+    badge: "soap.svg",
     icon: "soap-icon.svg",
     category: "Backend",
     tags: ["soap", "backend"],
@@ -412,7 +412,7 @@ export const techStack: TechItem[] = [
   {
     id: "azure_functions",
     name: "Azure Functions",
-    badge: "51_azure_functions.svg",
+    badge: "azure_functions.svg",
     icon: "azure-functions-icon.svg",
     category: "Backend",
     tags: ["azure_functions", "backend"],
@@ -420,7 +420,7 @@ export const techStack: TechItem[] = [
   {
     id: "bcryptjs",
     name: "Bcryptjs",
-    badge: "52_bcryptjs.svg",
+    badge: "bcryptjs.svg",
     icon: "bcryptjs-icon.svg",
     category: "Backend",
     tags: ["bcryptjs", "backend"],
@@ -428,7 +428,7 @@ export const techStack: TechItem[] = [
   {
     id: "express",
     name: "Express",
-    badge: "53_express.svg",
+    badge: "express.svg",
     icon: "express-icon.svg",
     category: "Backend",
     tags: ["express", "backend"],
@@ -436,7 +436,7 @@ export const techStack: TechItem[] = [
   {
     id: "passport",
     name: "Passport",
-    badge: "54_passport.svg",
+    badge: "passport.svg",
     icon: "passport-icon.svg",
     category: "Backend",
     tags: ["passport", "backend"],
@@ -444,7 +444,7 @@ export const techStack: TechItem[] = [
   {
     id: "rxjs",
     name: "Rxjs",
-    badge: "55_rxjs.svg",
+    badge: "rxjs.svg",
     icon: "rxjs-icon.svg",
     category: "Backend",
     tags: ["rxjs", "backend"],
@@ -452,7 +452,7 @@ export const techStack: TechItem[] = [
   {
     id: "jest",
     name: "Jest",
-    badge: "56_jest.svg",
+    badge: "jest.svg",
     icon: "jest-icon.svg",
     category: "Backend",
     tags: ["jest", "backend"],
@@ -460,7 +460,7 @@ export const techStack: TechItem[] = [
   {
     id: "zod",
     name: "Zod",
-    badge: "57_zod.svg",
+    badge: "zod.svg",
     icon: "zod-icon.svg",
     category: "UI Tools",
     tags: ["zod", "uitools"],
@@ -468,7 +468,7 @@ export const techStack: TechItem[] = [
   {
     id: "yup",
     name: "Yup",
-    badge: "58_yup.svg",
+    badge: "yup.svg",
     icon: "yup-icon.svg",
     category: "UI Tools",
     tags: ["yup", "uitools"],
@@ -476,7 +476,7 @@ export const techStack: TechItem[] = [
   {
     id: "boto3",
     name: "Boto3",
-    badge: "59_boto3.svg",
+    badge: "boto3.svg",
     icon: "boto3-icon.svg",
     category: "Backend",
     tags: ["boto3", "backend"],
@@ -484,7 +484,7 @@ export const techStack: TechItem[] = [
   {
     id: "opentelemetry",
     name: "Opentelemetry",
-    badge: "60_opentelemetry.svg",
+    badge: "opentelemetry.svg",
     icon: "opentelemetry-icon.svg",
     category: "Backend",
     tags: ["opentelemetry", "backend"],
@@ -492,7 +492,7 @@ export const techStack: TechItem[] = [
   {
     id: "bullmq",
     name: "Bullmq",
-    badge: "61_bullmq.svg",
+    badge: "bullmq.svg",
     icon: "bullmq-icon.svg",
     category: "Backend",
     tags: ["bullmq", "backend"],
@@ -500,7 +500,7 @@ export const techStack: TechItem[] = [
   {
     id: "exceljs",
     name: "Exceljs",
-    badge: "62_exceljs.svg",
+    badge: "exceljs.svg",
     icon: "exceljs-icon.svg",
     category: "Backend",
     tags: ["exceljs", "backend"],
@@ -508,7 +508,7 @@ export const techStack: TechItem[] = [
   {
     id: "pdfkit",
     name: "Pdfkit",
-    badge: "63_pdfkit.svg",
+    badge: "pdfkit.svg",
     icon: "pdfkit-icon.svg",
     category: "Backend",
     tags: ["pdfkit", "backend"],
@@ -516,7 +516,7 @@ export const techStack: TechItem[] = [
   {
     id: "pdfmake",
     name: "Pdfmake",
-    badge: "64_pdfmake.svg",
+    badge: "pdfmake.svg",
     icon: "pdfmake-icon.svg",
     category: "Backend",
     tags: ["pdfmake", "backend"],
@@ -524,7 +524,7 @@ export const techStack: TechItem[] = [
   {
     id: "xlsx",
     name: "Xlsx",
-    badge: "65_xlsx.svg",
+    badge: "xlsx.svg",
     icon: "xlsx-icon.svg",
     category: "Backend",
     tags: ["xlsx", "backend"],
@@ -532,7 +532,7 @@ export const techStack: TechItem[] = [
   {
     id: "uuid",
     name: "Uuid",
-    badge: "66_uuid.svg",
+    badge: "uuid.svg",
     icon: "uuid-icon.svg",
     category: "Backend",
     tags: ["uuid", "backend"],
@@ -540,7 +540,7 @@ export const techStack: TechItem[] = [
   {
     id: "sanitize_html",
     name: "Sanitize Html",
-    badge: "67_sanitize_html.svg",
+    badge: "sanitize_html.svg",
     icon: "sanitize-html-icon.svg",
     category: "Backend",
     tags: ["sanitize_html", "backend"],
@@ -548,7 +548,7 @@ export const techStack: TechItem[] = [
   {
     id: "multer",
     name: "Multer",
-    badge: "68_multer.svg",
+    badge: "multer.svg",
     icon: "multer-icon.svg",
     category: "Backend",
     tags: ["multer", "backend"],
@@ -556,7 +556,7 @@ export const techStack: TechItem[] = [
   {
     id: "mongoose",
     name: "Mongoose",
-    badge: "69_mongoose.svg",
+    badge: "mongoose.svg",
     icon: "mongoose-icon.svg",
     category: "Backend",
     tags: ["mongoose", "backend"],
@@ -564,7 +564,7 @@ export const techStack: TechItem[] = [
   {
     id: "drizzle_orm",
     name: "Drizzle Orm",
-    badge: "70_drizzle_orm.svg",
+    badge: "drizzle_orm.svg",
     icon: "drizzle-orm-icon.svg",
     category: "Databases",
     tags: ["drizzle_orm", "databases"],
@@ -572,7 +572,7 @@ export const techStack: TechItem[] = [
   {
     id: "git",
     name: "Git",
-    badge: "71_git.svg",
+    badge: "git.svg",
     icon: "git-icon.svg",
     category: "Tools & Development",
     tags: ["git", "toolsdevelopment"],
@@ -580,7 +580,7 @@ export const techStack: TechItem[] = [
   {
     id: "github",
     name: "GitHub",
-    badge: "72_github.svg",
+    badge: "github.svg",
     icon: "github-icon.svg",
     category: "Tools & Development",
     tags: ["github", "toolsdevelopment"],
@@ -588,7 +588,7 @@ export const techStack: TechItem[] = [
   {
     id: "gitlab",
     name: "GitLab",
-    badge: "73_gitlab.svg",
+    badge: "gitlab.svg",
     icon: "gitlab-icon.svg",
     category: "Tools & Development",
     tags: ["gitlab", "toolsdevelopment"],
@@ -596,7 +596,7 @@ export const techStack: TechItem[] = [
   {
     id: "vscode",
     name: "VS Code",
-    badge: "74_vscode.svg",
+    badge: "vscode.svg",
     icon: "vscode-icon.svg",
     category: "Tools & Development",
     tags: ["vscode", "toolsdevelopment"],
@@ -604,7 +604,7 @@ export const techStack: TechItem[] = [
   {
     id: "pnpm",
     name: "Pnpm",
-    badge: "118_pnpm.svg",
+    badge: "pnpm.svg",
     icon: "pnpm-icon.svg",
     category: "Tools & Development",
     tags: ["pnpm", "toolsdevelopment"],
@@ -612,7 +612,7 @@ export const techStack: TechItem[] = [
   {
     id: "npm",
     name: "Npm",
-    badge: "119_npm.svg",
+    badge: "npm.svg",
     icon: "npm-icon.svg",
     category: "Tools & Development",
     tags: ["npm", "toolsdevelopment"],
@@ -620,7 +620,7 @@ export const techStack: TechItem[] = [
   {
     id: "bun",
     name: "Bun",
-    badge: "120_bun.svg",
+    badge: "bun.svg",
     icon: "bun-icon.svg",
     category: "Uncategorized",
     tags: ["bun", "uncategorized"],
@@ -628,7 +628,7 @@ export const techStack: TechItem[] = [
   {
     id: "sonarqube",
     name: "Sonarqube",
-    badge: "121_sonarqube.svg",
+    badge: "sonarqube.svg",
     icon: "sonarqube-icon.svg",
     category: "Tools & Development",
     tags: ["sonarqube", "toolsdevelopment"],
@@ -636,7 +636,7 @@ export const techStack: TechItem[] = [
   {
     id: "sonarlint",
     name: "Sonarlint",
-    badge: "122_sonarlint.svg",
+    badge: "sonarlint.svg",
     icon: "sonarlint-icon.svg",
     category: "Uncategorized",
     tags: ["sonarlint", "uncategorized"],
@@ -644,7 +644,7 @@ export const techStack: TechItem[] = [
   {
     id: "postman",
     name: "Postman",
-    badge: "123_postman.svg",
+    badge: "postman.svg",
     icon: "postman-icon.svg",
     category: "Tools & Development",
     tags: ["postman", "toolsdevelopment"],
@@ -652,7 +652,7 @@ export const techStack: TechItem[] = [
   {
     id: "linux",
     name: "Linux",
-    badge: "124_linux.svg",
+    badge: "linux.svg",
     icon: "linux-icon.svg",
     category: "Tools & Development",
     tags: ["linux", "toolsdevelopment"],
@@ -660,7 +660,7 @@ export const techStack: TechItem[] = [
   {
     id: "windows",
     name: "Windows",
-    badge: "125_windows.svg",
+    badge: "windows.svg",
     icon: "windows-icon.svg",
     category: "Tools & Development",
     tags: ["windows", "toolsdevelopment"],
@@ -668,7 +668,7 @@ export const techStack: TechItem[] = [
   {
     id: "wsl",
     name: "Wsl",
-    badge: "126_wsl.svg",
+    badge: "wsl.svg",
     icon: "wsl-icon.svg",
     category: "Tools & Development",
     tags: ["wsl", "toolsdevelopment"],
@@ -676,7 +676,7 @@ export const techStack: TechItem[] = [
   {
     id: "eslint",
     name: "Eslint",
-    badge: "127_eslint.svg",
+    badge: "eslint.svg",
     icon: "eslint-icon.svg",
     category: "Tools & Development",
     tags: ["eslint", "toolsdevelopment"],
@@ -684,7 +684,7 @@ export const techStack: TechItem[] = [
   {
     id: "prettier",
     name: "Prettier",
-    badge: "128_prettier.svg",
+    badge: "prettier.svg",
     icon: "prettier-icon.svg",
     category: "Tools & Development",
     tags: ["prettier", "toolsdevelopment"],
@@ -692,7 +692,7 @@ export const techStack: TechItem[] = [
   {
     id: "lefthook",
     name: "Lefthook",
-    badge: "129_lefthook.svg",
+    badge: "lefthook.svg",
     icon: "lefthook-icon.svg",
     category: "Tools & Development",
     tags: ["lefthook", "toolsdevelopment"],
@@ -700,7 +700,7 @@ export const techStack: TechItem[] = [
   {
     id: "husky",
     name: "Husky",
-    badge: "130_husky.svg",
+    badge: "husky.svg",
     icon: "husky-icon.svg",
     category: "Tools & Development",
     tags: ["husky", "toolsdevelopment"],
@@ -708,7 +708,7 @@ export const techStack: TechItem[] = [
   {
     id: "vitest",
     name: "Vitest",
-    badge: "85_vitest.svg",
+    badge: "vitest.svg",
     icon: "vitest-icon.svg",
     category: "UI Tools",
     tags: ["vitest", "uitools"],
@@ -716,7 +716,7 @@ export const techStack: TechItem[] = [
   {
     id: "axios",
     name: "Axios",
-    badge: "86_axios.svg",
+    badge: "axios.svg",
     icon: "axios-icon.svg",
     category: "UI Tools",
     tags: ["axios", "uitools"],
@@ -724,7 +724,7 @@ export const techStack: TechItem[] = [
   {
     id: "lodash",
     name: "Lodash",
-    badge: "87_lodash.svg",
+    badge: "lodash.svg",
     icon: "lodash-icon.svg",
     category: "UI Tools",
     tags: ["lodash", "uitools"],
@@ -732,7 +732,7 @@ export const techStack: TechItem[] = [
   {
     id: "next_auth",
     name: "Next Auth",
-    badge: "88_next_auth.svg",
+    badge: "next_auth.svg",
     icon: "nextauth-icon.svg",
     category: "UI Tools",
     tags: ["next_auth", "uitools"],
@@ -740,7 +740,7 @@ export const techStack: TechItem[] = [
   {
     id: "dayjs",
     name: "Dayjs",
-    badge: "89_dayjs.svg",
+    badge: "dayjs.svg",
     icon: "dayjs-icon.svg",
     category: "UI Tools",
     tags: ["dayjs", "uitools"],
@@ -748,7 +748,7 @@ export const techStack: TechItem[] = [
   {
     id: "date_fns",
     name: "Date Fns",
-    badge: "90_date_fns.svg",
+    badge: "date_fns.svg",
     icon: "datefns-icon.svg",
     category: "UI Tools",
     tags: ["date_fns", "uitools"],
@@ -756,7 +756,7 @@ export const techStack: TechItem[] = [
   {
     id: "i18next",
     name: "I18next",
-    badge: "91_i18next.svg",
+    badge: "i18next.svg",
     icon: "i18n-icon.svg",
     category: "UI Tools",
     tags: ["i18next", "uitools"],
@@ -764,7 +764,7 @@ export const techStack: TechItem[] = [
   {
     id: "jspdf",
     name: "Jspdf",
-    badge: "92_jspdf.svg",
+    badge: "jspdf.svg",
     icon: "jspdf-icon.svg",
     category: "UI Tools",
     tags: ["jspdf", "uitools"],
@@ -772,7 +772,7 @@ export const techStack: TechItem[] = [
   {
     id: "react_quill",
     name: "React Quill",
-    badge: "93_react_quill.svg",
+    badge: "react_quill.svg",
     icon: "react-quill-icon.svg",
     category: "UI Tools",
     tags: ["react_quill", "uitools"],
@@ -780,7 +780,7 @@ export const techStack: TechItem[] = [
   {
     id: "react_toastify",
     name: "React Toastify",
-    badge: "94_react_toastify.svg",
+    badge: "react_toastify.svg",
     icon: "react-toastify-icon.svg",
     category: "UI Tools",
     tags: ["react_toastify", "uitools"],
@@ -788,7 +788,7 @@ export const techStack: TechItem[] = [
   {
     id: "stylis_plugin_rtl",
     name: "Stylis Plugin Rtl",
-    badge: "95_stylis_plugin_rtl.svg",
+    badge: "stylis_plugin_rtl.svg",
     icon: "stylis-rtl-icon.svg",
     category: "UI Tools",
     tags: ["stylis_plugin_rtl", "uitools"],
@@ -796,7 +796,7 @@ export const techStack: TechItem[] = [
   {
     id: "react_dropzone",
     name: "React Dropzone",
-    badge: "96_react_dropzone.svg",
+    badge: "react_dropzone.svg",
     icon: "react-dropzone-icon.svg",
     category: "UI Tools",
     tags: ["react_dropzone", "uitools"],
@@ -804,7 +804,7 @@ export const techStack: TechItem[] = [
   {
     id: "monaco_editor",
     name: "Monaco Editor",
-    badge: "97_monaco_editor.svg",
+    badge: "monaco_editor.svg",
     icon: "monaco-editor-icon.svg",
     category: "UI Tools",
     tags: ["monaco_editor", "uitools"],
@@ -812,7 +812,7 @@ export const techStack: TechItem[] = [
   {
     id: "react_easy_crop",
     name: "React Easy Crop",
-    badge: "98_react_easy_crop.svg",
+    badge: "react_easy_crop.svg",
     icon: "react-easy-crop-icon.svg",
     category: "UI Tools",
     tags: ["react_easy_crop", "uitools"],
@@ -820,7 +820,7 @@ export const techStack: TechItem[] = [
   {
     id: "google_libphonenumber",
     name: "Google Libphonenumber",
-    badge: "99_google_libphonenumber.svg",
+    badge: "google_libphonenumber.svg",
     icon: "google-libphonenumber-icon.svg",
     category: "UI Tools",
     tags: ["google_libphonenumber", "uitools"],
@@ -828,7 +828,7 @@ export const techStack: TechItem[] = [
   {
     id: "dnd_kit",
     name: "Dnd Kit",
-    badge: "100_dnd_kit.svg",
+    badge: "dnd_kit.svg",
     icon: "dnd-kit-icon.svg",
     category: "UI Tools",
     tags: ["dnd_kit", "uitools"],
@@ -836,7 +836,7 @@ export const techStack: TechItem[] = [
   {
     id: "emotion_react",
     name: "Emotion React",
-    badge: "101_emotion_react.svg",
+    badge: "emotion_react.svg",
     icon: "emotion-react-icon.svg",
     category: "UI Tools",
     tags: ["emotion_react", "uitools"],
@@ -844,7 +844,7 @@ export const techStack: TechItem[] = [
   {
     id: "db",
     name: "Db",
-    badge: "102_db.svg",
+    badge: "db.svg",
     icon: "db-icon.svg",
     category: "Databases",
     tags: ["db", "databases"],
@@ -852,7 +852,7 @@ export const techStack: TechItem[] = [
   {
     id: "cursor",
     name: "Cursor",
-    badge: "103_cursor.svg",
+    badge: "cursor.svg",
     icon: "cursor-icon.svg",
     category: "Tools & Development",
     tags: ["cursor", "toolsdevelopment"],
@@ -860,7 +860,7 @@ export const techStack: TechItem[] = [
   {
     id: "windsurf",
     name: "Windsurf",
-    badge: "104_windsurf.svg",
+    badge: "windsurf.svg",
     icon: "windsurf-icon.svg",
     category: "Tools & Development",
     tags: ["windsurf", "toolsdevelopment"],
@@ -868,7 +868,7 @@ export const techStack: TechItem[] = [
   {
     id: "kiro",
     name: "Kiro",
-    badge: "105_kiro.svg",
+    badge: "kiro.svg",
     icon: "kiro-icon.svg",
     category: "Tools & Development",
     tags: ["kiro", "toolsdevelopment"],
@@ -876,7 +876,7 @@ export const techStack: TechItem[] = [
   {
     id: "claude_code",
     name: "Claude Code",
-    badge: "106_claude_code.svg",
+    badge: "claude_code.svg",
     icon: "claude-code-icon.svg",
     category: "Tools & Development",
     tags: ["claude_code", "toolsdevelopment"],
@@ -884,7 +884,7 @@ export const techStack: TechItem[] = [
   {
     id: "claude_desktop",
     name: "Claude Desktop",
-    badge: "107_claude_desktop.svg",
+    badge: "claude_desktop.svg",
     icon: "claude-desktop-icon.svg",
     category: "Tools & Development",
     tags: ["claude_desktop", "toolsdevelopment"],
@@ -892,7 +892,7 @@ export const techStack: TechItem[] = [
   {
     id: "codex",
     name: "Codex",
-    badge: "108_codex.svg",
+    badge: "codex.svg",
     icon: "codex-icon.svg",
     category: "Tools & Development",
     tags: ["codex", "toolsdevelopment"],
@@ -900,7 +900,7 @@ export const techStack: TechItem[] = [
   {
     id: "devin",
     name: "Devin",
-    badge: "109_devin.svg",
+    badge: "devin.svg",
     icon: "devin-icon.svg",
     category: "Tools & Development",
     tags: ["devin", "toolsdevelopment"],
@@ -908,7 +908,7 @@ export const techStack: TechItem[] = [
   {
     id: "gemini",
     name: "Gemini",
-    badge: "110_gemini.svg",
+    badge: "gemini.svg",
     icon: "gemini-icon.svg",
     category: "Tools & Development",
     tags: ["gemini", "toolsdevelopment"],
@@ -916,7 +916,7 @@ export const techStack: TechItem[] = [
   {
     id: "handlebars",
     name: "Handlebars",
-    badge: "111_handlebars.svg",
+    badge: "handlebars.svg",
     icon: "handlebars-icon.svg",
     category: "Uncategorized",
     tags: ["handlebars", "uncategorized"],
@@ -924,7 +924,7 @@ export const techStack: TechItem[] = [
   {
     id: "gemini_cli",
     name: "Gemini Cli",
-    badge: "112_gemini_cli.svg",
+    badge: "gemini_cli.svg",
     icon: "gemini-cli-icon.svg",
     category: "Tools & Development",
     tags: ["gemini_cli", "toolsdevelopment"],
@@ -932,7 +932,7 @@ export const techStack: TechItem[] = [
   {
     id: "claude",
     name: "Claude",
-    badge: "113_claude.svg",
+    badge: "claude.svg",
     icon: "claude-icon.svg",
     category: "Tools & Development",
     tags: ["claude", "toolsdevelopment"],
@@ -940,7 +940,7 @@ export const techStack: TechItem[] = [
   {
     id: "chatgpt",
     name: "Chatgpt",
-    badge: "114_chatgpt.svg",
+    badge: "chatgpt.svg",
     icon: "chatgpt-icon.svg",
     category: "Tools & Development",
     tags: ["chatgpt", "toolsdevelopment"],
@@ -948,7 +948,7 @@ export const techStack: TechItem[] = [
   {
     id: "ai_studio",
     name: "Ai Studio",
-    badge: "115_ai_studio.svg",
+    badge: "ai_studio.svg",
     icon: "ai-studio-icon.svg",
     category: "Tools & Development",
     tags: ["ai_studio", "toolsdevelopment"],
@@ -956,7 +956,7 @@ export const techStack: TechItem[] = [
   {
     id: "antigravity",
     name: "Antigravity",
-    badge: "116_antigravity.svg",
+    badge: "antigravity.svg",
     icon: "antigravity-icon.svg",
     category: "Tools & Development",
     tags: ["antigravity", "toolsdevelopment"],
@@ -964,7 +964,7 @@ export const techStack: TechItem[] = [
   {
     id: "antigravity_cli",
     name: "Antigravity Cli",
-    badge: "117_antigravity_cli.svg",
+    badge: "antigravity_cli.svg",
     icon: "antigravity-cli-icon.svg",
     category: "Tools & Development",
     tags: ["antigravity_cli", "toolsdevelopment"],
@@ -972,7 +972,7 @@ export const techStack: TechItem[] = [
   {
     id: "django",
     name: "Django",
-    badge: "120_django.svg",
+    badge: "django.svg",
     icon: "django-icon.svg",
     category: "Backend",
     tags: ["django", "backend"],
@@ -980,7 +980,7 @@ export const techStack: TechItem[] = [
   {
     id: "flask",
     name: "Flask",
-    badge: "121_flask.svg",
+    badge: "flask.svg",
     icon: "flask-icon.svg",
     category: "Backend",
     tags: ["flask", "backend"],
@@ -988,7 +988,7 @@ export const techStack: TechItem[] = [
   {
     id: "react_router",
     name: "React Router",
-    badge: "118_react_router.svg",
+    badge: "react_router.svg",
     icon: "reactrouter-icon.svg",
     category: "Uncategorized",
     tags: ["react_router", "uncategorized"],
@@ -996,7 +996,7 @@ export const techStack: TechItem[] = [
   {
     id: "react_spring",
     name: "React Spring",
-    badge: "119_react_spring.svg",
+    badge: "react_spring.svg",
     icon: "reactspring-icon.svg",
     category: "Uncategorized",
     tags: ["react_spring", "uncategorized"],
@@ -1004,7 +1004,7 @@ export const techStack: TechItem[] = [
   {
     id: "markdown",
     name: "Markdown",
-    badge: "139_markdown.svg",
+    badge: "markdown.svg",
     icon: "markdown-icon.svg",
     category: "Languages & Scripting",
     tags: ["markdown", "languagesscripting"],
@@ -1012,7 +1012,7 @@ export const techStack: TechItem[] = [
   {
     id: "java",
     name: "Java",
-    badge: "140_java.svg",
+    badge: "java.svg",
     icon: "java-icon.svg",
     category: "Uncategorized",
     tags: ["java", "uncategorized"],
@@ -1020,7 +1020,7 @@ export const techStack: TechItem[] = [
   {
     id: "c",
     name: "C",
-    badge: "141_c.svg",
+    badge: "c.svg",
     icon: "c-icon.svg",
     category: "Languages & Scripting",
     tags: ["c", "languagesscripting"],
@@ -1028,7 +1028,7 @@ export const techStack: TechItem[] = [
   {
     id: "cpp",
     name: "Cpp",
-    badge: "142_cpp.svg",
+    badge: "cpp.svg",
     icon: "cpp-icon.svg",
     category: "Languages & Scripting",
     tags: ["cpp", "languagesscripting"],
@@ -1036,7 +1036,7 @@ export const techStack: TechItem[] = [
   {
     id: "csharp",
     name: "Csharp",
-    badge: "143_csharp.svg",
+    badge: "csharp.svg",
     icon: "csharp-icon.svg",
     category: "Uncategorized",
     tags: ["csharp", "uncategorized"],
@@ -1044,7 +1044,7 @@ export const techStack: TechItem[] = [
   {
     id: "fsharp",
     name: "Fsharp",
-    badge: "144_fsharp.svg",
+    badge: "fsharp.svg",
     icon: "fsharp-icon.svg",
     category: "Uncategorized",
     tags: ["fsharp", "uncategorized"],
@@ -1052,7 +1052,7 @@ export const techStack: TechItem[] = [
   {
     id: "rust",
     name: "Rust",
-    badge: "145_rust.svg",
+    badge: "rust.svg",
     icon: "rust-icon.svg",
     category: "Uncategorized",
     tags: ["rust", "uncategorized"],
@@ -1060,7 +1060,7 @@ export const techStack: TechItem[] = [
   {
     id: "go",
     name: "Go",
-    badge: "146_go.svg",
+    badge: "go.svg",
     icon: "go-icon.svg",
     category: "Uncategorized",
     tags: ["go", "uncategorized"],
@@ -1068,7 +1068,7 @@ export const techStack: TechItem[] = [
   {
     id: "kotlin",
     name: "Kotlin",
-    badge: "147_kotlin.svg",
+    badge: "kotlin.svg",
     icon: "kotlin-icon.svg",
     category: "Uncategorized",
     tags: ["kotlin", "uncategorized"],
@@ -1076,7 +1076,7 @@ export const techStack: TechItem[] = [
   {
     id: "swift",
     name: "Swift",
-    badge: "148_swift.svg",
+    badge: "swift.svg",
     icon: "swift-icon.svg",
     category: "Uncategorized",
     tags: ["swift", "uncategorized"],
@@ -1084,7 +1084,7 @@ export const techStack: TechItem[] = [
   {
     id: "dart",
     name: "Dart",
-    badge: "149_dart.svg",
+    badge: "dart.svg",
     icon: "dart-icon.svg",
     category: "Uncategorized",
     tags: ["dart", "uncategorized"],
@@ -1092,7 +1092,7 @@ export const techStack: TechItem[] = [
   {
     id: "ruby",
     name: "Ruby",
-    badge: "150_ruby.svg",
+    badge: "ruby.svg",
     icon: "ruby-icon.svg",
     category: "Uncategorized",
     tags: ["ruby", "uncategorized"],
@@ -1100,7 +1100,7 @@ export const techStack: TechItem[] = [
   {
     id: "php",
     name: "PHP",
-    badge: "151_php.svg",
+    badge: "php.svg",
     icon: "php-icon.svg",
     category: "Uncategorized",
     tags: ["php", "uncategorized"],
@@ -1108,7 +1108,7 @@ export const techStack: TechItem[] = [
   {
     id: "scala",
     name: "Scala",
-    badge: "152_scala.svg",
+    badge: "scala.svg",
     icon: "scala-icon.svg",
     category: "Uncategorized",
     tags: ["scala", "uncategorized"],
@@ -1116,7 +1116,7 @@ export const techStack: TechItem[] = [
   {
     id: "r_lang",
     name: "R Lang",
-    badge: "153_r_lang.svg",
+    badge: "r_lang.svg",
     icon: "r-lang-icon.svg",
     category: "Uncategorized",
     tags: ["r_lang", "uncategorized"],
@@ -1124,7 +1124,7 @@ export const techStack: TechItem[] = [
   {
     id: "lua",
     name: "Lua",
-    badge: "154_lua.svg",
+    badge: "lua.svg",
     icon: "lua-icon.svg",
     category: "Uncategorized",
     tags: ["lua", "uncategorized"],
@@ -1132,7 +1132,7 @@ export const techStack: TechItem[] = [
   {
     id: "elixir",
     name: "Elixir",
-    badge: "155_elixir.svg",
+    badge: "elixir.svg",
     icon: "elixir-icon.svg",
     category: "Uncategorized",
     tags: ["elixir", "uncategorized"],
@@ -1140,7 +1140,7 @@ export const techStack: TechItem[] = [
   {
     id: "haskell",
     name: "Haskell",
-    badge: "156_haskell.svg",
+    badge: "haskell.svg",
     icon: "haskell-icon.svg",
     category: "Uncategorized",
     tags: ["haskell", "uncategorized"],
@@ -1148,7 +1148,7 @@ export const techStack: TechItem[] = [
   {
     id: "perl",
     name: "Perl",
-    badge: "157_perl.svg",
+    badge: "perl.svg",
     icon: "perl-icon.svg",
     category: "Uncategorized",
     tags: ["perl", "uncategorized"],
@@ -1156,7 +1156,7 @@ export const techStack: TechItem[] = [
   {
     id: "julia",
     name: "Julia",
-    badge: "158_julia.svg",
+    badge: "julia.svg",
     icon: "julia-icon.svg",
     category: "Uncategorized",
     tags: ["julia", "uncategorized"],
@@ -1164,7 +1164,7 @@ export const techStack: TechItem[] = [
   {
     id: "groovy",
     name: "Groovy",
-    badge: "159_groovy.svg",
+    badge: "groovy.svg",
     icon: "groovy-icon.svg",
     category: "Uncategorized",
     tags: ["groovy", "uncategorized"],
@@ -1172,7 +1172,7 @@ export const techStack: TechItem[] = [
   {
     id: "flutter",
     name: "Flutter",
-    badge: "160_flutter.svg",
+    badge: "flutter.svg",
     icon: "flutter-icon.svg",
     category: "Uncategorized",
     tags: ["flutter", "uncategorized"],
@@ -1180,7 +1180,7 @@ export const techStack: TechItem[] = [
   {
     id: "expo",
     name: "Expo",
-    badge: "161_expo.svg",
+    badge: "expo.svg",
     icon: "expo-icon.svg",
     category: "Build Tools, Auth & Package Managers",
     tags: ["expo", "buildtoolsauthpackagemanagers"],
@@ -1188,7 +1188,7 @@ export const techStack: TechItem[] = [
   {
     id: "android",
     name: "Android",
-    badge: "162_android.svg",
+    badge: "android.svg",
     icon: "android-icon.svg",
     category: "Uncategorized",
     tags: ["android", "uncategorized"],
@@ -1196,7 +1196,7 @@ export const techStack: TechItem[] = [
   {
     id: "ios",
     name: "Ios",
-    badge: "163_ios.svg",
+    badge: "ios.svg",
     icon: "ios-icon.svg",
     category: "Uncategorized",
     tags: ["ios", "uncategorized"],
@@ -1204,7 +1204,7 @@ export const techStack: TechItem[] = [
   {
     id: "capacitor",
     name: "Capacitor",
-    badge: "164_capacitor.svg",
+    badge: "capacitor.svg",
     icon: "capacitor-icon.svg",
     category: "Uncategorized",
     tags: ["capacitor", "uncategorized"],
@@ -1212,7 +1212,7 @@ export const techStack: TechItem[] = [
   {
     id: "vuejs",
     name: "Vue.js",
-    badge: "165_vuejs.svg",
+    badge: "vuejs.svg",
     icon: "vuejs-icon.svg",
     category: "Frontend",
     tags: ["vuejs", "frontend"],
@@ -1220,7 +1220,7 @@ export const techStack: TechItem[] = [
   {
     id: "svelte",
     name: "Svelte",
-    badge: "166_svelte.svg",
+    badge: "svelte.svg",
     icon: "svelte-icon.svg",
     category: "Uncategorized",
     tags: ["svelte", "uncategorized"],
@@ -1228,7 +1228,7 @@ export const techStack: TechItem[] = [
   {
     id: "astro",
     name: "Astro",
-    badge: "167_astro.svg",
+    badge: "astro.svg",
     icon: "astro-icon.svg",
     category: "Uncategorized",
     tags: ["astro", "uncategorized"],
@@ -1236,7 +1236,7 @@ export const techStack: TechItem[] = [
   {
     id: "remix",
     name: "Remix",
-    badge: "168_remix.svg",
+    badge: "remix.svg",
     icon: "remix-icon.svg",
     category: "Uncategorized",
     tags: ["remix", "uncategorized"],
@@ -1244,7 +1244,7 @@ export const techStack: TechItem[] = [
   {
     id: "nuxtjs",
     name: "Nuxt.js",
-    badge: "169_nuxtjs.svg",
+    badge: "nuxtjs.svg",
     icon: "nuxtjs-icon.svg",
     category: "Frontend",
     tags: ["nuxtjs", "frontend"],
@@ -1252,7 +1252,7 @@ export const techStack: TechItem[] = [
   {
     id: "gatsby",
     name: "Gatsby",
-    badge: "170_gatsby.svg",
+    badge: "gatsby.svg",
     icon: "gatsby-icon.svg",
     category: "Uncategorized",
     tags: ["gatsby", "uncategorized"],
@@ -1260,7 +1260,7 @@ export const techStack: TechItem[] = [
   {
     id: "solid",
     name: "Solid",
-    badge: "171_solid.svg",
+    badge: "solid.svg",
     icon: "solid-icon.svg",
     category: "Uncategorized",
     tags: ["solid", "uncategorized"],
@@ -1268,7 +1268,7 @@ export const techStack: TechItem[] = [
   {
     id: "three_js",
     name: "Three Js",
-    badge: "172_three_js.svg",
+    badge: "three_js.svg",
     icon: "three-js-icon.svg",
     category: "Frontend",
     tags: ["three_js", "frontend"],
@@ -1276,7 +1276,7 @@ export const techStack: TechItem[] = [
   {
     id: "wasm",
     name: "Wasm",
-    badge: "173_wasm.svg",
+    badge: "wasm.svg",
     icon: "wasm-icon.svg",
     category: "Uncategorized",
     tags: ["wasm", "uncategorized"],
@@ -1284,7 +1284,7 @@ export const techStack: TechItem[] = [
   {
     id: "fastapi",
     name: "Fastapi",
-    badge: "174_fastapi.svg",
+    badge: "fastapi.svg",
     icon: "fastapi-icon.svg",
     category: "Backend",
     tags: ["fastapi", "backend"],
@@ -1292,7 +1292,7 @@ export const techStack: TechItem[] = [
   {
     id: "spring_boot",
     name: "Spring Boot",
-    badge: "175_spring_boot.svg",
+    badge: "spring_boot.svg",
     icon: "spring-boot-icon.svg",
     category: "Uncategorized",
     tags: ["spring_boot", "uncategorized"],
@@ -1300,7 +1300,7 @@ export const techStack: TechItem[] = [
   {
     id: "laravel",
     name: "Laravel",
-    badge: "176_laravel.svg",
+    badge: "laravel.svg",
     icon: "laravel-icon.svg",
     category: "Uncategorized",
     tags: ["laravel", "uncategorized"],
@@ -1308,7 +1308,7 @@ export const techStack: TechItem[] = [
   {
     id: "rails",
     name: "Rails",
-    badge: "177_rails.svg",
+    badge: "rails.svg",
     icon: "rails-icon.svg",
     category: "Uncategorized",
     tags: ["rails", "uncategorized"],
@@ -1316,7 +1316,7 @@ export const techStack: TechItem[] = [
   {
     id: "phoenix",
     name: "Phoenix",
-    badge: "178_phoenix.svg",
+    badge: "phoenix.svg",
     icon: "phoenix-icon.svg",
     category: "Uncategorized",
     tags: ["phoenix", "uncategorized"],
@@ -1324,7 +1324,7 @@ export const techStack: TechItem[] = [
   {
     id: "hono",
     name: "Hono",
-    badge: "179_hono.svg",
+    badge: "hono.svg",
     icon: "hono-icon.svg",
     category: "Uncategorized",
     tags: ["hono", "uncategorized"],
@@ -1332,7 +1332,7 @@ export const techStack: TechItem[] = [
   {
     id: "fastify",
     name: "Fastify",
-    badge: "180_fastify.svg",
+    badge: "fastify.svg",
     icon: "fastify-icon.svg",
     category: "Backend",
     tags: ["fastify", "backend"],
@@ -1340,7 +1340,7 @@ export const techStack: TechItem[] = [
   {
     id: "graphql",
     name: "GraphQL",
-    badge: "181_graphql.svg",
+    badge: "graphql.svg",
     icon: "graphql-icon.svg",
     category: "UI Tools",
     tags: ["graphql", "uitools"],
@@ -1348,7 +1348,7 @@ export const techStack: TechItem[] = [
   {
     id: "trpc",
     name: "Trpc",
-    badge: "182_trpc.svg",
+    badge: "trpc.svg",
     icon: "trpc-icon.svg",
     category: "Uncategorized",
     tags: ["trpc", "uncategorized"],
@@ -1356,7 +1356,7 @@ export const techStack: TechItem[] = [
   {
     id: "azure",
     name: "Azure",
-    badge: "183_azure.svg",
+    badge: "azure.svg",
     icon: "azure-icon.svg",
     category: "Uncategorized",
     tags: ["azure", "uncategorized"],
@@ -1364,7 +1364,7 @@ export const techStack: TechItem[] = [
   {
     id: "gcp",
     name: "GCP",
-    badge: "184_gcp.svg",
+    badge: "gcp.svg",
     icon: "gcp-icon.svg",
     category: "Cloud & DevOps",
     tags: ["gcp", "clouddevops"],
@@ -1372,7 +1372,7 @@ export const techStack: TechItem[] = [
   {
     id: "digitalocean",
     name: "Digitalocean",
-    badge: "185_digitalocean.svg",
+    badge: "digitalocean.svg",
     icon: "digitalocean-icon.svg",
     category: "Uncategorized",
     tags: ["digitalocean", "uncategorized"],
@@ -1380,7 +1380,7 @@ export const techStack: TechItem[] = [
   {
     id: "heroku",
     name: "Heroku",
-    badge: "186_heroku.svg",
+    badge: "heroku.svg",
     icon: "heroku-icon.svg",
     category: "Uncategorized",
     tags: ["heroku", "uncategorized"],
@@ -1388,7 +1388,7 @@ export const techStack: TechItem[] = [
   {
     id: "netlify",
     name: "Netlify",
-    badge: "187_netlify.svg",
+    badge: "netlify.svg",
     icon: "netlify-icon.svg",
     category: "Cloud & DevOps",
     tags: ["netlify", "clouddevops"],
@@ -1396,7 +1396,7 @@ export const techStack: TechItem[] = [
   {
     id: "cloudflare",
     name: "Cloudflare",
-    badge: "188_cloudflare.svg",
+    badge: "cloudflare.svg",
     icon: "cloudflare-icon.svg",
     category: "Cloud & DevOps",
     tags: ["cloudflare", "clouddevops"],
@@ -1404,7 +1404,7 @@ export const techStack: TechItem[] = [
   {
     id: "railway",
     name: "Railway",
-    badge: "189_railway.svg",
+    badge: "railway.svg",
     icon: "railway-icon.svg",
     category: "Cloud & DevOps",
     tags: ["railway", "clouddevops"],
@@ -1412,7 +1412,7 @@ export const techStack: TechItem[] = [
   {
     id: "kubernetes",
     name: "Kubernetes",
-    badge: "190_kubernetes.svg",
+    badge: "kubernetes.svg",
     icon: "kubernetes-icon.svg",
     category: "Cloud & DevOps",
     tags: ["kubernetes", "clouddevops"],
@@ -1420,7 +1420,7 @@ export const techStack: TechItem[] = [
   {
     id: "jenkins",
     name: "Jenkins",
-    badge: "191_jenkins.svg",
+    badge: "jenkins.svg",
     icon: "jenkins-icon.svg",
     category: "Uncategorized",
     tags: ["jenkins", "uncategorized"],
@@ -1428,7 +1428,7 @@ export const techStack: TechItem[] = [
   {
     id: "circle_ci",
     name: "Circle Ci",
-    badge: "192_circle_ci.svg",
+    badge: "circle_ci.svg",
     icon: "circle-ci-icon.svg",
     category: "Uncategorized",
     tags: ["circle_ci", "uncategorized"],
@@ -1436,7 +1436,7 @@ export const techStack: TechItem[] = [
   {
     id: "ansible",
     name: "Ansible",
-    badge: "193_ansible.svg",
+    badge: "ansible.svg",
     icon: "ansible-icon.svg",
     category: "Cloud & DevOps",
     tags: ["ansible", "clouddevops"],
@@ -1444,7 +1444,7 @@ export const techStack: TechItem[] = [
   {
     id: "nginx",
     name: "Nginx",
-    badge: "194_nginx.svg",
+    badge: "nginx.svg",
     icon: "nginx-icon.svg",
     category: "Cloud & DevOps",
     tags: ["nginx", "clouddevops"],
@@ -1452,7 +1452,7 @@ export const techStack: TechItem[] = [
   {
     id: "redis",
     name: "Redis",
-    badge: "195_redis.svg",
+    badge: "redis.svg",
     icon: "redis-icon.svg",
     category: "Databases",
     tags: ["redis", "databases"],
@@ -1460,7 +1460,7 @@ export const techStack: TechItem[] = [
   {
     id: "mysql",
     name: "MySQL",
-    badge: "196_mysql.svg",
+    badge: "mysql.svg",
     icon: "mysql-icon.svg",
     category: "Databases",
     tags: ["mysql", "databases"],
@@ -1468,7 +1468,7 @@ export const techStack: TechItem[] = [
   {
     id: "mariadb",
     name: "Mariadb",
-    badge: "197_mariadb.svg",
+    badge: "mariadb.svg",
     icon: "mariadb-icon.svg",
     category: "Uncategorized",
     tags: ["mariadb", "uncategorized"],
@@ -1476,7 +1476,7 @@ export const techStack: TechItem[] = [
   {
     id: "firebase",
     name: "Firebase",
-    badge: "198_firebase.svg",
+    badge: "firebase.svg",
     icon: "firebase-icon.svg",
     category: "Databases",
     tags: ["firebase", "databases"],
@@ -1484,7 +1484,7 @@ export const techStack: TechItem[] = [
   {
     id: "elasticsearch",
     name: "Elasticsearch",
-    badge: "199_elasticsearch.svg",
+    badge: "elasticsearch.svg",
     icon: "elasticsearch-icon.svg",
     category: "Uncategorized",
     tags: ["elasticsearch", "uncategorized"],
@@ -1492,7 +1492,7 @@ export const techStack: TechItem[] = [
   {
     id: "neo4j",
     name: "Neo4j",
-    badge: "200_neo4j.svg",
+    badge: "neo4j.svg",
     icon: "neo4j-icon.svg",
     category: "Uncategorized",
     tags: ["neo4j", "uncategorized"],
@@ -1500,7 +1500,7 @@ export const techStack: TechItem[] = [
   {
     id: "cassandra",
     name: "Cassandra",
-    badge: "201_cassandra.svg",
+    badge: "cassandra.svg",
     icon: "cassandra-icon.svg",
     category: "Uncategorized",
     tags: ["cassandra", "uncategorized"],
@@ -1508,7 +1508,7 @@ export const techStack: TechItem[] = [
   {
     id: "influxdb",
     name: "Influxdb",
-    badge: "202_influxdb.svg",
+    badge: "influxdb.svg",
     icon: "influxdb-icon.svg",
     category: "Uncategorized",
     tags: ["influxdb", "uncategorized"],
@@ -1516,7 +1516,7 @@ export const techStack: TechItem[] = [
   {
     id: "mssql",
     name: "Mssql",
-    badge: "203_mssql.svg",
+    badge: "mssql.svg",
     icon: "mssql-icon.svg",
     category: "Databases",
     tags: ["mssql", "databases"],
@@ -1524,7 +1524,7 @@ export const techStack: TechItem[] = [
   {
     id: "s3",
     name: "S3",
-    badge: "204_s3.svg",
+    badge: "s3.svg",
     icon: "s3-icon.svg",
     category: "Databases",
     tags: ["s3", "databases"],
@@ -1532,7 +1532,7 @@ export const techStack: TechItem[] = [
   {
     id: "kafka",
     name: "Kafka",
-    badge: "205_kafka.svg",
+    badge: "kafka.svg",
     icon: "kafka-icon.svg",
     category: "Uncategorized",
     tags: ["kafka", "uncategorized"],
@@ -1540,7 +1540,7 @@ export const techStack: TechItem[] = [
   {
     id: "rabbitmq",
     name: "Rabbitmq",
-    badge: "206_rabbitmq.svg",
+    badge: "rabbitmq.svg",
     icon: "rabbitmq-icon.svg",
     category: "Cloud & DevOps",
     tags: ["rabbitmq", "clouddevops"],
@@ -1548,7 +1548,7 @@ export const techStack: TechItem[] = [
   {
     id: "mqtt",
     name: "Mqtt",
-    badge: "207_mqtt.svg",
+    badge: "mqtt.svg",
     icon: "mqtt-icon.svg",
     category: "Uncategorized",
     tags: ["mqtt", "uncategorized"],
@@ -1556,7 +1556,7 @@ export const techStack: TechItem[] = [
   {
     id: "cypress",
     name: "Cypress",
-    badge: "208_cypress.svg",
+    badge: "cypress.svg",
     icon: "cypress-icon.svg",
     category: "Uncategorized",
     tags: ["cypress", "uncategorized"],
@@ -1564,7 +1564,7 @@ export const techStack: TechItem[] = [
   {
     id: "playwright",
     name: "Playwright",
-    badge: "209_playwright.svg",
+    badge: "playwright.svg",
     icon: "playwright-icon.svg",
     category: "Testing",
     tags: ["playwright", "testing"],
@@ -1572,7 +1572,7 @@ export const techStack: TechItem[] = [
   {
     id: "selenium",
     name: "Selenium",
-    badge: "210_selenium.svg",
+    badge: "selenium.svg",
     icon: "selenium-icon.svg",
     category: "Uncategorized",
     tags: ["selenium", "uncategorized"],
@@ -1580,7 +1580,7 @@ export const techStack: TechItem[] = [
   {
     id: "mocha",
     name: "Mocha",
-    badge: "211_mocha.svg",
+    badge: "mocha.svg",
     icon: "mocha-icon.svg",
     category: "Uncategorized",
     tags: ["mocha", "uncategorized"],
@@ -1588,7 +1588,7 @@ export const techStack: TechItem[] = [
   {
     id: "puppeteer",
     name: "Puppeteer",
-    badge: "212_puppeteer.svg",
+    badge: "puppeteer.svg",
     icon: "puppeteer-icon.svg",
     category: "Testing",
     tags: ["puppeteer", "testing"],
@@ -1596,7 +1596,7 @@ export const techStack: TechItem[] = [
   {
     id: "k6",
     name: "K6",
-    badge: "213_k6.svg",
+    badge: "k6.svg",
     icon: "k6-icon.svg",
     category: "Uncategorized",
     tags: ["k6", "uncategorized"],
@@ -1604,7 +1604,7 @@ export const techStack: TechItem[] = [
   {
     id: "storybook",
     name: "Storybook",
-    badge: "214_storybook.svg",
+    badge: "storybook.svg",
     icon: "storybook-icon.svg",
     category: "Tools & Development",
     tags: ["storybook", "toolsdevelopment"],
@@ -1612,7 +1612,7 @@ export const techStack: TechItem[] = [
   {
     id: "tensorflow",
     name: "Tensorflow",
-    badge: "215_tensorflow.svg",
+    badge: "tensorflow.svg",
     icon: "tensorflow-icon.svg",
     category: "Uncategorized",
     tags: ["tensorflow", "uncategorized"],
@@ -1620,7 +1620,7 @@ export const techStack: TechItem[] = [
   {
     id: "pytorch",
     name: "Pytorch",
-    badge: "216_pytorch.svg",
+    badge: "pytorch.svg",
     icon: "pytorch-icon.svg",
     category: "AI & ML",
     tags: ["pytorch", "aiml"],
@@ -1628,7 +1628,7 @@ export const techStack: TechItem[] = [
   {
     id: "langchain",
     name: "Langchain",
-    badge: "217_langchain.svg",
+    badge: "langchain.svg",
     icon: "langchain-icon.svg",
     category: "Uncategorized",
     tags: ["langchain", "uncategorized"],
@@ -1636,7 +1636,7 @@ export const techStack: TechItem[] = [
   {
     id: "openai_sdk",
     name: "Openai Sdk",
-    badge: "218_openai_sdk.svg",
+    badge: "openai_sdk.svg",
     icon: "openai-sdk-icon.svg",
     category: "AI & ML",
     tags: ["openai_sdk", "aiml"],
@@ -1644,7 +1644,7 @@ export const techStack: TechItem[] = [
   {
     id: "hugging_face",
     name: "Hugging Face",
-    badge: "219_hugging_face.svg",
+    badge: "hugging_face.svg",
     icon: "hugging-face-icon.svg",
     category: "Uncategorized",
     tags: ["hugging_face", "uncategorized"],
@@ -1652,7 +1652,7 @@ export const techStack: TechItem[] = [
   {
     id: "pandas",
     name: "Pandas",
-    badge: "220_pandas.svg",
+    badge: "pandas.svg",
     icon: "pandas-icon.svg",
     category: "AI & ML",
     tags: ["pandas", "aiml"],
@@ -1660,7 +1660,7 @@ export const techStack: TechItem[] = [
   {
     id: "numpy",
     name: "Numpy",
-    badge: "221_numpy.svg",
+    badge: "numpy.svg",
     icon: "numpy-icon.svg",
     category: "AI & ML",
     tags: ["numpy", "aiml"],
@@ -1668,7 +1668,7 @@ export const techStack: TechItem[] = [
   {
     id: "scikit_learn",
     name: "Scikit Learn",
-    badge: "222_scikit_learn.svg",
+    badge: "scikit_learn.svg",
     icon: "scikit-learn-icon.svg",
     category: "Uncategorized",
     tags: ["scikit_learn", "uncategorized"],
@@ -1676,7 +1676,7 @@ export const techStack: TechItem[] = [
   {
     id: "ollama",
     name: "Ollama",
-    badge: "223_ollama.svg",
+    badge: "ollama.svg",
     icon: "ollama-icon.svg",
     category: "Uncategorized",
     tags: ["ollama", "uncategorized"],
@@ -1684,7 +1684,7 @@ export const techStack: TechItem[] = [
   {
     id: "webpack",
     name: "Webpack",
-    badge: "224_webpack.svg",
+    badge: "webpack.svg",
     icon: "webpack-icon.svg",
     category: "Build Tools, Auth & Package Managers",
     tags: ["webpack", "buildtoolsauthpackagemanagers"],
@@ -1692,7 +1692,7 @@ export const techStack: TechItem[] = [
   {
     id: "vite",
     name: "Vite",
-    badge: "225_vite.svg",
+    badge: "vite.svg",
     icon: "vite-icon.svg",
     category: "Build Tools, Auth & Package Managers",
     tags: ["vite", "buildtoolsauthpackagemanagers"],
@@ -1700,7 +1700,7 @@ export const techStack: TechItem[] = [
   {
     id: "rollup",
     name: "Rollup",
-    badge: "226_rollup.svg",
+    badge: "rollup.svg",
     icon: "rollup-icon.svg",
     category: "Uncategorized",
     tags: ["rollup", "uncategorized"],
@@ -1708,7 +1708,7 @@ export const techStack: TechItem[] = [
   {
     id: "esbuild",
     name: "Esbuild",
-    badge: "227_esbuild.svg",
+    badge: "esbuild.svg",
     icon: "esbuild-icon.svg",
     category: "Build Tools, Auth & Package Managers",
     tags: ["esbuild", "buildtoolsauthpackagemanagers"],
@@ -1716,7 +1716,7 @@ export const techStack: TechItem[] = [
   {
     id: "babel",
     name: "Babel",
-    badge: "228_babel.svg",
+    badge: "babel.svg",
     icon: "babel-icon.svg",
     category: "Build Tools, Auth & Package Managers",
     tags: ["babel", "buildtoolsauthpackagemanagers"],
@@ -1724,7 +1724,7 @@ export const techStack: TechItem[] = [
   {
     id: "turborepo",
     name: "Turborepo",
-    badge: "229_turborepo.svg",
+    badge: "turborepo.svg",
     icon: "turborepo-icon.svg",
     category: "Build Tools, Auth & Package Managers",
     tags: ["turborepo", "buildtoolsauthpackagemanagers"],
@@ -1732,7 +1732,7 @@ export const techStack: TechItem[] = [
   {
     id: "nx",
     name: "Nx",
-    badge: "230_nx.svg",
+    badge: "nx.svg",
     icon: "nx-icon.svg",
     category: "Build Tools, Auth & Package Managers",
     tags: ["nx", "buildtoolsauthpackagemanagers"],
@@ -1740,7 +1740,7 @@ export const techStack: TechItem[] = [
   {
     id: "figma",
     name: "Figma",
-    badge: "231_figma.svg",
+    badge: "figma.svg",
     icon: "figma-icon.svg",
     category: "Tools & Development",
     tags: ["figma", "toolsdevelopment"],
@@ -1748,7 +1748,7 @@ export const techStack: TechItem[] = [
   {
     id: "framer",
     name: "Framer",
-    badge: "232_framer.svg",
+    badge: "framer.svg",
     icon: "framer-icon.svg",
     category: "Uncategorized",
     tags: ["framer", "uncategorized"],
@@ -1756,7 +1756,7 @@ export const techStack: TechItem[] = [
   {
     id: "auth0",
     name: "Auth0",
-    badge: "233_auth0.svg",
+    badge: "auth0.svg",
     icon: "auth0-icon.svg",
     category: "Build Tools, Auth & Package Managers",
     tags: ["auth0", "buildtoolsauthpackagemanagers"],
@@ -1764,7 +1764,7 @@ export const techStack: TechItem[] = [
   {
     id: "clerk",
     name: "Clerk",
-    badge: "234_clerk.svg",
+    badge: "clerk.svg",
     icon: "clerk-icon.svg",
     category: "Uncategorized",
     tags: ["clerk", "uncategorized"],
@@ -1772,7 +1772,7 @@ export const techStack: TechItem[] = [
   {
     id: "keycloak",
     name: "Keycloak",
-    badge: "235_keycloak.svg",
+    badge: "keycloak.svg",
     icon: "keycloak-icon.svg",
     category: "Uncategorized",
     tags: ["keycloak", "uncategorized"],
@@ -1780,7 +1780,7 @@ export const techStack: TechItem[] = [
   {
     id: "jwt",
     name: "Jwt",
-    badge: "236_jwt.svg",
+    badge: "jwt.svg",
     icon: "jwt-icon.svg",
     category: "Build Tools, Auth & Package Managers",
     tags: ["jwt", "buildtoolsauthpackagemanagers"],
@@ -1788,7 +1788,7 @@ export const techStack: TechItem[] = [
   {
     id: "deno",
     name: "Deno",
-    badge: "237_deno.svg",
+    badge: "deno.svg",
     icon: "deno-icon.svg",
     category: "Uncategorized",
     tags: ["deno", "uncategorized"],
@@ -1796,7 +1796,7 @@ export const techStack: TechItem[] = [
   {
     id: "yarn",
     name: "Yarn",
-    badge: "238_yarn.svg",
+    badge: "yarn.svg",
     icon: "yarn-icon.svg",
     category: "Build Tools, Auth & Package Managers",
     tags: ["yarn", "buildtoolsauthpackagemanagers"],
@@ -1804,7 +1804,7 @@ export const techStack: TechItem[] = [
   {
     id: "pip",
     name: "Pip",
-    badge: "239_pip.svg",
+    badge: "pip.svg",
     icon: "pip-icon.svg",
     category: "Build Tools, Auth & Package Managers",
     tags: ["pip", "buildtoolsauthpackagemanagers"],
@@ -1812,7 +1812,7 @@ export const techStack: TechItem[] = [
   {
     id: "maven",
     name: "Maven",
-    badge: "240_maven.svg",
+    badge: "maven.svg",
     icon: "maven-icon.svg",
     category: "Uncategorized",
     tags: ["maven", "uncategorized"],
@@ -1820,7 +1820,7 @@ export const techStack: TechItem[] = [
   {
     id: "gradle",
     name: "Gradle",
-    badge: "241_gradle.svg",
+    badge: "gradle.svg",
     icon: "gradle-icon.svg",
     category: "Uncategorized",
     tags: ["gradle", "uncategorized"],
@@ -1828,7 +1828,7 @@ export const techStack: TechItem[] = [
   {
     id: "composer",
     name: "Composer",
-    badge: "242_composer.svg",
+    badge: "composer.svg",
     icon: "composer-icon.svg",
     category: "Uncategorized",
     tags: ["composer", "uncategorized"],
@@ -1836,7 +1836,7 @@ export const techStack: TechItem[] = [
   {
     id: "intellij",
     name: "Intellij",
-    badge: "243_intellij.svg",
+    badge: "intellij.svg",
     icon: "intellij-icon.svg",
     category: "Uncategorized",
     tags: ["intellij", "uncategorized"],
@@ -1844,7 +1844,7 @@ export const techStack: TechItem[] = [
   {
     id: "webstorm",
     name: "Webstorm",
-    badge: "244_webstorm.svg",
+    badge: "webstorm.svg",
     icon: "webstorm-icon.svg",
     category: "Uncategorized",
     tags: ["webstorm", "uncategorized"],
@@ -1852,7 +1852,7 @@ export const techStack: TechItem[] = [
   {
     id: "xcode",
     name: "Xcode",
-    badge: "245_xcode.svg",
+    badge: "xcode.svg",
     icon: "xcode-icon.svg",
     category: "Uncategorized",
     tags: ["xcode", "uncategorized"],
@@ -1860,7 +1860,7 @@ export const techStack: TechItem[] = [
   {
     id: "android_studio",
     name: "Android Studio",
-    badge: "246_android_studio.svg",
+    badge: "android_studio.svg",
     icon: "android-studio-icon.svg",
     category: "Uncategorized",
     tags: ["android_studio", "uncategorized"],
@@ -1868,7 +1868,7 @@ export const techStack: TechItem[] = [
   {
     id: "vim",
     name: "Vim",
-    badge: "247_vim.svg",
+    badge: "vim.svg",
     icon: "vim-icon.svg",
     category: "Tools & Development",
     tags: ["vim", "toolsdevelopment"],
@@ -1876,7 +1876,7 @@ export const techStack: TechItem[] = [
   {
     id: "neovim",
     name: "Neovim",
-    badge: "248_neovim.svg",
+    badge: "neovim.svg",
     icon: "neovim-icon.svg",
     category: "Tools & Development",
     tags: ["neovim", "toolsdevelopment"],
@@ -1884,7 +1884,7 @@ export const techStack: TechItem[] = [
   {
     id: "insomnia",
     name: "Insomnia",
-    badge: "249_insomnia.svg",
+    badge: "insomnia.svg",
     icon: "insomnia-icon.svg",
     category: "Uncategorized",
     tags: ["insomnia", "uncategorized"],
@@ -1892,7 +1892,7 @@ export const techStack: TechItem[] = [
   {
     id: "dbeaver",
     name: "Dbeaver",
-    badge: "250_dbeaver.svg",
+    badge: "dbeaver.svg",
     icon: "dbeaver-icon.svg",
     category: "Tools & Development",
     tags: ["dbeaver", "toolsdevelopment"],
@@ -1900,7 +1900,7 @@ export const techStack: TechItem[] = [
   {
     id: "venv",
     name: "Venv",
-    badge: "251_venv.svg",
+    badge: "venv.svg",
     icon: "venv-icon.svg",
     category: "Build Tools, Auth & Package Managers",
     tags: ["venv", "buildtoolsauthpackagemanagers"],
@@ -1908,7 +1908,7 @@ export const techStack: TechItem[] = [
   {
     id: "v0",
     name: "V0",
-    badge: "122_v0.svg",
+    badge: "v0.svg",
     icon: "v0-icon.svg",
     category: "AI & ML",
     tags: ["v0", "aiml"],

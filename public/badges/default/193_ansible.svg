@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="57" height="20" role="img" aria-label="Ansible">
-  <title>Ansible</title>
-  
-  <rect width="57" height="20" fill="#EE0000" rx="3" />
-  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-    
-    <text x="285" y="140" transform="scale(.1)" font-weight="bold">Ansible</text>
-  </g>
-</svg>

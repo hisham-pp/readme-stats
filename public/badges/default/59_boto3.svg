@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="50" height="20" role="img" aria-label="Boto3">
-  <title>Boto3</title>
-  
-  <rect width="50" height="20" fill="#FF9900" rx="3" />
-  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-    
-    <text x="250" y="140" transform="scale(.1)" font-weight="bold">Boto3</text>
-  </g>
-</svg>

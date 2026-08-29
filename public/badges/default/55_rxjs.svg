@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="45" height="20" role="img" aria-label="RxJS">
-  <title>RxJS</title>
-  <defs><linearGradient id="rxjs-grad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#ec4899"/></linearGradient></defs>
-  <rect width="45" height="20" fill="url(#rxjs-grad)" rx="3" />
-  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-    
-    <text x="225" y="140" transform="scale(.1)" font-weight="bold">RxJS</text>
-  </g>
-</svg>

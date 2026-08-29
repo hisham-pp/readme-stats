@@ -9,6 +9,29 @@ const techConfig: Record<string, any> = JSON.parse(
 );
 
 const badgesDir = path.join(__dirname, "../public/badges");
+const themeBadgesDir = path.join(badgesDir, "brand");
+
+if (!fs.existsSync(themeBadgesDir)) {
+  fs.mkdirSync(themeBadgesDir, { recursive: true });
+}
+
+// --- Prune stale badge files ---
+// Build the set of expected output filenames from the current config.
+// Includes both the key-based primary name and the id-based alias.
+const expectedBadgeFiles = new Set(
+  Object.entries(techConfig).flatMap(([k, c]: [string, any]) => {
+    const files = [`${k}.svg`];
+    if (c.id) files.push(`${c.id}.svg`);
+    return files;
+  }),
+);
+
+for (const file of fs.readdirSync(themeBadgesDir)) {
+  if (!expectedBadgeFiles.has(file)) {
+    fs.rmSync(path.join(themeBadgesDir, file));
+    console.log(`\u{1F5D1}  Removed stale badge: brand/${file}`);
+  }
+}
 
 console.log("Generating badges from techConfig.json...");
 
@@ -47,16 +70,21 @@ for (const [key, config] of Object.entries(techConfig)) {
       icon: rawIconSvg || undefined,
     });
 
-    // Write the output file
-    const themeBadgesDir = path.join(badgesDir, "brand");
-    if (!fs.existsSync(themeBadgesDir)) {
-      fs.mkdirSync(themeBadgesDir, { recursive: true });
-    }
-
-    const outputPath = path.join(themeBadgesDir, `${id}.svg`);
+    // Use the tech key as the primary filename (e.g. react_js.svg) to match
+    // the same convention used by the icon generator (key-icon.svg).
+    const outputFilename = `${key}.svg`;
+    const outputPath = path.join(themeBadgesDir, outputFilename);
     fs.writeFileSync(outputPath, badgeSvg);
+    // Also write to the id-based filename as a convenience alias
+    // only if no other tech has already written to it (first-write wins).
+    if (id) {
+      const aliasPath = path.join(themeBadgesDir, `${id}.svg`);
+      if (!fs.existsSync(aliasPath)) {
+        fs.writeFileSync(aliasPath, badgeSvg);
+      }
+    }
     console.log(
-      `\u2705 Successfully generated brand/${id}.svg for ${config.name}`,
+      `\u2705 Successfully generated brand/${outputFilename} for ${config.name}`,
     );
   } catch (error) {
     console.error(`\u274C Failed to generate badge for ${key}:`, error);

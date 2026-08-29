@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="52" height="20" role="img" aria-label="NumPy">
-  <title>NumPy</title>
-  
-  <rect width="52" height="20" fill="#013243" rx="3" />
-  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-    
-    <text x="260" y="140" transform="scale(.1)" font-weight="bold">NumPy</text>
-  </g>
-</svg>

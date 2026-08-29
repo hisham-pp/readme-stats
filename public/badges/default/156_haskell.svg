@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="57" height="20" role="img" aria-label="Haskell">
-  <title>Haskell</title>
-  
-  <rect width="57" height="20" fill="#5D4F85" rx="3" />
-  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-    
-    <text x="285" y="140" transform="scale(.1)" font-weight="bold">Haskell</text>
-  </g>
-</svg>

@@ -3,7 +3,7 @@ export interface BadgeConfig {
   color: string;
   textColor?: string;
   icon?: string;
-  iconPosition?: 'left' | 'right';
+  iconPosition?: "left" | "right";
   iconColor?: string;
   showText?: boolean;
   iconWidth?: number;
@@ -16,14 +16,14 @@ export function generateBadge(config: BadgeConfig): string {
   const {
     name,
     color,
-    textColor = '#fff',
+    textColor = "#fff",
     icon,
-    iconPosition = 'left',
+    iconPosition = "left",
     showText = true,
     iconWidth = 14,
     iconHeight = 14,
     textWidth: customTextWidth,
-    defs = ''
+    defs = "",
   } = config;
 
   // Smarter text width calculation instead of flat avgCharWidth
@@ -43,7 +43,9 @@ export function generateBadge(config: BadgeConfig): string {
   }
 
   const textWidth = showText
-    ? (customTextWidth !== undefined ? customTextWidth : Math.round(calculatedTextWidth))
+    ? customTextWidth !== undefined
+      ? customTextWidth
+      : Math.round(calculatedTextWidth)
     : 0;
   const hasIcon = !!icon;
   const actualIconWidth = hasIcon ? iconWidth : 0;
@@ -51,43 +53,47 @@ export function generateBadge(config: BadgeConfig): string {
   const paddingRight = 6;
   const gap = showText && hasIcon ? 4 : 0;
 
-  const totalWidth = paddingLeft + actualIconWidth + gap + textWidth + paddingRight;
+  const totalWidth =
+    paddingLeft + actualIconWidth + gap + textWidth + paddingRight;
 
-  let iconMarkup = '';
+  let iconMarkup = "";
   let textX = 0;
 
   if (hasIcon) {
-    let renderedIcon = '';
+    let renderedIcon = "";
     const trimmedIcon = icon.trim();
-    if (trimmedIcon.startsWith('<svg')) {
-      renderedIcon = trimmedIcon.replace(
-        /^<svg[^>]*>/i,
-        (match) => {
-          let newTag = match.replace(/\s+(x|y|width|height)="[^"]*"/gi, '');
-          if (config.iconColor) {
-            // Only strip and replace fill if we explicitly want to override it
-            newTag = newTag.replace(/\s+fill="[^"]*"/gi, '');
-            return newTag.replace('<svg', `<svg x="0" y="0" width="${iconWidth}" height="${iconHeight}" fill="${config.iconColor}"`);
-          } else {
-            return newTag.replace('<svg', `<svg x="0" y="0" width="${iconWidth}" height="${iconHeight}"`);
-          }
+    if (trimmedIcon.startsWith("<svg")) {
+      renderedIcon = trimmedIcon.replace(/^<svg[^>]*>/i, (match) => {
+        let newTag = match.replace(/\s+(x|y|width|height)="[^"]*"/gi, "");
+        if (config.iconColor) {
+          // Only strip and replace fill if we explicitly want to override it
+          newTag = newTag.replace(/\s+fill="[^"]*"/gi, "");
+          return newTag.replace(
+            "<svg",
+            `<svg x="0" y="0" width="${iconWidth}" height="${iconHeight}" fill="${config.iconColor}"`,
+          );
+        } else {
+          return newTag.replace(
+            "<svg",
+            `<svg x="0" y="0" width="${iconWidth}" height="${iconHeight}"`,
+          );
         }
-      );
+      });
     } else {
       renderedIcon = `<svg x="0" y="0" width="${iconWidth}" height="${iconHeight}">${icon}</svg>`;
     }
 
-    if (iconPosition === 'left' || !showText) {
+    if (iconPosition === "left" || !showText) {
       const iconX = paddingLeft;
       const iconY = (20 - iconHeight) / 2;
       iconMarkup = `<g transform="translate(${iconX}, ${iconY})">${renderedIcon}</g>`;
 
       const textStartX = paddingLeft + actualIconWidth + gap;
-      const textCenterX = textStartX + (textWidth / 2);
+      const textCenterX = textStartX + textWidth / 2;
       textX = textCenterX * 10;
     } else {
       const textStartX = paddingLeft;
-      const textCenterX = textStartX + (textWidth / 2);
+      const textCenterX = textStartX + textWidth / 2;
       textX = textCenterX * 10;
 
       const iconX = textStartX + textWidth + gap;
@@ -101,9 +107,9 @@ export function generateBadge(config: BadgeConfig): string {
 
   const textMarkup = showText
     ? `<text x="${textX}" y="140" transform="scale(.1)" font-weight="bold">${name}</text>`
-    : '';
+    : "";
 
-  const defsMarkup = defs ? `<defs>${defs}</defs>` : '';
+  const defsMarkup = defs ? `<defs>${defs}</defs>` : "";
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${totalWidth} 20" role="img" aria-label="${name}">
   <title>${name}</title>

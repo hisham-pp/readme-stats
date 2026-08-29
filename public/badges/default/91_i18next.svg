@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="55" height="20" role="img" aria-label="i18next">
-  <title>i18next</title>
-  
-  <rect width="55" height="20" fill="#7986cb" rx="3" />
-  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-    
-    <text x="275" y="140" transform="scale(.1)" font-weight="bold">i18next</text>
-  </g>
-</svg>

@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="43" height="20" role="img" aria-label="Expo">
-  <title>Expo</title>
-  
-  <rect width="43" height="20" fill="#000020" rx="3" />
-  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-    
-    <text x="215" y="140" transform="scale(.1)" font-weight="bold">Expo</text>
-  </g>
-</svg>

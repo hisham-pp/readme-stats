@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="95" height="20" role="img" aria-label="Python venv">
-  <title>Python venv</title>
-  
-  <rect width="95" height="20" fill="#3776AB" rx="3" />
-  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-    
-    <text x="475" y="140" transform="scale(.1)" font-weight="bold">Python venv</text>
-  </g>
-</svg>

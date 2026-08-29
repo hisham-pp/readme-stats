@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" role="img" aria-label="pip">
-  <title>pip</title>
-  
-  <rect width="30" height="20" fill="#3775A9" rx="3" />
-  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-    
-    <text x="150" y="140" transform="scale(.1)" font-weight="bold">pip</text>
-  </g>
-</svg>

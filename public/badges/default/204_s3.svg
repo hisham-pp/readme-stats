@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="81" height="20" role="img" aria-label="Amazon S3">
-  <title>Amazon S3</title>
-  
-  <rect width="81" height="20" fill="#569A31" rx="3" />
-  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-    
-    <text x="405" y="140" transform="scale(.1)" font-weight="bold">Amazon S3</text>
-  </g>
-</svg>

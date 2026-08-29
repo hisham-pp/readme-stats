@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="60" height="20" role="img" aria-label="VITEST">
-  <title>VITEST</title>
-  <defs><linearGradient id="vitest-grad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#1E40AF"/></linearGradient></defs>
-  <rect width="60" height="20" fill="url(#vitest-grad)" rx="3" />
-  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-    
-    <text x="300" y="140" transform="scale(.1)" font-weight="bold">VITEST</text>
-  </g>
-</svg>

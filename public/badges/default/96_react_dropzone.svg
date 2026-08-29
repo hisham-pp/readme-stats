@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="119" height="20" role="img" aria-label="React Dropzone">
-  <title>React Dropzone</title>
-  
-  <rect width="119" height="20" fill="#0055ff" rx="3" />
-  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
-    
-    <text x="595" y="140" transform="scale(.1)" font-weight="bold">React Dropzone</text>
-  </g>
-</svg>
