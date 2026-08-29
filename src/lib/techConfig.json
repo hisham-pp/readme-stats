@@ -1481,7 +1481,8 @@
     "icon": "redux-icon.svg",
     "color": "#512da8",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "iconTheme": "light"
   },
   "ruby": {
     "name": "Ruby",
