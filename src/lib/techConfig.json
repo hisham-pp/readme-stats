@@ -61,7 +61,8 @@
     "showText": true,
     "iconWidth": 16,
     "iconHeight": 16,
-    "id": "03_angular"
+    "id": "03_angular",
+    "iconBgTheme": "light"
   },
   "typescript": {
     "name": "TypeScript",
