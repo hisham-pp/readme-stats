@@ -1,9 +1,28 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# AGENTS
 
-# This is NOT the Next.js you know
+This directory contains the `readme-stats` Next.js project, which generates GitHub profile stats, top-language cards, and themed SVG assets for README usage.
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+## Project conventions
+- Keep changes focused on the feature or fix being requested.
+- Prefer small, targeted edits over broad refactors.
+- Preserve the current structure under `src/app/`, `src/components/`, `src/config/`, `src/lib/`, `src/services/`, and `src/templates/`.
+- Avoid introducing unnecessary dependencies or new patterns for small changes.
+- If you modify icon, badge, or tech metadata, keep the source data and any generated output in sync.
 
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+## App-specific notes
+- This project is configured for pnpm and Next.js.
+- Run commands from this directory: `pnpm install`, `pnpm dev`, `pnpm lint`, and related checks.
+- The public assets and generated bundles are part of the app output; do not break the image-generation pipeline.
+- When changing routes or API behavior, keep the README examples and generated outputs aligned with the reality of the app.
 
-<!-- END:nextjs-agent-rules -->
+## Quality bar
+- Read the relevant file before editing it.
+- Follow the user’s instructions exactly.
+- Validate with the smallest relevant command before finishing.
+- Do not claim success without fresh verification output.
+- If a task is ambiguous, ask clarifying questions instead of guessing.
+
+## General instructions for AI agents
+- Make only the changes required for the task.
+- Keep diffs limited to the relevant files.
+- Summarize the outcome clearly when done.

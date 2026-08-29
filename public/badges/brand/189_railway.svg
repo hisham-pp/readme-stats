@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="75" height="20" role="img" aria-label="Railway">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 20" role="img" aria-label="Railway">
   <title>Railway</title>
   
   <rect width="75" height="20" fill="#0B0D0E" rx="3" />

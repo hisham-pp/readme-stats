@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="75" height="20" role="img" aria-label="Haskell">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 20" role="img" aria-label="Haskell">
   <title>Haskell</title>
   
   <rect width="75" height="20" fill="#5D4F85" rx="3" />

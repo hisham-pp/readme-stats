@@ -105,7 +105,7 @@ export function generateBadge(config: BadgeConfig): string {
 
   const defsMarkup = defs ? `<defs>${defs}</defs>` : '';
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="20" role="img" aria-label="${name}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${totalWidth} 20" role="img" aria-label="${name}">
   <title>${name}</title>
   ${defsMarkup}
   <rect width="${totalWidth}" height="20" fill="${color}" rx="3" />

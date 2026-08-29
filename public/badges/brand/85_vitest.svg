@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="81" height="20" role="img" aria-label="VITEST">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 20" role="img" aria-label="VITEST">
   <title>VITEST</title>
   <defs><linearGradient id="vitest-grad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#1E40AF"/></linearGradient></defs>
   <rect width="81" height="20" fill="url(#vitest-grad)" rx="3" />

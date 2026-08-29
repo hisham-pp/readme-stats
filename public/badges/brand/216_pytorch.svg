@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="85" height="20" role="img" aria-label="PyTorch">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85 20" role="img" aria-label="PyTorch">
   <title>PyTorch</title>
   
   <rect width="85" height="20" fill="#EE4C2C" rx="3" />
