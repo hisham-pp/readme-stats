@@ -1,7 +1,7 @@
 <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
   
   <rect x="0" y="0" width="36" height="36" rx="12" fill="#1b1a22" />
-  <svg x="6" y="6" width="24" height="24" xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 256 256">
+  <svg x="6" y="6" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
 	<path d="M0 0h256v256H0z" fill="none" />
 	<defs>
 		<radialGradient id="SVG0RIKCeDH" cx="33.434%" cy="32.389%" r="64.015%" fx="33.434%" fy="32.389%" gradientTransform="matrix(.5785 .81412 -.81568 .5774 .405 -.135)">
