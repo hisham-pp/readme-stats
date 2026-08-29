@@ -65,8 +65,8 @@ export default function BadgesPage() {
                 {/* Brand Theme */}
                 <div
                   className="flex items-center justify-between w-full h-12 px-4 bg-[#0d1117] rounded border border-zinc-800 group-hover:bg-[#161b22] transition-colors cursor-pointer group/badge"
-                  title="Click to copy: Brand Theme Badge"
-                  onClick={() => copyToClipboard(`${item.id}:brand`)}
+                  title="Click to copy: Brand Badge"
+                  onClick={() => copyToClipboard(item.id)}
                 >
                   <span className="text-[10px] font-medium text-zinc-500 uppercase tracking-wider group-hover/badge:text-zinc-300">
                     Brand
