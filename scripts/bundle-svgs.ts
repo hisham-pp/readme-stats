@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const themes = ["brand", "dark", "light"];
+const themes = ["brand", "dark", "light", "bg"];
 const types = ["icons", "badges"];
 
 const rootDir = path.join(__dirname, "..");

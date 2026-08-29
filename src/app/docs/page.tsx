@@ -111,6 +111,10 @@ export default function DocsPage() {
                       <code className="bg-zinc-800 px-1 py-0.5 rounded">
                         light
                       </code>
+                      ,{" "}
+                      <code className="bg-zinc-800 px-1 py-0.5 rounded">
+                        bg
+                      </code>
                     </td>
                   </tr>
                   <tr>
@@ -119,18 +123,6 @@ export default function DocsPage() {
                     <td className="px-4 py-3">No</td>
                     <td className="px-4 py-3">
                       ViewBox width of the SVG (default: 850)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-3 font-mono text-zinc-300">hasbg</td>
-                    <td className="px-4 py-3">boolean</td>
-                    <td className="px-4 py-3">No</td>
-                    <td className="px-4 py-3">
-                      If{" "}
-                      <code className="bg-zinc-800 px-1 py-0.5 rounded">
-                        true
-                      </code>
-                      , adds a contrasting circle background behind each icon
                     </td>
                   </tr>
                 </tbody>
@@ -371,7 +363,7 @@ export default function DocsPage() {
 <img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=hisham-pp&type=icon&theme=default" alt="Top Languages" />
 
 <!-- Tech Icon Marquee with Backgrounds (Dark Theme) -->
-<img src="https://readme-stats-theta-sepia.vercel.app/api/tech-icon-marquee?techs=docker,kubernetes,aws,linux&theme=dark&hasbg=true" alt="Infrastructure" />
+<img src="https://readme-stats-theta-sepia.vercel.app/api/tech-icon-marquee?techs=docker,kubernetes,aws,linux&theme=bg" alt="Infrastructure" />
 
 <!-- Advanced: Mixing Themes per-icon! -->
 <!-- You can force a specific theme for an individual icon using the syntax \`tech:theme\` -->

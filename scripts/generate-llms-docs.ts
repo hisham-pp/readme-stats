@@ -16,9 +16,8 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 **Description**: Generates an animated SVG marquee of technology icons.
 **Query Parameters**:
 - \`techs\`: (Required) Comma-separated list of technology IDs. See \`/tech-list.txt\` for supported IDs.
-- \`theme\`: (Optional) \`brand\`, \`dark\`, or \`light\`.
+- \`theme\`: (Optional) \`brand\`, \`dark\`, \`light\`, or \`bg\`.
 - \`width\`: (Optional) ViewBox width (default: 850).
-- \`hasbg\`: (Optional) \`true\` or \`false\` to include backgrounds on the icons.
 
 ### 2. Badge Marquee
 **Endpoint**: \`/api/tech-badge-marquee\`

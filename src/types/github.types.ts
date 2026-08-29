@@ -1,5 +1,5 @@
-export const THEMES = ['brand', 'dark', 'light'] as const;
-export type Theme = typeof THEMES[number];
+export const THEMES = ["brand", "dark", "light", "bg"] as const;
+export type Theme = (typeof THEMES)[number];
 
 export interface GitHubStats {
   name: string;

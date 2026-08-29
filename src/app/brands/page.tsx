@@ -1,0 +1,167 @@
+"use client";
+
+import { techStack } from "@/config/techs.config";
+import { useState } from "react";
+
+export default function BrandsPage() {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const brandsList = techStack.filter((t) => {
+    if (!searchQuery) return true;
+    const query = searchQuery.toLowerCase();
+    return (
+      t.name.toLowerCase().includes(query) ||
+      t.id.toLowerCase().includes(query) ||
+      t.tags?.some((tag) => tag.toLowerCase().includes(query))
+    );
+  });
+
+  return (
+    <div className="flex flex-col min-h-screen items-center bg-zinc-900 font-sans p-8">
+      <main className="flex w-full max-w-6xl flex-col mt-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-zinc-800 pb-6 mb-8 gap-4">
+          <div>
+            <h1 className="text-3xl font-bold text-zinc-100">All Brands</h1>
+            <p className="text-sm text-zinc-400 mt-2">
+              Browse all supported brands and their available assets (Icons and
+              Badges).
+            </p>
+          </div>
+          <div className="flex flex-col gap-2 min-w-[250px]">
+            <input
+              type="text"
+              placeholder="Search brands..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="px-4 py-2 bg-zinc-950 border border-zinc-800 rounded-md text-zinc-100 focus:outline-none focus:border-zinc-500 transition-colors w-full"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          {brandsList.map((item) => (
+            <div
+              key={item.id}
+              className="flex flex-col p-6 bg-zinc-950 border border-zinc-800 rounded-xl hover:border-zinc-700 transition-colors shadow-lg"
+            >
+              <div className="flex justify-between items-center mb-6 border-b border-zinc-800 pb-4">
+                <h3 className="text-lg font-bold text-zinc-100 truncate pr-2">
+                  {item.name}
+                </h3>
+                <code className="text-xs text-zinc-500 bg-zinc-900 px-2 py-1 rounded border border-zinc-800">
+                  {item.id}
+                </code>
+              </div>
+
+              <div className="flex flex-col gap-6">
+                {/* Icons Section */}
+                {item.icon && (
+                  <div className="flex flex-col gap-3">
+                    <h4 className="text-xs font-semibold text-zinc-400 uppercase tracking-wider">
+                      Icons
+                    </h4>
+                    <div className="grid grid-cols-4 gap-3">
+                      <div className="flex flex-col items-center gap-2 group">
+                        <div
+                          className="w-full h-14 flex items-center justify-center bg-[#0d1117] rounded border border-zinc-800 group-hover:bg-[#161b22] transition-colors"
+                          title="Brand Theme"
+                        >
+                          <img
+                            src={`/icons/brand/${item.icon}`}
+                            alt={`${item.name} brand icon`}
+                            className="max-h-8 transition-transform group-hover:scale-110"
+                          />
+                        </div>
+                        <span className="text-[10px] font-medium text-zinc-500 uppercase tracking-wider group-hover:text-zinc-300">
+                          Brand
+                        </span>
+                      </div>
+
+                      <div className="flex flex-col items-center gap-2 group">
+                        <div
+                          className="w-full h-14 flex items-center justify-center bg-zinc-100 rounded border border-zinc-300 group-hover:bg-white transition-colors"
+                          title="Dark Theme"
+                        >
+                          <img
+                            src={`/icons/dark/${item.icon}`}
+                            alt={`${item.name} dark icon`}
+                            className="max-h-8 transition-transform group-hover:scale-110"
+                          />
+                        </div>
+                        <span className="text-[10px] font-medium text-zinc-500 uppercase tracking-wider group-hover:text-zinc-300">
+                          Dark
+                        </span>
+                      </div>
+
+                      <div className="flex flex-col items-center gap-2 group">
+                        <div
+                          className="w-full h-14 flex items-center justify-center bg-zinc-950 rounded border border-black group-hover:bg-zinc-900 transition-colors"
+                          title="Light Theme"
+                        >
+                          <img
+                            src={`/icons/light/${item.icon}`}
+                            alt={`${item.name} light icon`}
+                            className="max-h-8 transition-transform group-hover:scale-110"
+                          />
+                        </div>
+                        <span className="text-[10px] font-medium text-zinc-500 uppercase tracking-wider group-hover:text-zinc-300">
+                          Light
+                        </span>
+                      </div>
+
+                      <div className="flex flex-col items-center gap-2 group">
+                        <div
+                          className="w-full h-14 flex items-center justify-center bg-[#0d1117] rounded border border-zinc-800 group-hover:bg-[#161b22] transition-colors"
+                          title="BG Theme"
+                        >
+                          <img
+                            src={`/icons/bg/${item.icon}`}
+                            alt={`${item.name} bg icon`}
+                            className="max-h-8 transition-transform group-hover:scale-110"
+                          />
+                        </div>
+                        <span className="text-[10px] font-medium text-zinc-500 uppercase tracking-wider group-hover:text-zinc-300">
+                          BG
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Badges Section */}
+                {item.badge && (
+                  <div className="flex flex-col gap-3">
+                    <h4 className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mt-2">
+                      Badges
+                    </h4>
+                    <div className="grid grid-cols-1 gap-3">
+                      <div
+                        className="flex items-center justify-between w-full h-12 px-4 bg-[#0d1117] rounded border border-zinc-800 group-hover:bg-[#161b22] transition-colors group"
+                        title="Brand Theme Badge"
+                      >
+                        <span className="text-[10px] font-medium text-zinc-500 uppercase tracking-wider group-hover:text-zinc-300">
+                          Brand
+                        </span>
+                        <img
+                          src={`/badges/brand/${item.badge}`}
+                          alt={`${item.name} brand badge`}
+                          className="max-h-6 transition-transform group-hover:scale-105"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {!item.icon && !item.badge && (
+                  <div className="text-sm text-zinc-600 italic text-center py-4">
+                    No visual assets mapped yet.
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+}

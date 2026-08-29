@@ -15,7 +15,6 @@ export default function BuilderPage() {
     { value: string; label: string; icon?: string }[]
   >([]);
   const [width, setWidth] = useState("850");
-  const [hasBg, setHasBg] = useState(false);
   const [username, setUsername] = useState("hisham-pp");
   const [topLangsType, setTopLangsType] = useState("default");
 
@@ -68,7 +67,6 @@ export default function BuilderPage() {
       if (apiType !== "tech-badge-marquee" && theme !== "brand")
         params.set("theme", theme);
       if (width && width !== "850") params.set("width", width);
-      if (apiType === "tech-icon-marquee" && hasBg) params.set("hasbg", "true");
     } else if (apiType === "top-langs") {
       if (username) params.set("username", username);
       if (theme !== "brand") params.set("theme", theme);
@@ -80,16 +78,7 @@ export default function BuilderPage() {
 
     const qs = params.toString();
     return `${baseUrl}/api/${apiType}${qs ? `?${qs}` : ""}`;
-  }, [
-    apiType,
-    theme,
-    selectedTechs,
-    width,
-    hasBg,
-    username,
-    topLangsType,
-    baseUrl,
-  ]);
+  }, [apiType, theme, selectedTechs, width, username, topLangsType, baseUrl]);
 
   const markdownCode = `[![Readme Stats](${generatedUrl})](${generatedUrl})`;
   const htmlCode = `<img src="${generatedUrl}" alt="Readme Stats" />`;
@@ -174,24 +163,6 @@ export default function BuilderPage() {
                   className="px-3 py-2 bg-zinc-900 border border-zinc-800 rounded-md text-zinc-100 focus:outline-none focus:border-zinc-500"
                 />
               </div>
-
-              {apiType === "tech-icon-marquee" && (
-                <div className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    id="hasBg"
-                    checked={hasBg}
-                    onChange={(e) => setHasBg(e.target.checked)}
-                    className="w-4 h-4 rounded bg-zinc-900 border-zinc-800"
-                  />
-                  <label
-                    htmlFor="hasBg"
-                    className="text-sm font-medium text-zinc-300"
-                  >
-                    Include Icon Backgrounds
-                  </label>
-                </div>
-              )}
             </>
           )}
 

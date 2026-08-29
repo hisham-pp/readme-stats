@@ -10,6 +10,7 @@
     "start": "next start",
     "lint": "eslint",
     "badges:generate": "npx tsx scripts/generate-badges.ts",
+    "icons:generate": "npx tsx scripts/generate-icons.ts",
     "bundle:svgs": "npx tsx scripts/bundle-svgs.ts",
     "postinstall": "lefthook install"
   },

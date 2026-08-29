@@ -5,15 +5,15 @@ import { useState } from "react";
 
 export default function IconsPage() {
   const [searchQuery, setSearchQuery] = useState("");
-  
-  const iconsList = techStack.filter(t => {
+
+  const iconsList = techStack.filter((t) => {
     if (!t.icon) return false;
     if (!searchQuery) return true;
     const query = searchQuery.toLowerCase();
     return (
-      t.name.toLowerCase().includes(query) || 
+      t.name.toLowerCase().includes(query) ||
       t.id.toLowerCase().includes(query) ||
-      t.tags?.some(tag => tag.toLowerCase().includes(query))
+      t.tags?.some((tag) => tag.toLowerCase().includes(query))
     );
   });
 
@@ -24,7 +24,8 @@ export default function IconsPage() {
           <div>
             <h1 className="text-3xl font-bold text-zinc-100">All Icons</h1>
             <p className="text-sm text-zinc-400 mt-2">
-              Browse all available SVGs. Use the <code>?techs=...</code> parameter to load these directly in the API.
+              Browse all available SVGs. Use the <code>?techs=...</code>{" "}
+              parameter to load these directly in the API.
             </p>
           </div>
           <div className="flex flex-col gap-2 min-w-[250px]">
@@ -40,47 +41,86 @@ export default function IconsPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {iconsList.map((item) => (
-            <div key={item.id} className="flex flex-col p-5 bg-zinc-950 border border-zinc-800 rounded-xl hover:border-zinc-700 transition-colors group shadow-lg">
+            <div
+              key={item.id}
+              className="flex flex-col p-5 bg-zinc-950 border border-zinc-800 rounded-xl hover:border-zinc-700 transition-colors group shadow-lg"
+            >
               <div className="flex justify-between items-center mb-4">
-                <h3 className="text-sm font-semibold text-zinc-200 truncate pr-2">{item.name}</h3>
-                <code className="text-[10px] text-zinc-500 bg-zinc-900 px-1.5 py-0.5 rounded border border-zinc-800">{item.id}</code>
+                <h3 className="text-sm font-semibold text-zinc-200 truncate pr-2">
+                  {item.name}
+                </h3>
+                <code className="text-[10px] text-zinc-500 bg-zinc-900 px-1.5 py-0.5 rounded border border-zinc-800">
+                  {item.id}
+                </code>
               </div>
-              
-              <div className="grid grid-cols-3 gap-3">
+
+              <div className="grid grid-cols-4 gap-3">
                 {/* Brand Theme */}
                 <div className="flex flex-col items-center gap-2">
-                  <div className="w-full h-14 flex items-center justify-center bg-[#0d1117] rounded border border-zinc-800 group-hover:bg-[#161b22] transition-colors" title="Brand Theme">
+                  <div
+                    className="w-full h-14 flex items-center justify-center bg-[#0d1117] rounded border border-zinc-800 group-hover:bg-[#161b22] transition-colors"
+                    title="Brand Theme"
+                  >
                     <img
                       src={`/icons/brand/${item.icon}`}
                       alt={`${item.name} brand`}
                       className="max-h-8 transition-transform group-hover:scale-110"
                     />
                   </div>
-                  <span className="text-[9px] font-medium text-zinc-500 uppercase tracking-wider">Brand</span>
+                  <span className="text-[9px] font-medium text-zinc-500 uppercase tracking-wider">
+                    Brand
+                  </span>
                 </div>
-                
+
                 {/* Dark Theme */}
                 <div className="flex flex-col items-center gap-2">
-                  <div className="w-full h-14 flex items-center justify-center bg-zinc-100 rounded border border-zinc-300 group-hover:bg-white transition-colors" title="Dark Theme (Best on Light Backgrounds)">
+                  <div
+                    className="w-full h-14 flex items-center justify-center bg-zinc-100 rounded border border-zinc-300 group-hover:bg-white transition-colors"
+                    title="Dark Theme (Best on Light Backgrounds)"
+                  >
                     <img
                       src={`/icons/dark/${item.icon}`}
                       alt={`${item.name} dark`}
                       className="max-h-8 transition-transform group-hover:scale-110"
                     />
                   </div>
-                  <span className="text-[9px] font-medium text-zinc-500 uppercase tracking-wider">Dark</span>
+                  <span className="text-[9px] font-medium text-zinc-500 uppercase tracking-wider">
+                    Dark
+                  </span>
                 </div>
 
                 {/* Light Theme */}
                 <div className="flex flex-col items-center gap-2">
-                  <div className="w-full h-14 flex items-center justify-center bg-zinc-950 rounded border border-black group-hover:bg-zinc-900 transition-colors" title="Light Theme (Best on Dark Backgrounds)">
+                  <div
+                    className="w-full h-14 flex items-center justify-center bg-zinc-950 rounded border border-black group-hover:bg-zinc-900 transition-colors"
+                    title="Light Theme (Best on Dark Backgrounds)"
+                  >
                     <img
                       src={`/icons/light/${item.icon}`}
                       alt={`${item.name} light`}
                       className="max-h-8 transition-transform group-hover:scale-110"
                     />
                   </div>
-                  <span className="text-[9px] font-medium text-zinc-500 uppercase tracking-wider">Light</span>
+                  <span className="text-[9px] font-medium text-zinc-500 uppercase tracking-wider">
+                    Light
+                  </span>
+                </div>
+
+                {/* BG Theme */}
+                <div className="flex flex-col items-center gap-2">
+                  <div
+                    className="w-full h-14 flex items-center justify-center bg-[#0d1117] rounded border border-zinc-800 group-hover:bg-[#161b22] transition-colors"
+                    title="BG Theme"
+                  >
+                    <img
+                      src={`/icons/bg/${item.icon}`}
+                      alt={`${item.name} bg`}
+                      className="max-h-8 transition-transform group-hover:scale-110"
+                    />
+                  </div>
+                  <span className="text-[9px] font-medium text-zinc-500 uppercase tracking-wider">
+                    BG
+                  </span>
                 </div>
               </div>
             </div>

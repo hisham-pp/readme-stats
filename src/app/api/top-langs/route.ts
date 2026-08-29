@@ -8,12 +8,14 @@ import { THEMES } from "@/types/github.types";
 import { iconsBrandBundle } from "@/lib/bundles/icons-brand.bundle";
 import { iconsDarkBundle } from "@/lib/bundles/icons-dark.bundle";
 import { iconsLightBundle } from "@/lib/bundles/icons-light.bundle";
+import { iconsBgBundle } from "@/lib/bundles/icons-bg.bundle";
 import { badgesBrandBundle } from "@/lib/bundles/badges-brand.bundle";
 
 const iconBundles: Record<string, Record<string, string>> = {
   brand: iconsBrandBundle,
   dark: iconsDarkBundle,
   light: iconsLightBundle,
+  bg: iconsBgBundle,
 };
 
 const badgeBundles: Record<string, Record<string, string>> = {
