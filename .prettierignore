@@ -1,0 +1,2 @@
+# Ignore generated SVG/badge bundle files
+src/lib/bundles/**

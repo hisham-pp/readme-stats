@@ -13,7 +13,7 @@ const eslintConfig = defineConfig([
       "out/**",
       "build/**",
       "next-env.d.ts",
-      "*bundles/**"
+      "src/lib/bundles/**"
     ],
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
