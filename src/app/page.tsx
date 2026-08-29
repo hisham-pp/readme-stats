@@ -12,8 +12,8 @@ export default function Home() {
           </h1>
           <p className="text-sm text-zinc-400 max-w-xl mx-auto mb-6">
             These SVGs are generated entirely on the server via the <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">/api/tech-badge-marquee</code> and <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">/api/tech-icon-marquee</code> endpoints. 
-            When deployed to Vercel, you can use the absolute URL in your GitHub <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">README.md</code>.
-            Use the <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">?techs=</code> query parameter to select specific technologies.
+            You can use the absolute URL directly in your GitHub <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">README.md</code> files.
+            Use the <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">?techs=</code> query parameter to select specific technologies, or head over to the <strong><a href="/builder" className="text-zinc-200 underline">API Builder</a></strong> to visually configure your URLs!
           </p>
           <a
             href="https://github.com/hisham-pp/readme-stats"
