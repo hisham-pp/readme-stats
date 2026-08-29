@@ -22,7 +22,7 @@
   },
   "react_js": {
     "name": "React.js",
-    "color": "#20232a",
+    "color": "native",
     "iconPosition": "left",
     "icon": "react-icon.svg",
     "showText": true,
