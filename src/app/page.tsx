@@ -1,5 +1,4 @@
-import { techMap } from "@/config/techs.config";
-import { techGroups } from "@/config/techGroups.config";
+import { techMap, techGroups } from "@/config/techs.config";
 
 
 
