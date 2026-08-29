@@ -22,7 +22,8 @@
   },
   "react_js": {
     "name": "React.js",
-    "color": "native",
+    "color": "#20232a",
+    "iconBgColor": "#0d1117",
     "iconPosition": "left",
     "icon": "react-icon.svg",
     "showText": true,
@@ -192,6 +193,7 @@
   "react_select": {
     "name": "React Select",
     "color": "#2684ff",
+    "iconBgColor": "#0d1117",
     "iconPosition": "left",
     "icon": "react-icon.svg",
     "showText": true,
@@ -224,6 +226,7 @@
   "react_datepicker": {
     "name": "React DatePicker",
     "color": "#007ec6",
+    "iconBgColor": "#0d1117",
     "iconPosition": "left",
     "icon": "react-icon.svg",
     "showText": true,

@@ -83,9 +83,18 @@ for (const [key, config] of Object.entries(techConfig)) {
   ${innerIcon}
 </svg>`;
 
-    const outputPath = path.join(iconsBgDir, icon);
+    // Use the tech key as the output filename to avoid collisions when
+    // multiple techs share the same source icon (e.g. react-icon.svg).
+    const outputFilename = `${key}-icon.svg`;
+    const outputPath = path.join(iconsBgDir, outputFilename);
     fs.writeFileSync(outputPath, finalSvgContent);
-    console.log(`\u2705 Successfully generated bg/${icon} for ${config.name}`);
+    // Also write to the original icon filename as a convenience alias
+    // only if no other tech has already written to it (first-write wins).
+    const aliasPath = path.join(iconsBgDir, icon);
+    if (!fs.existsSync(aliasPath)) {
+      fs.writeFileSync(aliasPath, finalSvgContent);
+    }
+    console.log(`\u2705 Successfully generated bg/${outputFilename} for ${config.name}`);
   } catch (error) {
     console.error(`\u274C Failed to generate bg icon for ${key}:`, error);
   }
