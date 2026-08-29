@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "pnpm run bundle:svgs && next build",
+    "prebuild": "pnpm run badges:generate && pnpm run bundle:svgs",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "badges:generate": "npx tsx scripts/generate-badges.ts",
