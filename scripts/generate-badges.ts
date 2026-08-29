@@ -17,29 +17,43 @@ for (const [key, config] of Object.entries(techConfig)) {
       console.warn(`Skipping ${key}: No 'id' provided in config.`);
       continue;
     }
-
-    // Read the raw SVG icon if provided
-    let rawIconSvg = '';
-    if (icon) {
-      const iconsDir = path.join(__dirname, '../public/icons');
-      const iconPath = path.join(iconsDir, icon);
-      if (fs.existsSync(iconPath)) {
-        rawIconSvg = fs.readFileSync(iconPath, 'utf8');
-      } else {
-        console.warn(`Warning: Icon file ${iconPath} not found for ${key}.`);
+    const themes = ['default', 'dark', 'light'];
+    
+    for (const theme of themes) {
+      // Read the raw SVG icon if provided
+      let rawIconSvg = '';
+      if (icon) {
+        const iconsDir = path.join(__dirname, `../public/icons/${theme}`);
+        const iconPath = path.join(iconsDir, icon);
+        if (fs.existsSync(iconPath)) {
+          rawIconSvg = fs.readFileSync(iconPath, 'utf8');
+        } else {
+          // fallback to default if theme icon not found
+          const defaultIconPath = path.join(__dirname, `../public/icons/default/${icon}`);
+          if (fs.existsSync(defaultIconPath)) {
+            rawIconSvg = fs.readFileSync(defaultIconPath, 'utf8');
+          } else {
+             console.warn(`Warning: Icon file ${icon} not found for ${key}.`);
+          }
+        }
       }
+
+      // Generate the full badge SVG
+      const badgeSvg = generateBadge({
+        ...config,
+        icon: rawIconSvg || undefined
+      });
+
+      // Write the output file
+      const themeBadgesDir = path.join(badgesDir, theme);
+      if (!fs.existsSync(themeBadgesDir)) {
+        fs.mkdirSync(themeBadgesDir, { recursive: true });
+      }
+      
+      const outputPath = path.join(themeBadgesDir, `${id}.svg`);
+      fs.writeFileSync(outputPath, badgeSvg);
+      console.log(`\u2705 Successfully generated ${theme}/${id}.svg for ${config.name}`);
     }
-
-    // Generate the full badge SVG
-    const badgeSvg = generateBadge({
-      ...config,
-      icon: rawIconSvg || undefined
-    });
-
-    // Write the output file
-    const outputPath = path.join(badgesDir, `${id}.svg`);
-    fs.writeFileSync(outputPath, badgeSvg);
-    console.log(`\u2705 Successfully generated ${id}.svg for ${config.name}`);
   } catch (error) {
     console.error(`\u274C Failed to generate badge for ${key}:`, error);
   }

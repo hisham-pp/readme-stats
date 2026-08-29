@@ -1,16 +1,30 @@
 import { GitHubStats } from '@/types/github.types';
 
 export function generateStatsSvg(stats: GitHubStats) {
-  const { name, totalStars, totalCommits, totalPRs, totalIssues, rank } = stats;
+  const { name, totalStars, totalCommits, totalPRs, totalIssues, rank, theme } = stats;
+
+  let bg = '#0D1117';
+  let header = '#58A6FF';
+  let stat = '#C9D1D9';
+  
+  if (theme === 'light') {
+    bg = '#FFFFFF';
+    header = '#0969DA';
+    stat = '#24292F';
+  } else if (theme === 'default') {
+    bg = '#0D1117';
+    header = '#58A6FF';
+    stat = '#C9D1D9';
+  }
 
   return `
     <svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">
       <style>
-        .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #58A6FF; }
-        .stat { font: 400 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #C9D1D9; }
-        .icon { fill: #58A6FF; }
+        .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${header}; }
+        .stat { font: 400 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${stat}; }
+        .icon { fill: ${header}; }
       </style>
-      <rect width="495" height="195" rx="4.5" fill="#0D1117" stroke="#0D1117" />
+      <rect width="495" height="195" rx="4.5" fill="${bg}" stroke="${bg}" />
       <text x="25" y="35" class="header">${name}'s GitHub Stats</text>
       
       <!-- Total Stars -->
@@ -51,8 +65,8 @@ export function generateStatsSvg(stats: GitHubStats) {
       
       <!-- Rank -->
       <g transform="translate(400, 75)">
-        <circle cx="35" cy="35" r="40" fill="none" stroke="#58A6FF" stroke-width="4"/>
-        <text x="35" y="45" font-size="28" font-family="'Segoe UI', Ubuntu, Sans-Serif" font-weight="700" fill="#58A6FF" text-anchor="middle">${rank}</text>
+        <circle cx="35" cy="35" r="40" fill="none" stroke="${header}" stroke-width="4"/>
+        <text x="35" y="45" font-size="28" font-family="'Segoe UI', Ubuntu, Sans-Serif" font-weight="700" fill="${header}" text-anchor="middle">${rank}</text>
       </g>
     </svg>
   `;

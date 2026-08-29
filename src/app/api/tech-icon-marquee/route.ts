@@ -4,15 +4,20 @@ import path from 'path';
 import { techMap } from '@/config/techs.config';
 import { generateMarqueeSvg } from '@/templates/marquee.template';
 import { MARQUEE_CACHE_CONTROL } from '@/config/constants';
+import { THEMES } from '@/types/github.types';
+
+import { iconsDefaultBundle } from '@/lib/bundles/icons-default.bundle';
+import { iconsDarkBundle } from '@/lib/bundles/icons-dark.bundle';
+import { iconsLightBundle } from '@/lib/bundles/icons-light.bundle';
+
+const bundles: Record<string, Record<string, string>> = {
+  default: iconsDefaultBundle,
+  dark: iconsDarkBundle,
+  light: iconsLightBundle,
+};
 
 export async function GET(request: NextRequest) {
   try {
-    const iconsDir = path.join(process.cwd(), 'public', 'icons');
-    
-    if (!fs.existsSync(iconsDir)) {
-      return new NextResponse('Icons not found', { status: 404 });
-    }
-
     const { searchParams } = new URL(request.url);
     const techsParam = searchParams.get('techs');
     const widthParam = searchParams.get('width');
@@ -22,11 +27,24 @@ export async function GET(request: NextRequest) {
     const configPath = path.join(process.cwd(), 'src', 'lib', 'techConfig.json');
     const techConfig = fs.existsSync(configPath) ? JSON.parse(fs.readFileSync(configPath, 'utf8')) : {};
 
-    let files: { file: string, color: string, defs?: string }[] = [];
+    let files: { file: string, color: string, defs?: string, theme: string }[] = [];
+    
+    // Determine global theme from URL query, fallback to default
+    const globalThemeQuery = searchParams.get('theme') as any;
+    const globalTheme = THEMES.includes(globalThemeQuery) ? globalThemeQuery : 'default';
+
     if (techsParam) {
       const requestedTechs = techsParam.split(',').map(t => t.trim().toLowerCase());
       
-      files = requestedTechs.map(tech => {
+      files = requestedTechs.map(techStr => {
+        let tech = techStr;
+        let themeSuffix = '';
+        if (techStr.includes(':')) {
+           const parts = techStr.split(':');
+           tech = parts[0];
+           themeSuffix = parts[1];
+        }
+
         const item = techMap[tech as keyof typeof techMap];
         if (!item || !item.icon) return null;
         
@@ -41,8 +59,13 @@ export async function GET(request: NextRequest) {
           }
         }
         
-        return { file: item.icon, color, defs };
-      }).filter(Boolean) as { file: string, color: string, defs?: string }[];
+        let theme = globalTheme;
+        if (themeSuffix && THEMES.includes(themeSuffix as any)) {
+          theme = themeSuffix;
+        }
+
+        return { file: item.icon, color, defs, theme };
+      }).filter(Boolean) as { file: string, color: string, defs?: string, theme: string }[];
     } else {
       files = Object.values(techMap)
         .filter(tech => tech.icon)
@@ -57,7 +80,7 @@ export async function GET(request: NextRequest) {
               defs = conf.defs || '';
             }
           }
-          return { file: tech.icon, color, defs };
+          return { file: tech.icon, color, defs, theme: globalTheme };
         }).sort((a, b) => a.file.localeCompare(b.file));
     }
 
@@ -70,8 +93,13 @@ export async function GET(request: NextRequest) {
     // First, calculate total width and prepare inner SVG tags
     let allDefs = '';
     const iconElements = files.map(item => {
-      const filePath = path.join(iconsDir, item.file);
-      const svgContent = fs.readFileSync(filePath, 'utf8');
+      const bundle = bundles[item.theme] || bundles.default;
+      const svgContent = bundle[item.file];
+      
+      if (!svgContent) {
+         console.warn(`Missing SVG for ${item.file} in theme ${item.theme}`);
+         return null;
+      }
       
       // Extract width from the SVG tag or viewBox
       let iconWidth = targetHeight; // Default to 1:1 aspect ratio if no dimensions found
@@ -131,7 +159,7 @@ export async function GET(request: NextRequest) {
         svgContent: finalSvgContent,
         width: containerWidth
       };
-    });
+    }).filter(Boolean) as any[];
 
     const viewBoxWidth = widthParam ? parseInt(widthParam, 10) || 850 : 850;
 

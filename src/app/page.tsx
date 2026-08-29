@@ -96,7 +96,7 @@ export default function Home() {
                     return (
                       <div key={tech} className="flex flex-col items-center justify-center p-3 bg-zinc-900 border border-zinc-800 rounded-lg hover:border-zinc-700 transition-colors">
                         <div className="h-8 flex items-center justify-center mb-2">
-                          <img src={`/badges/${techData.badge}`} alt={tech} className="max-h-full" />
+                          <img src={`/badges/default/${techData.badge}`} alt={tech} className="max-h-full" />
                         </div>
                         <code className="text-[10px] text-zinc-400 bg-zinc-950 border border-zinc-800 px-1.5 py-0.5 rounded truncate max-w-full">
                           {tech}
