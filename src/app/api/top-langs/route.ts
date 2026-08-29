@@ -9,8 +9,6 @@ import { iconsBrandBundle } from "@/lib/bundles/icons-brand.bundle";
 import { iconsDarkBundle } from "@/lib/bundles/icons-dark.bundle";
 import { iconsLightBundle } from "@/lib/bundles/icons-light.bundle";
 import { badgesBrandBundle } from "@/lib/bundles/badges-brand.bundle";
-import { badgesDarkBundle } from "@/lib/bundles/badges-dark.bundle";
-import { badgesLightBundle } from "@/lib/bundles/badges-light.bundle";
 
 const iconBundles: Record<string, Record<string, string>> = {
   brand: iconsBrandBundle,
@@ -20,8 +18,6 @@ const iconBundles: Record<string, Record<string, string>> = {
 
 const badgeBundles: Record<string, Record<string, string>> = {
   brand: badgesBrandBundle,
-  dark: badgesDarkBundle,
-  light: badgesLightBundle,
 };
 
 export async function GET(request: NextRequest) {
@@ -59,7 +55,7 @@ export async function GET(request: NextRequest) {
                 noDims = noDims.replace(/<svg([^>]*)height="[^"]*"/, "<svg$1");
                 embeddedSvg = noDims;
               }
-            } catch (e) {}
+            } catch {}
           }
         } else if (type === "icon" || type === "treemap_icon") {
           const iconKey = techMap[lang.techKey].icon;
@@ -76,7 +72,7 @@ export async function GET(request: NextRequest) {
                 noDims = noDims.replace(/<svg([^>]*)height="[^"]*"/, "<svg$1");
                 embeddedSvg = noDims;
               }
-            } catch (e) {}
+            } catch {}
           }
         }
       }

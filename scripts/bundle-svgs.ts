@@ -15,7 +15,9 @@ if (!fs.existsSync(bundlesDir)) {
 console.log("Generating SVG bundles...");
 
 types.forEach((type) => {
-  themes.forEach((theme) => {
+  const currentThemes = type === "badges" ? ["brand"] : themes;
+
+  currentThemes.forEach((theme) => {
     const inputDir = path.join(publicDir, type, theme);
     const bundleName = `${type}${theme.charAt(0).toUpperCase() + theme.slice(1)}Bundle`;
     const outputFile = path.join(bundlesDir, `${type}-${theme}.bundle.ts`);

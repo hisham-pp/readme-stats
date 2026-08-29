@@ -1,4 +1,3 @@
- 
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
@@ -66,7 +65,8 @@ export default function BuilderPage() {
       if (selectedTechs.length > 0) {
         params.set("techs", selectedTechs.map((t) => t.value).join(","));
       }
-      if (theme !== "brand") params.set("theme", theme);
+      if (apiType !== "tech-badge-marquee" && theme !== "brand")
+        params.set("theme", theme);
       if (width && width !== "850") params.set("width", width);
       if (apiType === "tech-icon-marquee" && hasBg) params.set("hasbg", "true");
     } else if (apiType === "top-langs") {
@@ -124,22 +124,24 @@ export default function BuilderPage() {
             </select>
           </div>
 
-          <div className="flex flex-col gap-2">
-            <label className="text-xs font-semibold text-zinc-300 uppercase tracking-wide">
-              Theme
-            </label>
-            <select
-              value={theme}
-              onChange={(e) => setTheme(e.target.value as Theme)}
-              className="px-3 py-2 bg-zinc-900 border border-zinc-800 rounded-md text-zinc-100 focus:outline-none focus:border-zinc-500"
-            >
-              {THEMES.map((t) => (
-                <option key={t} value={t}>
-                  {t.charAt(0).toUpperCase() + t.slice(1)}
-                </option>
-              ))}
-            </select>
-          </div>
+          {apiType !== "tech-badge-marquee" && (
+            <div className="flex flex-col gap-2">
+              <label className="text-xs font-semibold text-zinc-300 uppercase tracking-wide">
+                Theme
+              </label>
+              <select
+                value={theme}
+                onChange={(e) => setTheme(e.target.value as Theme)}
+                className="px-3 py-2 bg-zinc-900 border border-zinc-800 rounded-md text-zinc-100 focus:outline-none focus:border-zinc-500"
+              >
+                {THEMES.map((t) => (
+                  <option key={t} value={t}>
+                    {t.charAt(0).toUpperCase() + t.slice(1)}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
 
           {(apiType === "tech-icon-marquee" ||
             apiType === "tech-badge-marquee") && (

@@ -2,16 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { techMap } from "@/config/techs.config";
 import { generateMarqueeSvg } from "@/templates/marquee.template";
 import { MARQUEE_CACHE_CONTROL } from "@/config/constants";
-import { THEMES } from "@/types/github.types";
-
 import { badgesBrandBundle } from "@/lib/bundles/badges-brand.bundle";
-import { badgesDarkBundle } from "@/lib/bundles/badges-dark.bundle";
-import { badgesLightBundle } from "@/lib/bundles/badges-light.bundle";
 
 const bundles: Record<string, Record<string, string>> = {
   brand: badgesBrandBundle,
-  dark: badgesDarkBundle,
-  light: badgesLightBundle,
 };
 
 export async function GET(request: NextRequest) {
@@ -20,13 +14,7 @@ export async function GET(request: NextRequest) {
     const techsParam = searchParams.get("techs");
     const widthParam = searchParams.get("width");
 
-    // Determine global theme from URL query, fallback to brand
-    const globalThemeQuery = searchParams.get("theme");
-    const globalTheme = (
-      THEMES.includes(globalThemeQuery as any) ? globalThemeQuery : "brand"
-    ) as string;
-
-    let files: { file: string; theme: string }[] = [];
+    let files: { file: string }[] = [];
     if (techsParam) {
       const requestedTechs = techsParam
         .split(",")
@@ -34,30 +22,24 @@ export async function GET(request: NextRequest) {
       files = requestedTechs
         .map((techStr) => {
           let tech = techStr;
-          let themeSuffix = "";
+          // Ignore theme suffix if provided
           if (techStr.includes(":")) {
             const parts = techStr.split(":");
             tech = parts[0];
-            themeSuffix = parts[1];
           }
 
           const badgeFile = techMap[tech as keyof typeof techMap]?.badge;
           if (!badgeFile) return null;
 
-          let theme = globalTheme;
-          if (themeSuffix && THEMES.includes(themeSuffix as any)) {
-            theme = themeSuffix;
-          }
-
-          return { file: badgeFile, theme };
+          return { file: badgeFile };
         })
-        .filter(Boolean) as { file: string; theme: string }[];
+        .filter(Boolean) as { file: string }[];
     } else {
       files = Object.values(techMap)
         .map((tech) => tech.badge)
         .filter(Boolean)
         .sort()
-        .map((file) => ({ file: file as string, theme: globalTheme }));
+        .map((file) => ({ file: file as string }));
     }
 
     if (files.length === 0) {
@@ -66,7 +48,7 @@ export async function GET(request: NextRequest) {
 
     const badgeElements = files
       .map((item) => {
-        const bundle = bundles[item.theme] || bundles.brand;
+        const bundle = bundles.brand;
         const rawContent = bundle[item.file];
 
         let content = "";
@@ -83,10 +65,10 @@ export async function GET(request: NextRequest) {
             noDims = noDims.replace(/<svg([^>]*)height="[^"]*"/, "<svg$1");
             content = noDims;
           } else {
-            console.warn(`Missing SVG for ${item.file} in theme ${item.theme}`);
+            console.warn(`Missing SVG for ${item.file} in theme brand`);
             return null;
           }
-        } catch (_e) {
+        } catch {
           // ignore
         }
 
