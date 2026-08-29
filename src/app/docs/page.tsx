@@ -103,14 +103,9 @@ export default function DocsPage() {
                     <td className="px-4 py-3 font-mono text-zinc-300">techs</td>
                     <td className="px-4 py-3">string</td>
                     <td className="px-4 py-3 text-red-400">Yes</td>
-                    <td className="px-4 py-3">Comma-separated list of tech IDs (e.g. <code className="bg-zinc-800 px-1 py-0.5 rounded">react,nextjs,typescript</code>). <br/><span className="text-zinc-500 mt-1 block">Advanced: Append <code className="bg-zinc-800 px-1 rounded text-zinc-400">:theme</code> to force a theme (e.g. <code className="bg-zinc-800 px-1 rounded text-zinc-400">react:dark</code>).</span></td>
+                    <td className="px-4 py-3">Comma-separated list of tech IDs (e.g. <code className="bg-zinc-800 px-1 py-0.5 rounded">react,nextjs,typescript</code>).</td>
                   </tr>
-                  <tr>
-                    <td className="px-4 py-3 font-mono text-zinc-300">theme</td>
-                    <td className="px-4 py-3">string</td>
-                    <td className="px-4 py-3">No</td>
-                    <td className="px-4 py-3">Color theme. Options: <code className="bg-zinc-800 px-1 py-0.5 rounded">default</code>, <code className="bg-zinc-800 px-1 py-0.5 rounded">dark</code>, <code className="bg-zinc-800 px-1 py-0.5 rounded">light</code></td>
-                  </tr>
+
                   <tr>
                     <td className="px-4 py-3 font-mono text-zinc-300">width</td>
                     <td className="px-4 py-3">number</td>
@@ -215,8 +210,8 @@ export default function DocsPage() {
   <img src="https://readme-stats-theta-sepia.vercel.app/api/stats?username=hisham-pp&theme=dark" alt="GitHub Stats" />
 </a>
 
-<!-- Tech Badge Marquee (Light Theme) -->
-<img src="https://readme-stats-theta-sepia.vercel.app/api/tech-badge-marquee?techs=react,nextjs,typescript,tailwindcss,nodejs&theme=light" alt="Tech Stack" />
+<!-- Tech Badge Marquee -->
+<img src="https://readme-stats-theta-sepia.vercel.app/api/tech-badge-marquee?techs=react,nextjs,typescript,tailwindcss,nodejs" alt="Tech Stack" />
 
 <!-- Top Languages with Custom Icons (Default Theme) -->
 <img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=hisham-pp&type=icon&theme=default" alt="Top Languages" />

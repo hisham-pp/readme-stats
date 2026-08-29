@@ -25,7 +25,6 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 **Description**: Generates an animated SVG marquee of technology badges.
 **Query Parameters**:
 - \`techs\`: (Required) Comma-separated list of technology IDs. See \`/tech-list.txt\` for supported IDs.
-- \`theme\`: (Optional) \`brand\`, \`dark\`, or \`light\`.
 - \`width\`: (Optional) ViewBox width (default: 850).
 
 ### 3. Top Languages
@@ -45,7 +44,7 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 
 ## Markdown Usage Example
 \`\`\`markdown
-[![Tech Stack](https://<domain>/api/tech-badge-marquee?techs=react,nextjs,typescript,tailwindcss&theme=dark)](https://<domain>)
+[![Tech Stack](https://<domain>/api/tech-badge-marquee?techs=react,nextjs,typescript,tailwindcss)](https://<domain>)
 \`\`\`
 
 ## Supported Technologies
