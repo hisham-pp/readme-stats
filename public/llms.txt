@@ -12,7 +12,7 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 **Description**: Generates an animated SVG marquee of technology icons.
 **Query Parameters**:
 - `techs`: (Required) Comma-separated list of technology IDs. See `/tech-list.txt` for supported IDs.
-- `theme`: (Optional) `default`, `dark`, or `light`.
+- `theme`: (Optional) `brand`, `dark`, or `light`.
 - `width`: (Optional) ViewBox width (default: 850).
 - `hasbg`: (Optional) `true` or `false` to include backgrounds on the icons.
 
@@ -21,7 +21,7 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 **Description**: Generates an animated SVG marquee of technology badges.
 **Query Parameters**:
 - `techs`: (Required) Comma-separated list of technology IDs. See `/tech-list.txt` for supported IDs.
-- `theme`: (Optional) `default`, `dark`, or `light`.
+- `theme`: (Optional) `brand`, `dark`, or `light`.
 - `width`: (Optional) ViewBox width (default: 850).
 
 ### 3. Top Languages
@@ -29,7 +29,7 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 **Description**: Displays the top programming languages for a GitHub user.
 **Query Parameters**:
 - `username`: (Required) GitHub username.
-- `theme`: (Optional) `default`, `dark`, or `light`.
+- `theme`: (Optional) `brand`, `dark`, or `light`.
 - `type`: (Optional) Visual style: `default`, `icon`, `badge`, `treemap_icon`, or `treemap_badge`.
 
 ### 4. GitHub Stats
@@ -37,7 +37,7 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 **Description**: Displays general GitHub statistics for a user.
 **Query Parameters**:
 - `username`: (Required) GitHub username.
-- `theme`: (Optional) `default`, `dark`, or `light`.
+- `theme`: (Optional) `brand`, `dark`, or `light`.
 
 ## Markdown Usage Example
 ```markdown

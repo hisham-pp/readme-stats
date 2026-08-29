@@ -5,12 +5,12 @@ import { techMap } from "@/config/techs.config";
 import { COMMON_CACHE_CONTROL } from "@/config/constants";
 import { THEMES } from "@/types/github.types";
 
-import { iconsBrandBundle } from '@/lib/bundles/icons-brand.bundle';
-import { iconsDarkBundle } from '@/lib/bundles/icons-dark.bundle';
-import { iconsLightBundle } from '@/lib/bundles/icons-light.bundle';
-import { badgesBrandBundle } from '@/lib/bundles/badges-brand.bundle';
-import { badgesDarkBundle } from '@/lib/bundles/badges-dark.bundle';
-import { badgesLightBundle } from '@/lib/bundles/badges-light.bundle';
+import { iconsBrandBundle } from "@/lib/bundles/icons-brand.bundle";
+import { iconsDarkBundle } from "@/lib/bundles/icons-dark.bundle";
+import { iconsLightBundle } from "@/lib/bundles/icons-light.bundle";
+import { badgesBrandBundle } from "@/lib/bundles/badges-brand.bundle";
+import { badgesDarkBundle } from "@/lib/bundles/badges-dark.bundle";
+import { badgesLightBundle } from "@/lib/bundles/badges-light.bundle";
 
 const iconBundles: Record<string, Record<string, string>> = {
   brand: iconsBrandBundle,
@@ -28,9 +28,9 @@ export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const username = searchParams.get("username");
   const type = searchParams.get("type") || "default";
-  
+
   const globalThemeQuery = searchParams.get("theme") as any;
-  const theme = THEMES.includes(globalThemeQuery) ? globalThemeQuery : 'brand';
+  const theme = THEMES.includes(globalThemeQuery) ? globalThemeQuery : "brand";
 
   if (!username) {
     return new NextResponse("Missing username parameter", { status: 400 });
@@ -38,43 +38,49 @@ export async function GET(request: NextRequest) {
 
   try {
     const langs = await fetchTopLanguages(username);
-    
+
     // Inject SVGs for badges or icons
-    const langsWithSvg = langs.map(lang => {
+    const langsWithSvg = langs.map((lang) => {
       let embeddedSvg = undefined;
-      
+
       if (lang.techKey && techMap[lang.techKey]) {
-        if (type === 'badge' || type === 'treemap_badge') {
+        if (type === "badge" || type === "treemap_badge") {
           const badgeKey = techMap[lang.techKey].badge;
           if (badgeKey) {
             const bundle = badgeBundles[theme] || badgeBundles.brand;
-            let rawContent = bundle[badgeKey];
+            const rawContent = bundle[badgeKey];
             try {
               if (rawContent) {
-                let content = rawContent.replace(/<\?xml.*?\?>/g, '').trim();
-                let noDims = content.replace(/<svg([^>]*)width="[^"]*"/, '<svg$1');
-                noDims = noDims.replace(/<svg([^>]*)height="[^"]*"/, '<svg$1');
+                const content = rawContent.replace(/<\?xml.*?\?>/g, "").trim();
+                let noDims = content.replace(
+                  /<svg([^>]*)width="[^"]*"/,
+                  "<svg$1",
+                );
+                noDims = noDims.replace(/<svg([^>]*)height="[^"]*"/, "<svg$1");
                 embeddedSvg = noDims;
               }
-            } catch(e) {}
+            } catch (e) {}
           }
-        } else if (type === 'icon' || type === 'treemap_icon') {
+        } else if (type === "icon" || type === "treemap_icon") {
           const iconKey = techMap[lang.techKey].icon;
           if (iconKey) {
             const bundle = iconBundles[theme] || iconBundles.brand;
-            let rawContent = bundle[iconKey];
+            const rawContent = bundle[iconKey];
             try {
               if (rawContent) {
-                let content = rawContent.replace(/<\?xml.*?\?>/g, '').trim();
-                let noDims = content.replace(/<svg([^>]*)width="[^"]*"/, '<svg$1');
-                noDims = noDims.replace(/<svg([^>]*)height="[^"]*"/, '<svg$1');
+                const content = rawContent.replace(/<\?xml.*?\?>/g, "").trim();
+                let noDims = content.replace(
+                  /<svg([^>]*)width="[^"]*"/,
+                  "<svg$1",
+                );
+                noDims = noDims.replace(/<svg([^>]*)height="[^"]*"/, "<svg$1");
                 embeddedSvg = noDims;
               }
-            } catch(e) {}
+            } catch (e) {}
           }
         }
       }
-      
+
       return { ...lang, embeddedSvg };
     });
 

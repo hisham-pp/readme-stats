@@ -1,20 +1,21 @@
-import { GitHubStats } from '@/types/github.types';
+import { GitHubStats } from "@/types/github.types";
 
 export function generateStatsSvg(stats: GitHubStats) {
-  const { name, totalStars, totalCommits, totalPRs, totalIssues, rank, theme } = stats;
+  const { name, totalStars, totalCommits, totalPRs, totalIssues, rank, theme } =
+    stats;
 
-  let bg = '#0D1117';
-  let header = '#58A6FF';
-  let stat = '#C9D1D9';
-  
-  if (theme === 'light') {
-    bg = '#FFFFFF';
-    header = '#0969DA';
-    stat = '#24292F';
-  } else if (theme === 'default') {
-    bg = '#0D1117';
-    header = '#58A6FF';
-    stat = '#C9D1D9';
+  let bg = "#0D1117";
+  let header = "#58A6FF";
+  let stat = "#C9D1D9";
+
+  if (theme === "light") {
+    bg = "#FFFFFF";
+    header = "#0969DA";
+    stat = "#24292F";
+  } else if (theme === "brand") {
+    bg = "#0D1117";
+    header = "#58A6FF";
+    stat = "#C9D1D9";
   }
 
   return `
