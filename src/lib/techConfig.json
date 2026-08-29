@@ -1659,7 +1659,8 @@
     "iconPosition": "left",
     "showText": true,
     "iconWidth": 18,
-    "iconHeight": 18
+    "iconHeight": 18,
+    "iconTheme": "light"
   },
   "tensorflow": {
     "name": "TensorFlow",
