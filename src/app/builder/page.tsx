@@ -26,10 +26,11 @@ export default function BuilderPage() {
       acc[tech.category].push({
         value: tech.id,
         label: tech.name,
-        icon: tech.icon // Pass icon for the custom component
+        icon: tech.icon, // Pass icon for the custom component
+        tags: tech.tags // Pass tags for filtering
       });
       return acc;
-    }, {} as Record<string, {value: string, label: string, icon: string}[]>);
+    }, {} as Record<string, {value: string, label: string, icon: string, tags?: string[]}[]>);
 
     // Format for react-select grouped options
     return Object.entries(grouped)

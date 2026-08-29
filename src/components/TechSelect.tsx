@@ -29,9 +29,27 @@ const CustomMultiValueLabel = (props: MultiValueGenericProps<any>) => {
 };
 
 export default function TechSelect(props: SelectProps) {
+  // Custom filter to also search by tags
+  const customFilter = (option: any, inputValue: string) => {
+    if (!inputValue) return true;
+    const val = inputValue.toLowerCase();
+    
+    // Standard label and value check
+    if (option.label.toLowerCase().includes(val)) return true;
+    if (option.value.toLowerCase().includes(val)) return true;
+    
+    // Tag check
+    if (option.data?.tags?.some((tag: string) => tag.toLowerCase().includes(val))) {
+      return true;
+    }
+    
+    return false;
+  };
+
   return (
     <Select
       {...props}
+      filterOption={customFilter}
       components={{
         Option: CustomOption,
         MultiValueLabel: CustomMultiValueLabel,
