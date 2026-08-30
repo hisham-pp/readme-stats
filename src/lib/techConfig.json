@@ -990,7 +990,9 @@
     "icon": "mongodb-icon.svg",
     "color": "#47A248",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "mongoose": {
     "name": "Mongoose",
