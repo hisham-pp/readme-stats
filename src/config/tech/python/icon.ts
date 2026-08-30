@@ -1,3 +1,5 @@
 import type { TechIcon } from "../_types";
 
-export default {} satisfies TechIcon;
+export default {
+  iconBgColor: "url(#py-bg)",
+} satisfies TechIcon;
