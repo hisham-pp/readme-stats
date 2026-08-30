@@ -1104,7 +1104,9 @@
     "icon": "node-js-icon.svg",
     "color": "#339933",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "npm": {
     "name": "npm",
