@@ -439,7 +439,9 @@
     "icon": "dynamodb-icon.svg",
     "color": "#4053D6",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "elasticsearch": {
     "name": "Elasticsearch",
