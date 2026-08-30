@@ -4,7 +4,7 @@ export function generateMarqueeSvg({
   gap = 10,
   targetHeight = 24,
   extraHeightPadding = 0,
-  allDefs = ''
+  allDefs = "",
 }: {
   elements: { svgContent: string; width: number }[];
   viewBoxWidth?: number;
@@ -16,16 +16,17 @@ export function generateMarqueeSvg({
   let totalWidth = 0;
 
   // Calculate totalWidth of a single set of elements
-  elements.forEach(badge => {
+  elements.forEach((badge) => {
     totalWidth += badge.width + gap;
   });
 
   // To prevent empty space on short lists, we must repeat the items enough times.
   // We need the remaining width after the first set scrolls out to be at least viewBoxWidth.
-  const repeats = totalWidth > 0 ? Math.max(2, Math.ceil(viewBoxWidth / totalWidth) + 1) : 2;
+  const repeats =
+    totalWidth > 0 ? Math.max(2, Math.ceil(viewBoxWidth / totalWidth) + 1) : 2;
 
   let currentX = 0;
-  let stitchedSvgInner = '';
+  let stitchedSvgInner = "";
 
   // We render the list of elements multiple times to create a seamless infinite loop
   let allElements: typeof elements = [];
@@ -35,7 +36,7 @@ export function generateMarqueeSvg({
 
   allElements.forEach((badge) => {
     stitchedSvgInner += `
-      <g transform="translate(${currentX}, 0)">
+      <g transform="translate(${currentX}, ${extraHeightPadding / 2})">
         ${badge.svgContent}
       </g>
     `;

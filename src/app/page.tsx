@@ -184,7 +184,7 @@ export default function Home() {
                       >
                         <div className="h-8 flex items-center justify-center mb-2">
                           <img
-                            src={`/badges/default/${techData.badge}`}
+                            src={`/badges/brand/${techData.badge}`}
                             alt={tech}
                             className="max-h-full"
                           />

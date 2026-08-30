@@ -83,11 +83,15 @@ export async function GET(request: NextRequest) {
           return null;
         }
 
-        // Extract width from the SVG tag or viewBox
+        // Extract root <svg> tag to read dimensions and modify it only
+        const cleanedSvg = svgContent.replace(/<\?xml.*?\?>/g, "").trim();
+        const rootTagMatch = cleanedSvg.match(/^<svg[^>]*>/);
+        const rootTag = rootTagMatch ? rootTagMatch[0] : "";
+
         let iconWidth = targetHeight; // Default to 1:1 aspect ratio if no dimensions found
-        const widthMatch = svgContent.match(/<svg[^>]*width="([0-9.]+)"/);
-        const heightMatch = svgContent.match(/<svg[^>]*height="([0-9.]+)"/);
-        const viewBoxMatch = svgContent.match(/<svg[^>]*viewBox="([0-9.\s]+)"/);
+        const widthMatch = rootTag.match(/width="([0-9.]+)"/);
+        const heightMatch = rootTag.match(/height="([0-9.]+)"/);
+        const viewBoxMatch = rootTag.match(/viewBox="([0-9.\s]+)"/);
 
         if (widthMatch && heightMatch) {
           const w = parseFloat(widthMatch[1]);
@@ -102,23 +106,23 @@ export async function GET(request: NextRequest) {
           }
         }
 
-        let cleanedSvgContent = svgContent.replace(/<\?xml.*?\?>/g, "").trim();
+        let cleanedSvgContent = cleanedSvg;
 
-        // Remove hardcoded width and height from the root <svg> so it scales via CSS or transform
-        cleanedSvgContent = cleanedSvgContent.replace(
-          /<svg([^>]*)width="[^"]*"/g,
-          "<svg$1",
-        );
-        cleanedSvgContent = cleanedSvgContent.replace(
-          /<svg([^>]*)height="[^"]*"/g,
-          "<svg$1",
-        );
-
-        // Add explicit width and height corresponding to our target height to ensure consistent rendering
-        cleanedSvgContent = cleanedSvgContent.replace(
-          /<svg/,
-          `<svg width="${iconWidth}" height="${targetHeight}"`,
-        );
+        if (rootTagMatch) {
+          let modifiedRootTag = rootTag;
+          // Remove width and height from the root tag
+          modifiedRootTag = modifiedRootTag.replace(/\s+width="[^"]*"/g, "");
+          modifiedRootTag = modifiedRootTag.replace(/\s+height="[^"]*"/g, "");
+          // Add explicit width and height
+          modifiedRootTag = modifiedRootTag.replace(
+            /<svg/,
+            `<svg width="${iconWidth}" height="${targetHeight}"`,
+          );
+          cleanedSvgContent = cleanedSvgContent.replace(
+            rootTag,
+            modifiedRootTag,
+          );
+        }
 
         // Also extract defs if any
         const defsMatch = cleanedSvgContent.match(/<defs>([\s\S]*?)<\/defs>/);
