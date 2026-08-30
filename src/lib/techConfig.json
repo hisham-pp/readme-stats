@@ -94,11 +94,13 @@
   "aws": {
     "name": "AWS",
     "id": "aws",
-    "icon": "aws-lambda-icon.svg",
-    "color": "#FF9900",
+    "icon": "aws-icon.svg",
+    "color": "#232F3E",
     "iconPosition": "left",
     "showText": true,
-    "iconBgColor": "#232F3E"
+    "badgeIconTheme": "light",
+    "iconBgColor": "#232F3E",
+    "iconTheme": "light"
   },
   "aws_lambda": {
     "name": "AWS Lambda",
@@ -1290,7 +1292,9 @@
     "icon": "prisma-icon.svg",
     "color": "#2D3748",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "puppeteer": {
     "name": "Puppeteer",
@@ -1677,7 +1681,9 @@
     "icon": "supabase-icon.svg",
     "color": "#3ECF8E",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "svelte": {
     "name": "Svelte",
@@ -1721,7 +1727,9 @@
     "icon": "terraform-icon.svg",
     "color": "#844FBA",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "three_js": {
     "name": "Three.js",
@@ -1753,7 +1761,9 @@
     "icon": "typeorm-icon.svg",
     "color": "#FE0902",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "typescript": {
     "name": "TypeScript",
