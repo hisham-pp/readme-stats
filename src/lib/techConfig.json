@@ -1064,7 +1064,9 @@
     "icon": "nestjs-icon.svg",
     "color": "#E0234E",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "netlify": {
     "name": "Netlify",
