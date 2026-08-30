@@ -30,6 +30,12 @@ async function main() {
     const badge = await load("badge.ts");
     const icon = await load("icon.ts");
 
+    // Rename badge.iconTheme to badge.badgeIconTheme to avoid conflict
+    if (badge.iconTheme) {
+      badge.badgeIconTheme = badge.iconTheme;
+      delete badge.iconTheme;
+    }
+
     merged[key] = { ...base, ...badge, ...icon };
   }
 

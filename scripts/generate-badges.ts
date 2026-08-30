@@ -37,7 +37,7 @@ console.log("Generating badges from techConfig.json...");
 
 for (const [key, config] of Object.entries(techConfig)) {
   try {
-    const { id, icon, iconTheme = "brand" } = config as any;
+    const { id, icon, badgeIconTheme = "brand" } = config as any;
     if (!id) {
       console.warn(`Skipping ${key}: No 'id' provided in config.`);
       continue;
@@ -46,7 +46,7 @@ for (const [key, config] of Object.entries(techConfig)) {
     // Read the raw SVG icon if provided
     let rawIconSvg = "";
     if (icon) {
-      const iconsDir = path.join(__dirname, `../public/icons/${iconTheme}`);
+      const iconsDir = path.join(__dirname, `../public/icons/${badgeIconTheme}`);
       const iconPath = path.join(iconsDir, icon);
       if (fs.existsSync(iconPath)) {
         rawIconSvg = fs.readFileSync(iconPath, "utf8");

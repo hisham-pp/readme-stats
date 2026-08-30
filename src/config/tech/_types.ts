@@ -8,7 +8,7 @@ export interface TechBadge {
   color: string;
   textColor?: string;
   iconPosition?: "left" | "right";
-  iconTheme?: "light" | "dark" | "brand";
+  badgeIconTheme?: "light" | "dark" | "brand";
   showText?: boolean;
   iconWidth?: number;
   iconHeight?: number;

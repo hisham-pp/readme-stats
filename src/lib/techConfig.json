@@ -32,6 +32,7 @@
     "showText": true,
     "iconWidth": 16,
     "iconHeight": 16,
+    "badgeIconTheme": "light",
     "iconTheme": "light"
   },
   "ansible": {
@@ -219,6 +220,7 @@
     "color": "#319795",
     "iconPosition": "left",
     "showText": true,
+    "badgeIconTheme": "light",
     "iconTheme": "light"
   },
   "chatgpt": {
@@ -795,6 +797,7 @@
     "showText": true,
     "iconWidth": 18,
     "iconHeight": 18,
+    "badgeIconTheme": "dark",
     "iconTheme": "dark"
   },
   "jenkins": {
@@ -1020,6 +1023,7 @@
     "color": "#007fff",
     "iconPosition": "left",
     "showText": true,
+    "badgeIconTheme": "light",
     "iconTheme": "light"
   },
   "multer": {
@@ -1450,6 +1454,7 @@
     "color": "#764abc",
     "iconPosition": "left",
     "showText": true,
+    "badgeIconTheme": "light",
     "iconTheme": "light"
   },
   "redux_saga": {
@@ -1493,6 +1498,7 @@
     "color": "#764abc",
     "iconPosition": "left",
     "showText": true,
+    "badgeIconTheme": "light",
     "iconTheme": "light"
   },
   "ruby": {
@@ -1673,6 +1679,7 @@
     "showText": true,
     "iconWidth": 18,
     "iconHeight": 18,
+    "badgeIconTheme": "light",
     "iconTheme": "light"
   },
   "tensorflow": {
@@ -1732,6 +1739,7 @@
     "showText": true,
     "iconWidth": 18,
     "iconHeight": 18,
+    "badgeIconTheme": "light",
     "iconTheme": "light"
   },
   "uuid": {
