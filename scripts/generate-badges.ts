@@ -46,7 +46,10 @@ for (const [key, config] of Object.entries(techConfig)) {
     // Read the raw SVG icon if provided
     let rawIconSvg = "";
     if (icon) {
-      const iconsDir = path.join(__dirname, `../public/icons/${badgeIconTheme}`);
+      const iconsDir = path.join(
+        __dirname,
+        `../public/icons/${badgeIconTheme}`,
+      );
       const iconPath = path.join(iconsDir, icon);
       if (fs.existsSync(iconPath)) {
         rawIconSvg = fs.readFileSync(iconPath, "utf8");
