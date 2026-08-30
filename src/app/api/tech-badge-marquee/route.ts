@@ -46,6 +46,8 @@ export async function GET(request: NextRequest) {
       return new NextResponse("No valid techs provided", { status: 400 });
     }
 
+    const badgeHeight = 20;
+
     const badgeElements = files
       .map((item) => {
         const bundle = bundles.brand;
@@ -56,20 +58,59 @@ export async function GET(request: NextRequest) {
 
         try {
           if (rawContent) {
-            content = rawContent.replace(/<\?xml.*?\?>/g, "").trim();
-            const widthMatch = content.match(/<svg[^>]*width="([0-9.]+)"/);
-            if (widthMatch) {
-              width = parseFloat(widthMatch[1]);
+            const cleanedSvg = rawContent.replace(/<\?xml.*?\?>/g, "").trim();
+            const rootTagMatch = cleanedSvg.match(/^<svg[^>]*>/);
+            const rootTag = rootTagMatch ? rootTagMatch[0] : "";
+
+            const viewBoxMatch = rootTag.match(/viewBox="([0-9.\s]+)"/);
+            const widthMatch = rootTag.match(/width="([0-9.]+)"/);
+            const heightMatch = rootTag.match(/height="([0-9.]+)"/);
+
+            let w = 0;
+            let h = 0;
+
+            if (widthMatch && heightMatch) {
+              w = parseFloat(widthMatch[1]);
+              h = parseFloat(heightMatch[1]);
+            } else if (viewBoxMatch) {
+              const parts = viewBoxMatch[1].trim().split(/\s+/);
+              if (parts.length === 4) {
+                w = parseFloat(parts[2]);
+                h = parseFloat(parts[3]);
+              }
             }
-            let noDims = content.replace(/<svg([^>]*)width="[^"]*"/, "<svg$1");
-            noDims = noDims.replace(/<svg([^>]*)height="[^"]*"/, "<svg$1");
-            content = noDims;
+
+            if (h > 0) {
+              width = (w / h) * badgeHeight;
+            }
+
+            content = cleanedSvg;
+
+            if (rootTagMatch) {
+              let modifiedRootTag = rootTag;
+              // Remove width and height from the root tag
+              modifiedRootTag = modifiedRootTag.replace(
+                /\s+width="[^"]*"/g,
+                "",
+              );
+              modifiedRootTag = modifiedRootTag.replace(
+                /\s+height="[^"]*"/g,
+                "",
+              );
+              // Add explicit width and height
+              modifiedRootTag = modifiedRootTag.replace(
+                /<svg/,
+                `<svg width="${width}" height="${badgeHeight}"`,
+              );
+              content = content.replace(rootTag, modifiedRootTag);
+            }
           } else {
             console.warn(`Missing SVG for ${item.file} in theme brand`);
             return null;
           }
-        } catch {
-          // ignore
+        } catch (e) {
+          console.error("Error processing badge SVG:", e);
+          return null;
         }
 
         return {
@@ -80,13 +121,13 @@ export async function GET(request: NextRequest) {
       .filter(Boolean) as { svgContent: string; width: number }[];
 
     const viewBoxWidth = widthParam ? parseInt(widthParam, 10) || 850 : 850;
-    const height = 24; // standard flat-square badge height is usually 20, we give it a bit of padding
 
     const wrapperSvg = generateMarqueeSvg({
       elements: badgeElements,
       viewBoxWidth,
       gap: 10,
-      targetHeight: height,
+      targetHeight: badgeHeight,
+      extraHeightPadding: 4,
     });
 
     return new NextResponse(wrapperSvg, {

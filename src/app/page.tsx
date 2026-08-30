@@ -186,7 +186,7 @@ export default function Home() {
                           <img
                             src={`/badges/brand/${techData.badge}`}
                             alt={tech}
-                            className="max-h-full"
+                            className="h-full"
                           />
                         </div>
                         <code className="text-[10px] text-zinc-400 bg-zinc-950 border border-zinc-800 px-1.5 py-0.5 rounded truncate max-w-full">
