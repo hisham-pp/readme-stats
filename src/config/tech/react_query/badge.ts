@@ -1,7 +1,7 @@
 import type { TechBadge } from "../_types";
 
 export default {
-  color: "#1e293b",
+  color: "#ff4154",
   iconPosition: "left",
   showText: true,
   iconWidth: 16,

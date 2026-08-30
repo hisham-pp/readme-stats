@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 20" role="img" aria-label="i18next">
   <title>i18next</title>
   
-  <rect width="73" height="20" fill="#7986cb" rx="3" />
+  <rect width="73" height="20" fill="#26a69a" rx="3" />
   <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
     <g transform="translate(6, 3)"><svg x="0" y="0" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 	<path d="M0 0h32v32H0z" fill="none" />

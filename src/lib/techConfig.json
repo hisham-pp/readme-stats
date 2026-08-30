@@ -78,7 +78,7 @@
     "name": "Astro",
     "id": "167_astro",
     "icon": "astro-icon.svg",
-    "color": "#FF5D01",
+    "color": "#bc52ee",
     "iconPosition": "left",
     "showText": true
   },
@@ -89,6 +89,15 @@
     "color": "#EB5424",
     "iconPosition": "left",
     "showText": true
+  },
+  "aws": {
+    "name": "AWS",
+    "id": "aws",
+    "icon": "aws-lambda-icon.svg",
+    "color": "#FF9900",
+    "iconPosition": "left",
+    "showText": true,
+    "iconBgColor": "#232F3E"
   },
   "aws_lambda": {
     "name": "AWS Lambda",
@@ -175,7 +184,7 @@
     "name": "Bun",
     "id": "120_bun",
     "icon": "bun-icon.svg",
-    "color": "#FBF0DF",
+    "color": "#000000",
     "iconPosition": "left",
     "showText": true
   },
@@ -321,7 +330,7 @@
     "name": "Cypress",
     "id": "208_cypress",
     "icon": "cypress-icon.svg",
-    "color": "#17202C",
+    "color": "#69d3a7",
     "iconPosition": "left",
     "showText": true
   },
@@ -529,7 +538,7 @@
     "name": "Flask",
     "id": "121_flask",
     "icon": "flask-icon.svg",
-    "color": "#000000",
+    "color": "#3babc3",
     "iconPosition": "left",
     "showText": true
   },
@@ -731,7 +740,7 @@
     "name": "i18next",
     "id": "91_i18next",
     "icon": "i18n-icon.svg",
-    "color": "#7986cb",
+    "color": "#26a69a",
     "iconPosition": "left",
     "showText": true
   },
@@ -919,7 +928,7 @@
     "name": "lodash",
     "id": "87_lodash",
     "icon": "lodash-icon.svg",
-    "color": "#000000",
+    "color": "#3492ff",
     "iconPosition": "left",
     "showText": true
   },
@@ -1377,7 +1386,7 @@
     "name": "React Query",
     "id": "33_react_query",
     "icon": "reactquery-icon.svg",
-    "color": "#1e293b",
+    "color": "#ff4154",
     "iconPosition": "left",
     "showText": true,
     "iconWidth": 16,
@@ -1479,7 +1488,7 @@
     "name": "RTK Query",
     "id": "34_rtk_query",
     "icon": "redux-icon.svg",
-    "color": "#512da8",
+    "color": "#764abc",
     "iconPosition": "left",
     "showText": true,
     "iconTheme": "light"
@@ -1700,7 +1709,7 @@
     "name": "Turborepo",
     "id": "229_turborepo",
     "icon": "turborepo-icon.svg",
-    "color": "#EF4444",
+    "color": "#ff1e56",
     "iconPosition": "left",
     "showText": true
   },
@@ -1907,7 +1916,7 @@
     "name": "Zod",
     "id": "57_zod",
     "icon": "zod-icon.svg",
-    "color": "#3E67B1",
+    "color": "#408aff",
     "iconPosition": "left",
     "showText": true
   },
@@ -1915,7 +1924,7 @@
     "name": "Zsh",
     "id": "137_zsh",
     "icon": "zsh-icon.svg",
-    "color": "#111111",
+    "color": "#f15a24",
     "iconPosition": "left",
     "showText": true
   },
