@@ -42,7 +42,7 @@ export async function GET(request: NextRequest) {
       let embeddedSvg = undefined;
 
       if (lang.techKey && techMap[lang.techKey]) {
-        if (type === "badge" || type === "treemap_badge") {
+        if (type === "badge" || type === "treemap-badge") {
           const badgeKey = techMap[lang.techKey].badge;
           if (badgeKey) {
             const bundle = badgeBundles[theme] || badgeBundles.brand;
@@ -51,15 +51,15 @@ export async function GET(request: NextRequest) {
               if (rawContent) {
                 const content = rawContent.replace(/<\?xml.*?\?>/g, "").trim();
                 let noDims = content.replace(
-                  /<svg([^>]*)width="[^"]*"/,
+                  /^<svg([^>]*)width="[^"]*"/,
                   "<svg$1",
                 );
-                noDims = noDims.replace(/<svg([^>]*)height="[^"]*"/, "<svg$1");
+                noDims = noDims.replace(/^<svg([^>]*)height="[^"]*"/, "<svg$1");
                 embeddedSvg = noDims;
               }
             } catch {}
           }
-        } else if (type === "icon" || type === "treemap_icon") {
+        } else if (type === "icon" || type === "treemap-icon") {
           const iconKey = techMap[lang.techKey].icon;
           if (iconKey) {
             const bundle = iconBundles[theme] || iconBundles.brand;
@@ -68,10 +68,10 @@ export async function GET(request: NextRequest) {
               if (rawContent) {
                 const content = rawContent.replace(/<\?xml.*?\?>/g, "").trim();
                 let noDims = content.replace(
-                  /<svg([^>]*)width="[^"]*"/,
+                  /^<svg([^>]*)width="[^"]*"/,
                   "<svg$1",
                 );
-                noDims = noDims.replace(/<svg([^>]*)height="[^"]*"/, "<svg$1");
+                noDims = noDims.replace(/^<svg([^>]*)height="[^"]*"/, "<svg$1");
                 embeddedSvg = noDims;
               }
             } catch {}
