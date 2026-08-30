@@ -1394,6 +1394,15 @@
     "showText": true,
     "iconBgColor": "#0d1117"
   },
+  "react_native": {
+    "name": "React Native",
+    "id": "01_react_native",
+    "icon": "react-icon.svg",
+    "color": "#20232a",
+    "iconPosition": "left",
+    "showText": true,
+    "iconBgColor": "#0d1117"
+  },
   "react_query": {
     "name": "React Query",
     "id": "33_react_query",
