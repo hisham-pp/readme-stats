@@ -1,3 +1,6 @@
 import type { TechIcon } from "../_types";
 
-export default {} satisfies TechIcon;
+export default {
+  iconBgColor: "url(#sqlite-bg)",
+  iconTheme: "dark",
+} satisfies TechIcon;
