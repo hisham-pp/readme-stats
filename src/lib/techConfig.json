@@ -1252,7 +1252,9 @@
     "icon": "postgresql-icon.svg",
     "color": "#4169E1",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "postman": {
     "name": "Postman",
