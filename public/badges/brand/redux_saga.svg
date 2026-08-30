@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116 20" role="img" aria-label="Redux Saga">
   <title>Redux Saga</title>
   
-  <rect width="116" height="20" fill="#999999" rx="3" />
+  <rect width="116" height="20" fill="#764ABC" rx="3" />
   <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
     <g transform="translate(6, 3)"><svg x="0" y="0" width="23" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 157">
 	<path d="M0 0h256v157H0z" fill="none" />

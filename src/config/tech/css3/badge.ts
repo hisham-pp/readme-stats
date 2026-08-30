@@ -6,4 +6,5 @@ export default {
   showText: true,
   iconWidth: 14,
   iconHeight: 14,
+  badgeIconTheme: "light",
 } satisfies TechBadge;
