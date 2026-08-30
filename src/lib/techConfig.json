@@ -218,7 +218,8 @@
     "icon": "chakraui-icon.svg",
     "color": "#319795",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "iconTheme": "light"
   },
   "chatgpt": {
     "name": "ChatGPT",
@@ -1018,7 +1019,8 @@
     "icon": "mui-icon.svg",
     "color": "#007fff",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "iconTheme": "light"
   },
   "multer": {
     "name": "Multer",
