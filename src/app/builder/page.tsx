@@ -209,7 +209,7 @@ export default function BuilderPage() {
             </h3>
             <div className="w-full bg-[#0d1117] p-8 rounded-lg flex items-center justify-center overflow-x-auto min-h-[200px] border border-zinc-800">
               {baseUrl ? (
-                <img src={generatedUrl} alt="Preview" className="max-w-full" />
+                <img src={generatedUrl} alt="Preview" />
               ) : (
                 <span className="text-zinc-500">Loading preview...</span>
               )}

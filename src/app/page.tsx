@@ -50,7 +50,7 @@ export default function Home() {
           <h2 className="text-xl font-semibold text-zinc-100 mb-6 border-b border-zinc-800 pb-2">
             Top Languages Stats
           </h2>
-          <div className="w-full bg-[#0d1117] p-8 rounded-lg flex flex-col items-center justify-center gap-8 overflow-hidden border border-zinc-800 mb-8">
+          <div className="w-full bg-[#0d1117] p-8 rounded-lg flex flex-col items-center justify-center gap-8 overflow-x-auto border border-zinc-800 mb-8">
             <div className="w-full">
               <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">
                 Default Style
@@ -58,7 +58,7 @@ export default function Home() {
               <img
                 src="/api/top-langs?username=hisham-pp&v=2"
                 alt="Top Languages Default"
-                className="max-w-full mx-auto"
+                className="mx-auto"
               />
             </div>
             <div className="w-full">
@@ -68,7 +68,7 @@ export default function Home() {
               <img
                 src="/api/top-langs?username=hisham-pp&type=icon&v=2"
                 alt="Top Languages Icons"
-                className="max-w-full mx-auto"
+                className="mx-auto"
               />
             </div>
             <div className="w-full">
@@ -78,7 +78,7 @@ export default function Home() {
               <img
                 src="/api/top-langs?username=hisham-pp&type=badge&v=2"
                 alt="Top Languages Badges"
-                className="max-w-full mx-auto"
+                className="mx-auto"
               />
             </div>
             <div className="w-full">
@@ -88,7 +88,7 @@ export default function Home() {
               <img
                 src="/api/top-langs?username=hisham-pp&type=treemap-icon&v=2"
                 alt="Top Languages Treemap Icons"
-                className="max-w-full mx-auto"
+                className="mx-auto"
               />
             </div>
             <div className="w-full">
@@ -98,7 +98,7 @@ export default function Home() {
               <img
                 src="/api/top-langs?username=hisham-pp&type=treemap-badge&v=2"
                 alt="Top Languages Treemap Badges"
-                className="max-w-full mx-auto"
+                className="mx-auto"
               />
             </div>
           </div>
@@ -136,7 +136,7 @@ export default function Home() {
                 </h2>
 
                 {/* Marquee Previews */}
-                <div className="w-full bg-[#0d1117] p-8 rounded-lg flex flex-col items-center justify-center gap-8 overflow-hidden border border-zinc-800 mb-8">
+                <div className="w-full bg-[#0d1117] p-8 rounded-lg flex flex-col items-center justify-center gap-8 overflow-x-auto border border-zinc-800 mb-8">
                   <div className="w-full">
                     <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">
                       Badge Marquee
@@ -144,7 +144,7 @@ export default function Home() {
                     <img
                       src={`/api/tech-badge-marquee?techs=${queryStr}&v=7`}
                       alt={`${group.title} Badge Marquee`}
-                      className="max-w-full mx-auto"
+                      className="mx-auto"
                     />
                   </div>
                   <div className="w-full">
@@ -154,7 +154,7 @@ export default function Home() {
                     <img
                       src={`/api/tech-icon-marquee?techs=${queryStr}&v=7`}
                       alt={`${group.title} Icon Marquee`}
-                      className="max-w-full mx-auto"
+                      className="mx-auto"
                     />
                   </div>
                   <div className="w-full">
@@ -164,7 +164,7 @@ export default function Home() {
                     <img
                       src={`/api/tech-icon-marquee?techs=${queryStr}&theme=bg&v=7`}
                       alt={`${group.title} Icon Marquee with BG`}
-                      className="max-w-full mx-auto"
+                      className="mx-auto"
                     />
                   </div>
                 </div>
@@ -173,20 +173,20 @@ export default function Home() {
                 <h3 className="text-sm font-medium text-zinc-400 mb-4">
                   Keys Available in this Group
                 </h3>
-                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                <div className="flex flex-wrap justify-center gap-3">
                   {group.keys.map((tech) => {
                     const techData = techMap[tech];
                     if (!techData || !techData.badge) return null; // In case of a typo in the array
                     return (
                       <div
                         key={tech}
-                        className="flex flex-col items-center justify-center p-3 bg-zinc-900 border border-zinc-800 rounded-lg hover:border-zinc-700 transition-colors"
+                        className="flex flex-col items-center justify-center p-3 bg-zinc-900 border border-zinc-800 rounded-lg hover:border-zinc-700 transition-colors min-w-[120px]"
                       >
                         <div className="h-8 flex items-center justify-center mb-2">
                           <img
                             src={`/badges/brand/${techData.badge}`}
                             alt={tech}
-                            className="h-full"
+                            className="h-full max-w-none"
                           />
                         </div>
                         <code className="text-[10px] text-zinc-400 bg-zinc-950 border border-zinc-800 px-1.5 py-0.5 rounded truncate max-w-full">
