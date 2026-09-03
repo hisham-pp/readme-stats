@@ -23,6 +23,22 @@ export async function GET(request: NextRequest) {
     const widthParam = searchParams.get("width");
     const heightParam = searchParams.get("height");
     const name = searchParams.get("name") || "";
+    const colorParam = searchParams.get("color");
+    const color =
+      colorParam && /^#?[0-9a-fA-F]{3,8}$/.test(colorParam)
+        ? colorParam.startsWith("#")
+          ? colorParam
+          : `#${colorParam}`
+        : "#FFFFFF";
+    const bgcolorParam = searchParams.get("bgcolor");
+    const bgcolor =
+      bgcolorParam === "transparent"
+        ? "transparent"
+        : bgcolorParam && /^#?[0-9a-fA-F]{3,8}$/.test(bgcolorParam)
+          ? bgcolorParam.startsWith("#")
+            ? bgcolorParam
+            : `#${bgcolorParam}`
+          : undefined;
 
     // Determine global theme from URL query, fallback to brand
     const globalThemeQuery = searchParams.get("theme") as any;
@@ -136,6 +152,8 @@ export async function GET(request: NextRequest) {
       width: viewBoxWidth,
       height: viewBoxHeight,
       theme: globalTheme,
+      color,
+      bgcolor,
     });
 
     return new NextResponse(svg, {

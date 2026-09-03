@@ -52,14 +52,23 @@ export function generateRainSvg({
   width = 850,
   height = 300,
   theme = "brand",
+  color = "#FFFFFF",
+  bgcolor,
 }: {
   icons: RainIcon[];
   name?: string;
   width?: number;
   height?: number;
   theme?: string;
+  color?: string;
+  bgcolor?: string;
 }) {
-  const colors = THEME_COLORS[theme] || THEME_COLORS.brand;
+  const themeColors = THEME_COLORS[theme] || THEME_COLORS.brand;
+  const colors = {
+    ...themeColors,
+    nameColor: color,
+    bg: bgcolor ?? themeColors.bg,
+  };
 
   // --- Build rain drops -------------------------------------------------------
   // Spread icons across the full width in randomised positions.
