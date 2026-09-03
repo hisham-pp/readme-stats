@@ -12,10 +12,14 @@ export default function Home() {
             These SVGs are generated entirely on the server via the{" "}
             <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">
               /api/tech-badge-marquee
-            </code>{" "}
-            and{" "}
+            </code>
+            ,{" "}
             <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">
               /api/tech-icon-marquee
+            </code>
+            , and{" "}
+            <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">
+              /api/tech-icon-rain
             </code>{" "}
             endpoints. You can use the absolute URL directly in your GitHub{" "}
             <code className="text-zinc-300 bg-zinc-800 px-1 py-0.5 rounded">
@@ -164,6 +168,16 @@ export default function Home() {
                     <img
                       src={`/api/tech-icon-marquee?techs=${queryStr}&theme=bg&v=7`}
                       alt={`${group.title} Icon Marquee with BG`}
+                      className="mx-auto"
+                    />
+                  </div>
+                  <div className="w-full">
+                    <p className="text-xs text-zinc-500 mb-2 text-center uppercase tracking-wider">
+                      Icon Rain
+                    </p>
+                    <img
+                      src={`/api/tech-icon-rain?techs=${queryStr}&name=${encodeURIComponent(group.title)}&v=1`}
+                      alt={`${group.title} Icon Rain`}
                       className="mx-auto"
                     />
                   </div>
