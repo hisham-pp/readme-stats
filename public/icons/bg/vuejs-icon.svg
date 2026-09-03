@@ -1,5 +1,5 @@
 <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
   
   <rect x="0" y="0" width="36" height="36" rx="12" fill="#4FC08D" />
-  <svg x="6" y="6" width="24" height="24" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Vue.js</title><path d="M24,1.61H14.06L12,5.16,9.94,1.61H0L12,22.39ZM12,14.08,5.16,2.23H9.59L12,6.41l2.41-4.18h4.43Z"/></svg>
+  <svg x="6" y="6" width="24" height="24" role="img" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><title>Vue.js</title><path d="M24,1.61H14.06L12,5.16,9.94,1.61H0L12,22.39ZM12,14.08,5.16,2.23H9.59L12,6.41l2.41-4.18h4.43Z"/></svg>
 </svg>

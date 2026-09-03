@@ -60,20 +60,17 @@ for (const [key, config] of Object.entries(techConfig)) {
     const containerHeight = targetHeight + padding * 2;
 
     cleanedSvgContent = cleanedSvgContent.replace(
-      /<svg([^>]*)width="[^"]*"/g,
-      "<svg$1",
-    );
-    cleanedSvgContent = cleanedSvgContent.replace(
-      /<svg([^>]*)height="[^"]*"/g,
-      "<svg$1",
+      /<svg([^>]*)>/i,
+      (_, attrs) => {
+        const cleanAttrs = attrs
+          .replace(/\bwidth="[^"]*"/gi, "")
+          .replace(/\bheight="[^"]*"/gi, "");
+        return `<svg${cleanAttrs}>`;
+      },
     );
 
-    let innerIcon = cleanedSvgContent.replace(
-      /<svg\s+width="[^"]*"\s+height="[^"]*"/,
-      "<svg",
-    );
-    innerIcon = innerIcon.replace(
-      /<svg/,
+    const innerIcon = cleanedSvgContent.replace(
+      /<svg/i,
       `<svg x="${padding}" y="${padding}" width="${iconWidth}" height="${targetHeight}"`,
     );
 

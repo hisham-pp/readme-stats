@@ -7,6 +7,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#4285F4",
     "iconTheme": "light"
   },
   "android": {
@@ -219,6 +220,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#00B3E6",
     "iconTheme": "light"
   },
   "bun": {
@@ -290,6 +292,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#343434",
     "iconTheme": "light"
   },
   "claude": {
@@ -300,6 +303,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#D97757",
     "iconTheme": "light"
   },
   "claude_code": {
@@ -310,6 +314,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#D97757",
     "iconTheme": "light"
   },
   "claude_desktop": {
@@ -320,6 +325,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#D97757",
     "iconTheme": "light"
   },
   "clerk": {
@@ -512,6 +518,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#18181B",
     "iconTheme": "light"
   },
   "docker": {
@@ -656,6 +663,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#F24E1E",
     "iconTheme": "light"
   },
   "firebase": {
@@ -726,6 +734,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#4285F4",
     "iconTheme": "light"
   },
   "gemini": {
@@ -736,6 +745,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#8E75B2",
     "iconTheme": "light"
   },
   "gemini_cli": {
@@ -746,6 +756,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#8E75B2",
     "iconTheme": "light"
   },
   "git": {
@@ -928,6 +939,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#26a69a",
     "iconTheme": "light"
   },
   "influxdb": {
@@ -1032,6 +1044,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#FF0000",
     "iconTheme": "light"
   },
   "julia": {
@@ -1113,6 +1126,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#326CE5",
     "iconTheme": "light"
   },
   "langchain": {
@@ -1164,6 +1178,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#3492ff",
     "iconTheme": "light"
   },
   "lua": {
@@ -1408,6 +1423,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#00DC82",
     "iconTheme": "light"
   },
   "nx": {
@@ -1590,7 +1606,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
-    "iconTheme": "light"
+    "iconTheme": "brand"
   },
   "prisma": {
     "name": "Prisma",
@@ -1640,6 +1656,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#276DC3",
     "iconTheme": "light"
   },
   "rabbitmq": {
@@ -1670,6 +1687,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#CC0000",
     "iconTheme": "light"
   },
   "railway": {
@@ -2018,6 +2036,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#6DB33F",
     "iconTheme": "light"
   },
   "sql": {
@@ -2130,7 +2149,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
-    "iconBgColor": "#18181B",
+    "iconBgColor": "#000000",
     "iconTheme": "light"
   },
   "trpc": {
@@ -2266,6 +2285,7 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
+    "iconBgColor": "#4FC08D",
     "iconTheme": "light"
   },
   "wasm": {

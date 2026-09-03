@@ -1,5 +1,5 @@
 import type { TechIcon } from "../_types";
 
 export default {
-  iconTheme: "light",
+  iconTheme: "brand",
 } satisfies TechIcon;
