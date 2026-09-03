@@ -143,11 +143,15 @@ export function generateRainSvg({
   let nameMarkup = "";
   if (name) {
     // Choose font size that fits — shrink if name is very long
-    const fontSize = fontSizeOverride || (name.length > 16 ? 38 : name.length > 10 ? 46 : 54);
+    const fontSize =
+      fontSizeOverride || (name.length > 16 ? 38 : name.length > 10 ? 46 : 54);
+    const nameY = description
+      ? height / 2 - fontSize * 0.7
+      : height / 2 + fontSize / 3;
     nameMarkup = `
       <!-- Centered name -->
       <text
-        x="${width / 2}" y="${description ? height / 2 - fontSize * 0.15 : height / 2 + fontSize / 3}"
+        x="${width / 2}" y="${nameY}"
         class="rain-name"
         font-size="${fontSize}"
         text-anchor="middle"
@@ -155,13 +159,18 @@ export function generateRainSvg({
       >${escapeXml(name)}</text>`;
 
     if (description) {
-      const descFontSize = Math.round(fontSize * 0.32);
-      const descriptionLines = wrapDescription(description, Math.floor(width / (descFontSize * 0.62)));
+      const descFontSize = Math.round(fontSize * 0.28);
+      const descriptionLines = wrapDescription(
+        description,
+        Math.floor(width / (descFontSize * 0.62)),
+      );
       const lineHeight = descFontSize * 1.35;
-      const descriptionStartY = height / 2 + fontSize * 0.55 - ((descriptionLines.length - 1) * lineHeight) / 2;
+      const descriptionCenterY = height / 2 + fontSize * 0.5;
+      const descriptionStartY =
+        descriptionCenterY - ((descriptionLines.length - 1) * lineHeight) / 2;
       nameMarkup += `
       <text
-        x="${width / 2}" y="${height / 2 + fontSize * 0.55}"
+        x="${width / 2}" y="${descriptionCenterY}"
         class="rain-desc"
         font-size="${descFontSize}"
         text-anchor="middle"
@@ -169,7 +178,7 @@ export function generateRainSvg({
       >${descriptionLines
         .map(
           (line, index) =>
-            `<tspan x="${width / 2}" dy="${index === 0 ? descriptionStartY - (height / 2 + fontSize * 0.55) : lineHeight}">${escapeXml(line)}</tspan>`,
+            `<tspan x="${width / 2}" dy="${index === 0 ? descriptionStartY - descriptionCenterY : lineHeight}">${escapeXml(line)}</tspan>`,
         )
         .join("")}</text>`;
     }
