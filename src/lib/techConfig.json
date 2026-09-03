@@ -5,7 +5,9 @@
     "icon": "ai-studio-icon.svg",
     "color": "#4285F4",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "android": {
     "name": "Android",
@@ -13,7 +15,9 @@
     "icon": "android-icon.svg",
     "color": "#3DDC84",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "android_studio": {
     "name": "Android Studio",
@@ -21,7 +25,9 @@
     "icon": "android-studio-icon.svg",
     "color": "#3DDC84",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "angular": {
     "name": "Angular",
@@ -30,8 +36,6 @@
     "color": "#dd0031",
     "iconPosition": "left",
     "showText": true,
-    "iconWidth": 16,
-    "iconHeight": 16,
     "badgeIconTheme": "light",
     "iconTheme": "light"
   },
@@ -41,7 +45,9 @@
     "icon": "ansible-icon.svg",
     "color": "#EE0000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "antigravity": {
     "name": "Antigravity",
@@ -49,7 +55,9 @@
     "icon": "antigravity-icon.svg",
     "color": "#20232A",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "antigravity_cli": {
     "name": "Antigravity CLI",
@@ -57,7 +65,9 @@
     "icon": "antigravity-cli-icon.svg",
     "color": "#20232A",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "apexcharts": {
     "name": "ApexCharts",
@@ -85,7 +95,9 @@
     "icon": "astro-icon.svg",
     "color": "#bc52ee",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "auth0": {
     "name": "Auth0",
@@ -93,7 +105,9 @@
     "icon": "auth0-icon.svg",
     "color": "#EB5424",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "aws": {
     "name": "AWS",
@@ -103,7 +117,6 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
-    "iconBgColor": "#232F3E",
     "iconTheme": "light"
   },
   "aws_lambda": {
@@ -112,7 +125,9 @@
     "icon": "aws-lambda-icon.svg",
     "color": "#FF9900",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "aws_sam": {
     "name": "AWS SAM",
@@ -122,7 +137,6 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
-    "iconBgColor": "#232F3E",
     "iconTheme": "light"
   },
   "axios": {
@@ -132,7 +146,8 @@
     "color": "url(#axios-grad)",
     "iconPosition": "left",
     "showText": true,
-    "defs": "<linearGradient id=\"axios-grad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\"><stop offset=\"0%\" stop-color=\"#377A9E\"/><stop offset=\"100%\" stop-color=\"#381C4F\"/></linearGradient>"
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "azure": {
     "name": "Azure",
@@ -140,7 +155,9 @@
     "icon": "azure-icon.svg",
     "color": "#0089D6",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "azure_functions": {
     "name": "Azure Functions",
@@ -158,7 +175,9 @@
     "icon": "babel-icon.svg",
     "color": "#F9DC3E",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "bash": {
     "name": "Bash",
@@ -186,7 +205,9 @@
     "icon": "boto3-icon.svg",
     "color": "#FF9900",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "bullmq": {
     "name": "BullMQ",
@@ -194,7 +215,9 @@
     "icon": "bullmq-icon.svg",
     "color": "#00B3E6",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "bun": {
     "name": "Bun",
@@ -202,7 +225,9 @@
     "icon": "bun-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "c": {
     "name": "C",
@@ -210,7 +235,9 @@
     "icon": "c-icon.svg",
     "color": "#A8B9CC",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "capacitor": {
     "name": "Capacitor",
@@ -218,7 +245,9 @@
     "icon": "capacitor-icon.svg",
     "color": "#119EFF",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "cassandra": {
     "name": "Cassandra",
@@ -226,7 +255,9 @@
     "icon": "cassandra-icon.svg",
     "color": "#1287B1",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "chakra_ui": {
     "name": "Chakra UI",
@@ -244,7 +275,9 @@
     "icon": "chatgpt-icon.svg",
     "color": "#10A37F",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "circle_ci": {
     "name": "CircleCI",
@@ -252,7 +285,9 @@
     "icon": "circle-ci-icon.svg",
     "color": "#343434",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "claude": {
     "name": "Claude",
@@ -260,7 +295,9 @@
     "icon": "claude-icon.svg",
     "color": "#D97757",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "claude_code": {
     "name": "Claude Code",
@@ -268,7 +305,9 @@
     "icon": "claude-code-icon.svg",
     "color": "#D97757",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "claude_desktop": {
     "name": "Claude Desktop",
@@ -276,7 +315,9 @@
     "icon": "claude-desktop-icon.svg",
     "color": "#D97757",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "clerk": {
     "name": "Clerk",
@@ -284,7 +325,9 @@
     "icon": "clerk-icon.svg",
     "color": "#6C47FF",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "cloudflare": {
     "name": "Cloudflare",
@@ -292,7 +335,9 @@
     "icon": "cloudflare-icon.svg",
     "color": "#F48120",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "codex": {
     "name": "OpenAI Codex",
@@ -300,7 +345,9 @@
     "icon": "codex-icon.svg",
     "color": "#412991",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "composer": {
     "name": "Composer",
@@ -308,7 +355,9 @@
     "icon": "composer-icon.svg",
     "color": "#885630",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "cpp": {
     "name": "C++",
@@ -316,7 +365,9 @@
     "icon": "cpp-icon.svg",
     "color": "#00599C",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "csharp": {
     "name": "C#",
@@ -324,7 +375,9 @@
     "icon": "csharp-icon.svg",
     "color": "#239120",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "css3": {
     "name": "CSS3",
@@ -333,8 +386,6 @@
     "color": "#1572b6",
     "iconPosition": "left",
     "showText": true,
-    "iconWidth": 14,
-    "iconHeight": 14,
     "badgeIconTheme": "light",
     "iconTheme": "light"
   },
@@ -344,7 +395,9 @@
     "icon": "cursor-icon.svg",
     "color": "#18181B",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "cypress": {
     "name": "Cypress",
@@ -352,7 +405,9 @@
     "icon": "cypress-icon.svg",
     "color": "#69d3a7",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "dart": {
     "name": "Dart",
@@ -360,7 +415,9 @@
     "icon": "dart-icon.svg",
     "color": "#0175C2",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "date_fns": {
     "name": "date-fns",
@@ -368,7 +425,9 @@
     "icon": "datefns-icon.svg",
     "color": "#770C56",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "dayjs": {
     "name": "Day.js",
@@ -376,7 +435,9 @@
     "icon": "dayjs-icon.svg",
     "color": "#FF5F45",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "db": {
     "name": "Database",
@@ -384,7 +445,9 @@
     "icon": "db-icon.svg",
     "color": "#4B5563",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "dbeaver": {
     "name": "DBeaver",
@@ -392,7 +455,9 @@
     "icon": "dbeaver-icon.svg",
     "color": "#382923",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "deno": {
     "name": "Deno",
@@ -400,7 +465,9 @@
     "icon": "deno-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "devin": {
     "name": "Devin",
@@ -408,7 +475,9 @@
     "icon": "devin-icon.svg",
     "color": "#1E3A8A",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "digitalocean": {
     "name": "DigitalOcean",
@@ -416,7 +485,9 @@
     "icon": "digitalocean-icon.svg",
     "color": "#0080FF",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "django": {
     "name": "Django",
@@ -424,7 +495,9 @@
     "icon": "django-icon.svg",
     "color": "#092E20",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "dnd_kit": {
     "name": "dnd-kit",
@@ -432,7 +505,9 @@
     "icon": "dnd-kit-icon.svg",
     "color": "#333333",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "docker": {
     "name": "Docker",
@@ -450,7 +525,10 @@
     "icon": "drizzle-orm-icon.svg",
     "color": "#C5F74F",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "textColor": "#000000",
+    "badgeIconTheme": "dark",
+    "iconTheme": "dark"
   },
   "dynamodb": {
     "name": "DynamoDB",
@@ -468,7 +546,9 @@
     "icon": "elasticsearch-icon.svg",
     "color": "#005571",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "elixir": {
     "name": "Elixir",
@@ -476,7 +556,9 @@
     "icon": "elixir-icon.svg",
     "color": "#4B275F",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "emotion_react": {
     "name": "Emotion React",
@@ -484,7 +566,9 @@
     "icon": "emotion-react-icon.svg",
     "color": "#C43BAD",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "esbuild": {
     "name": "esbuild",
@@ -492,7 +576,9 @@
     "icon": "esbuild-icon.svg",
     "color": "#FFCF00",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "eslint": {
     "name": "ESLint",
@@ -500,7 +586,9 @@
     "icon": "eslint-icon.svg",
     "color": "#4B32C3",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "exceljs": {
     "name": "ExcelJS",
@@ -508,7 +596,9 @@
     "icon": "exceljs-icon.svg",
     "color": "#217346",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "expo": {
     "name": "Expo",
@@ -516,7 +606,9 @@
     "icon": "expo-icon.svg",
     "color": "#000020",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "express": {
     "name": "Express",
@@ -526,7 +618,6 @@
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "light",
-    "iconBgColor": "#000000",
     "iconTheme": "light"
   },
   "fastapi": {
@@ -535,7 +626,9 @@
     "icon": "fastapi-icon.svg",
     "color": "#009688",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "fastify": {
     "name": "Fastify",
@@ -543,7 +636,9 @@
     "icon": "fastify-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "figma": {
     "name": "Figma",
@@ -551,7 +646,9 @@
     "icon": "figma-icon.svg",
     "color": "#F24E1E",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "firebase": {
     "name": "Firebase",
@@ -559,7 +656,9 @@
     "icon": "firebase-icon.svg",
     "color": "#FFCA28",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "flask": {
     "name": "Flask",
@@ -567,7 +666,9 @@
     "icon": "flask-icon.svg",
     "color": "#3babc3",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "flutter": {
     "name": "Flutter",
@@ -575,7 +676,9 @@
     "icon": "flutter-icon.svg",
     "color": "#02569B",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "framer": {
     "name": "Framer",
@@ -583,7 +686,9 @@
     "icon": "framer-icon.svg",
     "color": "#0055FF",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "fsharp": {
     "name": "F#",
@@ -591,7 +696,9 @@
     "icon": "fsharp-icon.svg",
     "color": "#378BBA",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "gatsby": {
     "name": "Gatsby",
@@ -599,7 +706,9 @@
     "icon": "gatsby-icon.svg",
     "color": "#663399",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "gcp": {
     "name": "Google Cloud",
@@ -607,7 +716,9 @@
     "icon": "gcp-icon.svg",
     "color": "#4285F4",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "gemini": {
     "name": "Google Gemini",
@@ -615,7 +726,9 @@
     "icon": "gemini-icon.svg",
     "color": "#8E75B2",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "gemini_cli": {
     "name": "Gemini CLI",
@@ -623,7 +736,9 @@
     "icon": "gemini-cli-icon.svg",
     "color": "#8E75B2",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "git": {
     "name": "Git",
@@ -631,7 +746,9 @@
     "icon": "git-icon.svg",
     "color": "#F05032",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "github": {
     "name": "GitHub",
@@ -639,7 +756,9 @@
     "icon": "github-icon.svg",
     "color": "#181717",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "github_actions": {
     "name": "GitHub Actions",
@@ -677,7 +796,9 @@
     "icon": "go-icon.svg",
     "color": "#00ADD8",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "google_libphonenumber": {
     "name": "google-libphonenumber",
@@ -685,7 +806,9 @@
     "icon": "google-libphonenumber-icon.svg",
     "color": "#4285F4",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "gradle": {
     "name": "Gradle",
@@ -693,7 +816,9 @@
     "icon": "gradle-icon.svg",
     "color": "#02303A",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "graphql": {
     "name": "GraphQL",
@@ -701,7 +826,9 @@
     "icon": "graphql-icon.svg",
     "color": "#E10098",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "groovy": {
     "name": "Groovy",
@@ -709,7 +836,9 @@
     "icon": "groovy-icon.svg",
     "color": "#4298B8",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "handlebars": {
     "name": "Handlebars",
@@ -717,7 +846,9 @@
     "icon": "handlebars-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "haskell": {
     "name": "Haskell",
@@ -725,7 +856,9 @@
     "icon": "haskell-icon.svg",
     "color": "#5D4F85",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "heroku": {
     "name": "Heroku",
@@ -733,7 +866,9 @@
     "icon": "heroku-icon.svg",
     "color": "#430098",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "hono": {
     "name": "Hono",
@@ -741,7 +876,9 @@
     "icon": "hono-icon.svg",
     "color": "#E36002",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "html5": {
     "name": "HTML5",
@@ -750,8 +887,6 @@
     "color": "#e34f26",
     "iconPosition": "left",
     "showText": true,
-    "iconWidth": 16,
-    "iconHeight": 16,
     "badgeIconTheme": "light",
     "iconTheme": "light"
   },
@@ -761,7 +896,9 @@
     "icon": "hugging-face-icon.svg",
     "color": "#FFD21E",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "husky": {
     "name": "Husky",
@@ -769,7 +906,9 @@
     "icon": "husky-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "i18next": {
     "name": "i18next",
@@ -777,7 +916,9 @@
     "icon": "i18n-icon.svg",
     "color": "#26a69a",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "influxdb": {
     "name": "InfluxDB",
@@ -785,7 +926,9 @@
     "icon": "influxdb-icon.svg",
     "color": "#22ADF6",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "insomnia": {
     "name": "Insomnia",
@@ -793,7 +936,9 @@
     "icon": "insomnia-icon.svg",
     "color": "#4000BF",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "intellij": {
     "name": "IntelliJ IDEA",
@@ -801,7 +946,9 @@
     "icon": "intellij-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "ios": {
     "name": "iOS",
@@ -809,7 +956,9 @@
     "icon": "ios-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "java": {
     "name": "Java",
@@ -817,18 +966,18 @@
     "icon": "java-icon.svg",
     "color": "#ED8B00",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "javascript": {
     "name": "JavaScript",
     "id": "05_javascript",
     "icon": "javascript-icon.svg",
     "color": "#f7df1e",
-    "textColor": "#000000",
     "iconPosition": "left",
     "showText": true,
-    "iconWidth": 18,
-    "iconHeight": 18,
+    "textColor": "#000000",
     "badgeIconTheme": "dark",
     "iconTheme": "dark"
   },
@@ -838,7 +987,9 @@
     "icon": "jenkins-icon.svg",
     "color": "#D24939",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "jest": {
     "name": "Jest",
@@ -846,7 +997,9 @@
     "icon": "jest-icon.svg",
     "color": "#C21325",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "json": {
     "name": "JSON",
@@ -864,7 +1017,9 @@
     "icon": "jspdf-icon.svg",
     "color": "#FF0000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "julia": {
     "name": "Julia",
@@ -872,7 +1027,9 @@
     "icon": "julia-icon.svg",
     "color": "#9558B2",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "jwt": {
     "name": "JWT",
@@ -880,7 +1037,9 @@
     "icon": "jwt-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "k6": {
     "name": "k6",
@@ -888,7 +1047,9 @@
     "icon": "k6-icon.svg",
     "color": "#7D64FF",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "kafka": {
     "name": "Apache Kafka",
@@ -896,7 +1057,9 @@
     "icon": "kafka-icon.svg",
     "color": "#231F20",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "keycloak": {
     "name": "Keycloak",
@@ -904,7 +1067,9 @@
     "icon": "keycloak-icon.svg",
     "color": "#4D4D4D",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "kiro": {
     "name": "Kiro",
@@ -912,7 +1077,9 @@
     "icon": "kiro-icon.svg",
     "color": "#10B981",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "kotlin": {
     "name": "Kotlin",
@@ -920,7 +1087,9 @@
     "icon": "kotlin-icon.svg",
     "color": "#7F52FF",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "kubernetes": {
     "name": "Kubernetes",
@@ -928,7 +1097,9 @@
     "icon": "kubernetes-icon.svg",
     "color": "#326CE5",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "langchain": {
     "name": "LangChain",
@@ -936,7 +1107,9 @@
     "icon": "langchain-icon.svg",
     "color": "#1C3C3C",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "laravel": {
     "name": "Laravel",
@@ -944,7 +1117,9 @@
     "icon": "laravel-icon.svg",
     "color": "#FF2D20",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "lefthook": {
     "name": "Lefthook",
@@ -952,7 +1127,9 @@
     "icon": "lefthook-icon.svg",
     "color": "#FF6B6B",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "linux": {
     "name": "Linux",
@@ -960,7 +1137,9 @@
     "icon": "linux-icon.svg",
     "color": "#FCC624",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "lodash": {
     "name": "lodash",
@@ -968,7 +1147,9 @@
     "icon": "lodash-icon.svg",
     "color": "#3492ff",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "lua": {
     "name": "Lua",
@@ -976,7 +1157,9 @@
     "icon": "lua-icon.svg",
     "color": "#2C2D72",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "mariadb": {
     "name": "MariaDB",
@@ -984,7 +1167,9 @@
     "icon": "mariadb-icon.svg",
     "color": "#003545",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "markdown": {
     "name": "Markdown",
@@ -992,7 +1177,9 @@
     "icon": "markdown-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "maven": {
     "name": "Maven",
@@ -1000,7 +1187,9 @@
     "icon": "maven-icon.svg",
     "color": "#C71A36",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "mocha": {
     "name": "Mocha",
@@ -1008,7 +1197,9 @@
     "icon": "mocha-icon.svg",
     "color": "#8D6748",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "monaco_editor": {
     "name": "Monaco Editor",
@@ -1016,7 +1207,9 @@
     "icon": "monaco-editor-icon.svg",
     "color": "#1E1E1E",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "mongodb": {
     "name": "MongoDB",
@@ -1034,7 +1227,9 @@
     "icon": "mongoose-icon.svg",
     "color": "#880000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "mqtt": {
     "name": "MQTT",
@@ -1042,7 +1237,9 @@
     "icon": "mqtt-icon.svg",
     "color": "#660066",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "mssql": {
     "name": "MS SQL Server",
@@ -1050,7 +1247,9 @@
     "icon": "mssql-icon.svg",
     "color": "#CC2927",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "mui": {
     "name": "MUI",
@@ -1068,7 +1267,9 @@
     "icon": "multer-icon.svg",
     "color": "#F34C28",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "mysql": {
     "name": "MySQL",
@@ -1076,7 +1277,9 @@
     "icon": "mysql-icon.svg",
     "color": "#4479A1",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "neo4j": {
     "name": "Neo4j",
@@ -1084,7 +1287,9 @@
     "icon": "neo4j-icon.svg",
     "color": "#008CC1",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "neovim": {
     "name": "Neovim",
@@ -1092,7 +1297,9 @@
     "icon": "neovim-icon.svg",
     "color": "#57A143",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "nestjs": {
     "name": "NestJS",
@@ -1110,7 +1317,9 @@
     "icon": "netlify-icon.svg",
     "color": "#00C7B7",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "next_auth": {
     "name": "NextAuth.js",
@@ -1118,7 +1327,9 @@
     "icon": "nextauth-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "next_js": {
     "name": "Next.js",
@@ -1126,7 +1337,9 @@
     "icon": "nextjs-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "nginx": {
     "name": "nginx",
@@ -1134,7 +1347,9 @@
     "icon": "nginx-icon.svg",
     "color": "#009639",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "nodejs": {
     "name": "Node.js",
@@ -1152,7 +1367,9 @@
     "icon": "npm-icon.svg",
     "color": "#CB3837",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "numpy": {
     "name": "NumPy",
@@ -1160,7 +1377,9 @@
     "icon": "numpy-icon.svg",
     "color": "#013243",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "nuxtjs": {
     "name": "Nuxt.js",
@@ -1168,7 +1387,9 @@
     "icon": "nuxtjs-icon.svg",
     "color": "#00DC82",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "nx": {
     "name": "Nx",
@@ -1176,7 +1397,9 @@
     "icon": "nx-icon.svg",
     "color": "#143055",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "ollama": {
     "name": "Ollama",
@@ -1184,7 +1407,9 @@
     "icon": "ollama-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "openai_sdk": {
     "name": "OpenAI SDK",
@@ -1192,7 +1417,9 @@
     "icon": "openai-sdk-icon.svg",
     "color": "#412991",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "opentelemetry": {
     "name": "OpenTelemetry",
@@ -1200,7 +1427,9 @@
     "icon": "opentelemetry-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "pandas": {
     "name": "Pandas",
@@ -1208,7 +1437,9 @@
     "icon": "pandas-icon.svg",
     "color": "#150458",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "passport": {
     "name": "Passport",
@@ -1216,7 +1447,9 @@
     "icon": "passport-icon.svg",
     "color": "#34E27A",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "pdfkit": {
     "name": "PDFKit",
@@ -1224,7 +1457,9 @@
     "icon": "pdfkit-icon.svg",
     "color": "#CC0000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "pdfmake": {
     "name": "pdfmake",
@@ -1232,7 +1467,9 @@
     "icon": "pdfmake-icon.svg",
     "color": "#8C1515",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "perl": {
     "name": "Perl",
@@ -1240,7 +1477,9 @@
     "icon": "perl-icon.svg",
     "color": "#39457E",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "phoenix": {
     "name": "Phoenix",
@@ -1248,7 +1487,9 @@
     "icon": "phoenix-icon.svg",
     "color": "#FD4F00",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "php": {
     "name": "PHP",
@@ -1256,7 +1497,9 @@
     "icon": "php-icon.svg",
     "color": "#777BB4",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "pip": {
     "name": "pip",
@@ -1264,7 +1507,9 @@
     "icon": "pip-icon.svg",
     "color": "#3775A9",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "playwright": {
     "name": "Playwright",
@@ -1272,7 +1517,9 @@
     "icon": "playwright-icon.svg",
     "color": "#2EAD33",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "pnpm": {
     "name": "pnpm",
@@ -1280,7 +1527,9 @@
     "icon": "pnpm-icon.svg",
     "color": "#F69220",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "postgresql": {
     "name": "PostgreSQL",
@@ -1298,7 +1547,9 @@
     "icon": "postman-icon.svg",
     "color": "#FF6C37",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "powershell": {
     "name": "PowerShell",
@@ -1316,7 +1567,9 @@
     "icon": "prettier-icon.svg",
     "color": "#F7B93E",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "prisma": {
     "name": "Prisma",
@@ -1334,17 +1587,19 @@
     "icon": "puppeteer-icon.svg",
     "color": "#40B5A4",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "python": {
     "name": "Python",
     "id": "11_python",
     "icon": "python-icon.svg",
     "color": "url(#py-bg)",
-    "defs": "<linearGradient id=\"py-bg\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#1e415e\"/><stop offset=\"100%\" stop-color=\"#3776AB\"/></linearGradient>",
     "iconPosition": "left",
     "showText": true,
-    "iconBgColor": "url(#py-bg)"
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "pytorch": {
     "name": "PyTorch",
@@ -1352,7 +1607,9 @@
     "icon": "pytorch-icon.svg",
     "color": "#EE4C2C",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "r_lang": {
     "name": "R",
@@ -1360,7 +1617,9 @@
     "icon": "r-lang-icon.svg",
     "color": "#276DC3",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "rabbitmq": {
     "name": "RabbitMQ",
@@ -1368,7 +1627,9 @@
     "icon": "rabbitmq-icon.svg",
     "color": "#FF6600",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "radix_ui": {
     "name": "Radix UI",
@@ -1386,7 +1647,9 @@
     "icon": "rails-icon.svg",
     "color": "#D30001",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "railway": {
     "name": "Railway",
@@ -1394,7 +1657,9 @@
     "icon": "railway-icon.svg",
     "color": "#0B0D0E",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "react_datepicker": {
     "name": "React DatePicker",
@@ -1403,7 +1668,8 @@
     "color": "#007ec6",
     "iconPosition": "left",
     "showText": true,
-    "iconBgColor": "#0d1117"
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "react_dropzone": {
     "name": "React Dropzone",
@@ -1411,7 +1677,9 @@
     "icon": "react-dropzone-icon.svg",
     "color": "#0055ff",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "react_easy_crop": {
     "name": "React Easy Crop",
@@ -1419,7 +1687,9 @@
     "icon": "react-easy-crop-icon.svg",
     "color": "#222222",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "react_hook_form": {
     "name": "React Hook Form",
@@ -1438,7 +1708,8 @@
     "color": "#20232a",
     "iconPosition": "left",
     "showText": true,
-    "iconBgColor": "#0d1117"
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "react_native": {
     "name": "React Native",
@@ -1447,7 +1718,8 @@
     "color": "#20232a",
     "iconPosition": "left",
     "showText": true,
-    "iconBgColor": "#0d1117"
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "react_query": {
     "name": "React Query",
@@ -1456,8 +1728,8 @@
     "color": "#ff4154",
     "iconPosition": "left",
     "showText": true,
-    "iconWidth": 16,
-    "iconHeight": 16
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "react_quill": {
     "name": "React Quill",
@@ -1465,7 +1737,9 @@
     "icon": "react-quill-icon.svg",
     "color": "#333333",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "react_router": {
     "name": "React Router",
@@ -1473,7 +1747,9 @@
     "icon": "reactrouter-icon.svg",
     "color": "#CA4245",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "react_select": {
     "name": "React Select",
@@ -1482,7 +1758,8 @@
     "color": "#2684ff",
     "iconPosition": "left",
     "showText": true,
-    "iconBgColor": "#0d1117"
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "react_spring": {
     "name": "React Spring",
@@ -1490,7 +1767,9 @@
     "icon": "reactspring-icon.svg",
     "color": "#1b1a22",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "react_toastify": {
     "name": "React Toastify",
@@ -1498,7 +1777,9 @@
     "icon": "react-toastify-icon.svg",
     "color": "#121212",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "redis": {
     "name": "Redis",
@@ -1506,7 +1787,9 @@
     "icon": "redis-icon.svg",
     "color": "#DC382D",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "redux": {
     "name": "Redux",
@@ -1525,10 +1808,7 @@
     "color": "#764ABC",
     "iconPosition": "left",
     "showText": true,
-    "iconWidth": 23,
-    "iconHeight": 14,
     "badgeIconTheme": "light",
-    "iconBgColor": "#764ABC",
     "iconTheme": "light"
   },
   "remix": {
@@ -1537,7 +1817,9 @@
     "icon": "remix-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "rest_api": {
     "name": "REST API",
@@ -1555,7 +1837,9 @@
     "icon": "rollup-icon.svg",
     "color": "#EC4A3F",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "rtk_query": {
     "name": "RTK Query",
@@ -1573,7 +1857,9 @@
     "icon": "ruby-icon.svg",
     "color": "#CC342D",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "rust": {
     "name": "Rust",
@@ -1581,7 +1867,9 @@
     "icon": "rust-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "rxjs": {
     "name": "RxJS",
@@ -1590,7 +1878,8 @@
     "color": "url(#rxjs-grad)",
     "iconPosition": "left",
     "showText": true,
-    "defs": "<linearGradient id=\"rxjs-grad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\"><stop offset=\"0%\" stop-color=\"#3b82f6\"/><stop offset=\"100%\" stop-color=\"#ec4899\"/></linearGradient>"
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "s3": {
     "name": "Amazon S3",
@@ -1598,7 +1887,9 @@
     "icon": "s3-icon.svg",
     "color": "#569A31",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "sanitize_html": {
     "name": "sanitize-html",
@@ -1606,7 +1897,9 @@
     "icon": "sanitize-html-icon.svg",
     "color": "#E34F26",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "scala": {
     "name": "Scala",
@@ -1614,7 +1907,9 @@
     "icon": "scala-icon.svg",
     "color": "#DC322F",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "scikit_learn": {
     "name": "Scikit-learn",
@@ -1622,7 +1917,9 @@
     "icon": "scikit-learn-icon.svg",
     "color": "#F7931E",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "selenium": {
     "name": "Selenium",
@@ -1630,7 +1927,9 @@
     "icon": "selenium-icon.svg",
     "color": "#43B02A",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "serverless": {
     "name": "Serverless",
@@ -1658,7 +1957,9 @@
     "icon": "solid-icon.svg",
     "color": "#2C4F7C",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "sonarlint": {
     "name": "SonarLint",
@@ -1666,7 +1967,9 @@
     "icon": "sonarlint-icon.svg",
     "color": "#CB2029",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "sonarqube": {
     "name": "SonarQube",
@@ -1674,7 +1977,9 @@
     "icon": "sonarqube-icon.svg",
     "color": "#4E9BCD",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "spring_boot": {
     "name": "Spring Boot",
@@ -1682,7 +1987,9 @@
     "icon": "spring-boot-icon.svg",
     "color": "#6DB33F",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "sql": {
     "name": "SQL",
@@ -1699,11 +2006,9 @@
     "id": "16_sqlite",
     "icon": "sqlite-icon.svg",
     "color": "url(#sqlite-bg)",
-    "defs": "<linearGradient id=\"sqlite-bg\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#4ba3e3\"/><stop offset=\"100%\" stop-color=\"#006eb3\"/></linearGradient>",
     "iconPosition": "left",
     "showText": true,
     "badgeIconTheme": "dark",
-    "iconBgColor": "url(#sqlite-bg)",
     "iconTheme": "dark"
   },
   "storybook": {
@@ -1712,7 +2017,9 @@
     "icon": "storybook-icon.svg",
     "color": "#FF4785",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "stylis_plugin_rtl": {
     "name": "Stylis Plugin RTL",
@@ -1720,7 +2027,9 @@
     "icon": "stylis-rtl-icon.svg",
     "color": "#333333",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "supabase": {
     "name": "Supabase",
@@ -1738,7 +2047,9 @@
     "icon": "svelte-icon.svg",
     "color": "#FF3E00",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "swift": {
     "name": "Swift",
@@ -1746,7 +2057,9 @@
     "icon": "swift-icon.svg",
     "color": "#F05138",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "tailwind_css": {
     "name": "Tailwind CSS",
@@ -1755,8 +2068,6 @@
     "color": "#06b6d4",
     "iconPosition": "left",
     "showText": true,
-    "iconWidth": 18,
-    "iconHeight": 18,
     "badgeIconTheme": "light",
     "iconTheme": "light"
   },
@@ -1766,7 +2077,9 @@
     "icon": "tensorflow-icon.svg",
     "color": "#FF6F00",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "terraform": {
     "name": "Terraform",
@@ -1784,7 +2097,9 @@
     "icon": "three-js-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "trpc": {
     "name": "tRPC",
@@ -1792,7 +2107,9 @@
     "icon": "trpc-icon.svg",
     "color": "#2596BE",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "turborepo": {
     "name": "Turborepo",
@@ -1800,7 +2117,9 @@
     "icon": "turborepo-icon.svg",
     "color": "#ff1e56",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "typeorm": {
     "name": "TypeORM",
@@ -1819,8 +2138,6 @@
     "color": "#3178c6",
     "iconPosition": "left",
     "showText": true,
-    "iconWidth": 18,
-    "iconHeight": 18,
     "badgeIconTheme": "light",
     "iconTheme": "light"
   },
@@ -1830,7 +2147,9 @@
     "icon": "uuid-icon.svg",
     "color": "#4B5563",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "v0": {
     "name": "v0",
@@ -1838,7 +2157,9 @@
     "icon": "v0-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "venv": {
     "name": "Python venv",
@@ -1846,7 +2167,9 @@
     "icon": "venv-icon.svg",
     "color": "#3776AB",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "vercel": {
     "name": "Vercel",
@@ -1864,7 +2187,9 @@
     "icon": "vim-icon.svg",
     "color": "#019733",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "vite": {
     "name": "Vite",
@@ -1872,7 +2197,9 @@
     "icon": "vite-icon.svg",
     "color": "#646CFF",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "vitest": {
     "name": "VITEST",
@@ -1881,10 +2208,8 @@
     "color": "url(#vitest-grad)",
     "iconPosition": "right",
     "showText": true,
-    "iconWidth": 17,
-    "iconHeight": 14,
-    "textWidth": 48,
-    "defs": "<linearGradient id=\"vitest-grad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\"><stop offset=\"0%\" stop-color=\"#10B981\"/><stop offset=\"100%\" stop-color=\"#1E40AF\"/></linearGradient>"
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "vscode": {
     "name": "VS Code",
@@ -1892,7 +2217,9 @@
     "icon": "vscode-icon.svg",
     "color": "#007ACC",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "vuejs": {
     "name": "Vue.js",
@@ -1900,7 +2227,9 @@
     "icon": "vuejs-icon.svg",
     "color": "#4FC08D",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "wasm": {
     "name": "WebAssembly",
@@ -1908,7 +2237,9 @@
     "icon": "wasm-icon.svg",
     "color": "#654FF0",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "webhooks": {
     "name": "Webhooks",
@@ -1926,7 +2257,9 @@
     "icon": "webpack-icon.svg",
     "color": "#8DD6F9",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "webstorm": {
     "name": "WebStorm",
@@ -1934,7 +2267,9 @@
     "icon": "webstorm-icon.svg",
     "color": "#000000",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "windows": {
     "name": "Windows",
@@ -1942,7 +2277,9 @@
     "icon": "windows-icon.svg",
     "color": "#0078D6",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "windsurf": {
     "name": "Windsurf",
@@ -1950,7 +2287,9 @@
     "icon": "windsurf-icon.svg",
     "color": "#2563EB",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "wsl": {
     "name": "WSL",
@@ -1958,7 +2297,9 @@
     "icon": "wsl-icon.svg",
     "color": "#0a97f5",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "xcode": {
     "name": "Xcode",
@@ -1966,7 +2307,9 @@
     "icon": "xcode-icon.svg",
     "color": "#147EFB",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "xlsx": {
     "name": "xlsx",
@@ -1974,7 +2317,9 @@
     "icon": "xlsx-icon.svg",
     "color": "#185C37",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "xml": {
     "name": "XML",
@@ -2002,7 +2347,9 @@
     "icon": "yarn-icon.svg",
     "color": "#2C8EBB",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "yup": {
     "name": "Yup",
@@ -2010,15 +2357,19 @@
     "icon": "yup-icon.svg",
     "color": "#10B981",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "zod": {
     "name": "Zod",
     "id": "57_zod",
     "icon": "zod-icon.svg",
-    "color": "#408aff",
+    "color": "#3068F8",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   },
   "zsh": {
     "name": "Zsh",
@@ -2036,6 +2387,8 @@
     "icon": "zustand-icon.svg",
     "color": "#443e38",
     "iconPosition": "left",
-    "showText": true
+    "showText": true,
+    "badgeIconTheme": "light",
+    "iconTheme": "light"
   }
 }

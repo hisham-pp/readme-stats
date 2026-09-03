@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 20" role="img" aria-label="Zod">
   <title>Zod</title>
   
-  <rect width="54" height="20" fill="#408aff" rx="3" />
+  <rect width="54" height="20" fill="#3068F8" rx="3" />
   <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
     <g transform="translate(6, 3)"><svg x="0" y="0" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 	<path d="M0 0h24v24H0z" fill="none" />

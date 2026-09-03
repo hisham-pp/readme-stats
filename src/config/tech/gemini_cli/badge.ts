@@ -4,4 +4,5 @@ export default {
   color: "#8E75B2",
   iconPosition: "left",
   showText: true,
+  badgeIconTheme: "light",
 } satisfies TechBadge;
