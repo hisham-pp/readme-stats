@@ -146,7 +146,7 @@ export function generateRainSvg({
     const fontSize =
       fontSizeOverride || (name.length > 16 ? 38 : name.length > 10 ? 46 : 54);
     const nameY = description
-      ? height / 2 - fontSize * 0.7
+      ? height / 2 - fontSize * 0.1
       : height / 2 + fontSize / 3;
     nameMarkup = `
       <!-- Centered name -->
@@ -165,12 +165,12 @@ export function generateRainSvg({
         Math.floor(width / (descFontSize * 0.62)),
       );
       const lineHeight = descFontSize * 1.35;
-      const descriptionCenterY = height / 2 + fontSize * 0.5;
+      const descriptionBottomY = height - descFontSize * 1.5;
       const descriptionStartY =
-        descriptionCenterY - ((descriptionLines.length - 1) * lineHeight) / 2;
+        descriptionBottomY - (descriptionLines.length - 1) * lineHeight;
       nameMarkup += `
       <text
-        x="${width / 2}" y="${descriptionCenterY}"
+        x="${width / 2}" y="${descriptionStartY}"
         class="rain-desc"
         font-size="${descFontSize}"
         text-anchor="middle"
@@ -178,7 +178,7 @@ export function generateRainSvg({
       >${descriptionLines
         .map(
           (line, index) =>
-            `<tspan x="${width / 2}" dy="${index === 0 ? descriptionStartY - descriptionCenterY : lineHeight}">${escapeXml(line)}</tspan>`,
+            `<tspan x="${width / 2}" dy="${index === 0 ? 0 : lineHeight}">${escapeXml(line)}</tspan>`,
         )
         .join("")}</text>`;
     }
