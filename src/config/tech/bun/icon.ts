@@ -1,5 +1,6 @@
 import type { TechIcon } from "../_types";
 
 export default {
-  iconTheme: "light",
+  iconBgColor: "#FBF0DF",
+  iconTheme: "dark",
 } satisfies TechIcon;
