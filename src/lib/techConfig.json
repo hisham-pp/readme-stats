@@ -2040,7 +2040,7 @@
     "showText": true,
     "badgeIconTheme": "light",
     "iconBgColor": "#006eb3",
-    "iconTheme": "light"
+    "iconTheme": "brand"
   },
   "storybook": {
     "name": "Storybook",
