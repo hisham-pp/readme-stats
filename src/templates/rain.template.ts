@@ -10,6 +10,28 @@ export interface RainThemeColors {
   nameGlow: string;
 }
 
+function wrapDescription(description: string, maxCharacters: number) {
+  const words = description.trim().split(/\s+/);
+  const lines: string[] = [];
+  let currentLine = "";
+
+  for (const word of words) {
+    const nextLine = currentLine ? `${currentLine} ${word}` : word;
+    if (currentLine && nextLine.length > maxCharacters) {
+      lines.push(currentLine);
+      currentLine = word;
+    } else {
+      currentLine = nextLine;
+    }
+  }
+
+  if (currentLine) {
+    lines.push(currentLine);
+  }
+
+  return lines;
+}
+
 const THEME_COLORS: Record<string, RainThemeColors> = {
   brand: {
     bg: "#0D1117",
@@ -134,6 +156,9 @@ export function generateRainSvg({
 
     if (description) {
       const descFontSize = Math.round(fontSize * 0.32);
+      const descriptionLines = wrapDescription(description, Math.floor(width / (descFontSize * 0.62)));
+      const lineHeight = descFontSize * 1.35;
+      const descriptionStartY = height / 2 + fontSize * 0.55 - ((descriptionLines.length - 1) * lineHeight) / 2;
       nameMarkup += `
       <text
         x="${width / 2}" y="${height / 2 + fontSize * 0.55}"
@@ -141,7 +166,12 @@ export function generateRainSvg({
         font-size="${descFontSize}"
         text-anchor="middle"
         dominant-baseline="central"
-      >${escapeXml(description)}</text>`;
+      >${descriptionLines
+        .map(
+          (line, index) =>
+            `<tspan x="${width / 2}" dy="${index === 0 ? descriptionStartY - (height / 2 + fontSize * 0.55) : lineHeight}">${escapeXml(line)}</tspan>`,
+        )
+        .join("")}</text>`;
     }
   }
 
