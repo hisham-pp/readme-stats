@@ -39,6 +39,8 @@ export async function GET(request: NextRequest) {
             ? bgcolorParam
             : `#${bgcolorParam}`
           : undefined;
+    const fontSizeParam = searchParams.get("fontSize");
+    const fontSize = fontSizeParam ? parseInt(fontSizeParam, 10) || undefined : undefined;
 
     // Determine global theme from URL query, fallback to brand
     const globalThemeQuery = searchParams.get("theme") as any;
@@ -154,6 +156,7 @@ export async function GET(request: NextRequest) {
       theme: globalTheme,
       color,
       bgcolor,
+      fontSize,
     });
 
     return new NextResponse(svg, {

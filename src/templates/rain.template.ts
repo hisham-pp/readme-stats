@@ -52,8 +52,9 @@ export function generateRainSvg({
   width = 850,
   height = 300,
   theme = "brand",
-  color = "#FFFFFF",
+  color,
   bgcolor,
+  fontSize: fontSizeOverride,
 }: {
   icons: RainIcon[];
   name?: string;
@@ -62,12 +63,13 @@ export function generateRainSvg({
   theme?: string;
   color?: string;
   bgcolor?: string;
+  fontSize?: number;
 }) {
   const themeColors = THEME_COLORS[theme] || THEME_COLORS.brand;
   const colors = {
-    ...themeColors,
-    nameColor: color,
-    bg: bgcolor ?? themeColors.bg,
+    bg: bgcolor || themeColors.bg,
+    nameColor: color || themeColors.nameColor,
+    nameGlow: themeColors.nameGlow,
   };
 
   // --- Build rain drops -------------------------------------------------------
@@ -117,7 +119,7 @@ export function generateRainSvg({
   let nameMarkup = "";
   if (name) {
     // Choose font size that fits — shrink if name is very long
-    const fontSize = name.length > 16 ? 38 : name.length > 10 ? 46 : 54;
+    const fontSize = fontSizeOverride || (name.length > 16 ? 38 : name.length > 10 ? 46 : 54);
     nameMarkup = `
       <!-- Centered name -->
       <text
