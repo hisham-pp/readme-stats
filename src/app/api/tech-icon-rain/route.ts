@@ -23,6 +23,7 @@ export async function GET(request: NextRequest) {
     const widthParam = searchParams.get("width");
     const heightParam = searchParams.get("height");
     const name = searchParams.get("name") || "";
+    const description = searchParams.get("description") || "";
     const colorParam = searchParams.get("color");
     const color =
       colorParam && /^#?[0-9a-fA-F]{3,8}$/.test(colorParam)
@@ -157,6 +158,7 @@ export async function GET(request: NextRequest) {
       color,
       bgcolor,
       fontSize,
+      description,
     });
 
     return new NextResponse(svg, {

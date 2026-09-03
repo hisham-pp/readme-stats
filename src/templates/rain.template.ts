@@ -55,6 +55,7 @@ export function generateRainSvg({
   color,
   bgcolor,
   fontSize: fontSizeOverride,
+  description = "",
 }: {
   icons: RainIcon[];
   name?: string;
@@ -64,6 +65,7 @@ export function generateRainSvg({
   color?: string;
   bgcolor?: string;
   fontSize?: number;
+  description?: string;
 }) {
   const themeColors = THEME_COLORS[theme] || THEME_COLORS.brand;
   const colors = {
@@ -123,12 +125,24 @@ export function generateRainSvg({
     nameMarkup = `
       <!-- Centered name -->
       <text
-        x="${width / 2}" y="${height / 2 + fontSize / 3}"
+        x="${width / 2}" y="${description ? height / 2 - fontSize * 0.15 : height / 2 + fontSize / 3}"
         class="rain-name"
         font-size="${fontSize}"
         text-anchor="middle"
         dominant-baseline="central"
       >${escapeXml(name)}</text>`;
+
+    if (description) {
+      const descFontSize = Math.round(fontSize * 0.32);
+      nameMarkup += `
+      <text
+        x="${width / 2}" y="${height / 2 + fontSize * 0.55}"
+        class="rain-desc"
+        font-size="${descFontSize}"
+        text-anchor="middle"
+        dominant-baseline="central"
+      >${escapeXml(description)}</text>`;
+    }
   }
 
   // --- Compose SVG ------------------------------------------------------------
@@ -148,6 +162,15 @@ export function generateRainSvg({
       font-weight: 800;
       fill: ${colors.nameColor};
       filter: drop-shadow(0 0 12px ${colors.nameGlow});
+      pointer-events: none;
+    }
+
+    .rain-desc {
+      font-family: 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;
+      font-weight: 400;
+      fill: ${colors.nameColor};
+      opacity: 0.75;
+      letter-spacing: 0.05em;
       pointer-events: none;
     }
 
