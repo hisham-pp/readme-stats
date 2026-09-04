@@ -5,6 +5,7 @@ Welcome to the marquee previews! Select a style below to view its examples and c
 - [Badge Marquee](./badge-marquee.md) - Standard tech badges
 - [Icon Marquee](./icon-marquee.md) - Clean, transparent icons
 - [Icon Background Marquee](./iconbg-marquee.md) - Icons perfectly centered inside themed background blocks
+- [Single Icons & Badges](./single-icons-badges.md) - Individual technology icon and badge APIs
 - [Tech Icon Rain](./tech-icon-rain.md) - Animated tech rainfall banner with custom name and description
 - [Typing Terminal](./terminal.md) - Animated macOS/Linux typing terminal with custom commands and syntax highlights
 

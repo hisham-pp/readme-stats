@@ -44,6 +44,12 @@ const DOC_METADATA: Record<
     category: "Marquees",
     order: 4,
   },
+  "single-icons-badges.md": {
+    id: "single-icons-badges",
+    title: "Single Icons & Badges",
+    category: "Tech Stack & Brands",
+    order: 4.5,
+  },
   "tech-icon-rain.md": {
     id: "tech-icon-rain",
     title: "Rainfall Banner",

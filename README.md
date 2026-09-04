@@ -194,6 +194,42 @@ Generates a dynamic pinned repository card displaying live stars, forks, languag
 | `show_owner`  | `boolean` | `false`    | When `true`, displays title as `owner/repo`                                   |
 | `description` | `string`  | _Auto_     | Custom description override if you wish to customize the text                 |
 
+---
+
+### 9. Single Technology Icon (`/api/icon`)
+
+Embed any of our **280+ technology icons** directly with theme and size controls:
+
+```markdown
+<img src="https://readme-stats-theta-sepia.vercel.app/api/icon?name=react&theme=brand&size=48" alt="React" />
+<img src="https://readme-stats-theta-sepia.vercel.app/api/icon?name=nextjs&theme=dark&size=48" alt="Next.js" />
+```
+
+| Parameter | Type     | Default | Description                                                                     |
+| --------- | -------- | ------- | ------------------------------------------------------------------------------- |
+| `name`    | `string` | _Req_   | Technology name or identifier (e.g. `react`, `python`, `docker`). Alias: `tech` |
+| `theme`   | `string` | `brand` | Color theme: `brand`, `dark`, `light`, or `bg`                                  |
+| `size`    | `number` | _Auto_  | Icon width & height in pixels (e.g. `48`, `64`). Alias: `width`                 |
+
+---
+
+### 10. Single Technology Badge (`/api/badge`)
+
+Embed individual shields-style technology badges:
+
+```markdown
+<img src="https://readme-stats-theta-sepia.vercel.app/api/badge?name=typescript" alt="TypeScript" />
+<img src="https://readme-stats-theta-sepia.vercel.app/api/badge?name=tailwindcss&height=28" alt="Tailwind" />
+```
+
+| Parameter | Type     | Default | Description                                                                |
+| --------- | -------- | ------- | -------------------------------------------------------------------------- |
+| `name`    | `string` | _Req_   | Technology name or identifier (e.g. `typescript`, `docker`). Alias: `tech` |
+| `height`  | `number` | `20`    | Badge height in pixels (scales width proportionally)                       |
+| `width`   | `number` | _Auto_  | Explicit badge width in pixels                                             |
+
+---
+
 ## 🚀 GitHub Actions Pre-Generation Pipeline (Zero Cold Starts)
 
 Want completely instant loading without relying on dynamic API cold starts when visitors open your profile? You can pre-generate all your SVGs using a scheduled GitHub Actions workflow and push them directly to an `output` branch:

@@ -91,6 +91,22 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 - `show_owner`: (Optional) `true` or `false` (default: `false`).
 - `description`: (Optional) Custom description override for single cards.
 
+### 10. Single Technology Icon
+**Endpoint**: `/api/icon`
+**Description**: Generates an individual SVG icon for any of 280+ supported technologies with theme and size controls.
+**Query Parameters**:
+- `name` / `tech`: (Required) Technology name or identifier (e.g. `react`, `python`, `docker`).
+- `theme`: (Optional) `brand`, `dark`, `light`, or `bg` (default: `brand`).
+- `size`: (Optional) Icon width & height in pixels (e.g. `48`, `64`).
+
+### 11. Single Technology Badge
+**Endpoint**: `/api/badge`
+**Description**: Generates an individual SVG badge for any of 280+ supported technologies with custom height scaling.
+**Query Parameters**:
+- `name` / `tech`: (Required) Technology name or identifier (e.g. `typescript`, `docker`).
+- `height`: (Optional) Badge height in pixels (default: `20`, preserves aspect ratio).
+- `width`: (Optional) Explicit badge width in pixels.
+
 ## Markdown Usage Example
 ```markdown
 [![Tech Stack](https://<domain>/api/tech-badge-marquee?techs=react,nextjs,typescript,tailwindcss)](https://<domain>)
