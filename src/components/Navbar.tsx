@@ -24,12 +24,6 @@ export default function Navbar() {
             Preview
           </Link>
           <Link
-            href="/docs"
-            className="text-zinc-400 hover:text-zinc-100 transition-colors"
-          >
-            Docs
-          </Link>
-          <Link
             href="/builder"
             className="px-4 py-2 bg-zinc-100 text-zinc-900 rounded hover:bg-white transition-colors"
           >
