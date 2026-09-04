@@ -41,3 +41,13 @@ You can provide the `&width=1000` parameter if you want to override the default 
 <p align="center">
   <img src="https://readme-stats-theta-sepia.vercel.app/api/tech-icon-marquee?theme=bg&techs=react,nextjs,typescript&width=1000" alt="Frontend Tech Stack Background Icon Marquee" />
 </p>
+
+---
+
+## Parameters
+
+| Parameter | Type     | Default     | Description                                                                                        |
+| --------- | -------- | ----------- | -------------------------------------------------------------------------------------------------- |
+| `theme`   | `string` | `bg`        | Set to `bg` to render icons with themed background card blocks                                     |
+| `techs`   | `string` | _All techs_ | Comma-separated list of technology keys to display in the marquee (e.g. `react,nextjs,typescript`) |
+| `width`   | `number` | `850`       | SVG viewbox width in pixels                                                                        |

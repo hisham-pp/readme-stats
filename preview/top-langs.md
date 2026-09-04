@@ -65,3 +65,13 @@ Renders a squarified treemap proportional to each language's percentage.
 ```markdown
 <img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs/treemap?username=your-username" alt="Top Languages Treemap" />
 ```
+
+---
+
+## Parameters
+
+| Parameter  | Type     | Default    | Description                                                                                    |
+| ---------- | -------- | ---------- | ---------------------------------------------------------------------------------------------- |
+| `username` | `string` | _Required_ | GitHub username to fetch top languages for                                                     |
+| `type`     | `string` | `default`  | Layout style: `default` (dots), `badge`, `icon`, `treemap`, `treemap-badge`, or `treemap-icon` |
+| `theme`    | `string` | `brand`    | Color palette for badges/icons: `brand`, `dark`, `light`, or `bg`                              |

@@ -15,12 +15,29 @@ You can also browse all supported icons and badges visually at the **`/icons`** 
 
 - `/api/stats` - Generates a GitHub stats card.
 - `/api/top-langs` - Generates a top languages card.
+- `/api/tech-icon-rain` - Generates an animated tech rainfall banner with custom text.
 - `/api/tech-icon-marquee` - Generates an animated tech stack **icon** marquee.
 - `/api/tech-badge-marquee` - Generates an animated tech stack **badge** marquee.
+- `/api/snake` - Generates an animated GitHub contribution grid snake animation.
 
-## ✨ Features
+## ✨ Features & Parameter Tables
 
-### 3. Top Languages Card
+### 1. GitHub Stats Card (`/api/stats`)
+
+Generates a summary card of your GitHub stars, commits, PRs, and issues:
+
+```markdown
+<img src="https://readme-stats-theta-sepia.vercel.app/api/stats?username=your-username" alt="GitHub Stats" />
+```
+
+| Parameter  | Type     | Default    | Description                              |
+| ---------- | -------- | ---------- | ---------------------------------------- |
+| `username` | `string` | _Required_ | GitHub username                          |
+| `theme`    | `string` | `brand`    | Theme: `brand`, `dark`, `light`, or `bg` |
+
+---
+
+### 2. Top Languages Card (`/api/top-langs`)
 
 Showcase your most-used GitHub languages using dedicated endpoints for each visual layout:
 
@@ -48,9 +65,53 @@ Showcase your most-used GitHub languages using dedicated endpoints for each visu
 <img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs/treemap?username=your-username" alt="Top Languages Treemap" />
 ```
 
-> **Tip:** You can also pass `?theme=dark|light|brand` or use the query parameter `?type=badge|icon|treemap` on `/api/top-langs`.
+| Parameter  | Type     | Default    | Description                                                                       |
+| ---------- | -------- | ---------- | --------------------------------------------------------------------------------- |
+| `username` | `string` | _Required_ | GitHub username                                                                   |
+| `type`     | `string` | `default`  | Layout: `default`, `badge`, `icon`, `treemap`, `treemap-badge`, or `treemap-icon` |
+| `theme`    | `string` | `brand`    | Color palette for badges/icons: `brand`, `dark`, `light`, or `bg`                 |
 
-### 4. GitHub Contribution Snake Animation (`/api/snake`)
+---
+
+### 3. Tech Icon Rainfall Banner (`/api/tech-icon-rain`)
+
+Animated tech logos raining in the background behind your name and bio:
+
+```markdown
+<img src="https://readme-stats-theta-sepia.vercel.app/api/tech-icon-rain?techs=react,nextjs,typescript&name=Hi%2C%20I'm%20YourName&description=Full%20Stack%20Engineer" alt="Tech Rainfall Banner" width="100%" />
+```
+
+| Parameter     | Type     | Default     | Description                                         |
+| ------------- | -------- | ----------- | --------------------------------------------------- |
+| `techs`       | `string` | _All techs_ | Comma-separated tech keys to rain in the background |
+| `name`        | `string` | _None_      | Title heading centered in banner                    |
+| `description` | `string` | _None_      | Subtitle description below title                    |
+| `width`       | `number` | `850`       | SVG width in pixels                                 |
+| `height`      | `number` | `300`       | SVG height in pixels                                |
+| `theme`       | `string` | `brand`     | Icon theme: `brand`, `dark`, `light`, or `bg`       |
+| `color`       | `string` | `#FFFFFF`   | Text color (hex code)                               |
+| `bgcolor`     | `string` | _Auto_      | Background color (hex code or `transparent`)        |
+| `fontSize`    | `number` | `54`        | Font size for title heading                         |
+
+---
+
+### 4. Tech Marquees (`/api/tech-badge-marquee` & `/api/tech-icon-marquee`)
+
+Infinite animated carousel displaying badges or icons:
+
+```markdown
+<img src="https://readme-stats-theta-sepia.vercel.app/api/tech-badge-marquee?techs=react,nextjs,typescript" alt="Tech Badge Marquee" />
+```
+
+| Parameter | Type     | Default     | Description                                             |
+| --------- | -------- | ----------- | ------------------------------------------------------- |
+| `techs`   | `string` | _All techs_ | Comma-separated technology keys                         |
+| `theme`   | `string` | `brand`     | _(Icons only)_ Theme: `brand`, `dark`, `light`, or `bg` |
+| `width`   | `number` | `850`       | Marquee viewbox width in pixels                         |
+
+---
+
+### 5. GitHub Contribution Snake Animation (`/api/snake`)
 
 Dynamically generate an animated snake that crawls through your real GitHub contribution graph:
 
@@ -58,7 +119,14 @@ Dynamically generate an animated snake that crawls through your real GitHub cont
 <img src="https://readme-stats-theta-sepia.vercel.app/api/snake?username=your-username" alt="Contribution Snake" width="100%" />
 ```
 
-> **Options:** `?palette=github-dark|github-light` • `?color_snake=purple|#38bdf8` • `?color_dots=...`
+| Parameter           | Type     | Default       | Description                                                                           |
+| ------------------- | -------- | ------------- | ------------------------------------------------------------------------------------- |
+| `username`          | `string` | _Required_    | GitHub username                                                                       |
+| `palette` / `theme` | `string` | `github-dark` | Color preset: `github-dark`, `github-light`, `github`, `gitlab-dark`, `codeberg-dark` |
+| `color_snake`       | `string` | `purple`      | Hex or named color for the snake (e.g. `#38bdf8`, `orange`)                           |
+| `color_dots`        | `string` | _5 colors_    | Comma-separated list of 5 colors from 0 to 4 contribution level                       |
+| `color_background`  | `string` | `#0c1116`     | Background color of the SVG                                                           |
+| `speed`             | `number` | `100`         | Step duration in milliseconds (lower = faster)                                        |
 
 ## 🚀 GitHub Actions Pre-Generation Pipeline (Zero Cold Starts)
 
