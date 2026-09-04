@@ -79,6 +79,8 @@ export default function IconsPage() {
                     <img
                       src={`/icons/brand/${item.icon}`}
                       alt={`${item.name} brand`}
+                      loading="lazy"
+                      decoding="async"
                       className="max-h-8 transition-transform group-hover:scale-110"
                     />
                   </div>
@@ -99,6 +101,8 @@ export default function IconsPage() {
                     <img
                       src={`/icons/dark/${item.icon}`}
                       alt={`${item.name} dark`}
+                      loading="lazy"
+                      decoding="async"
                       className="max-h-8 transition-transform group-hover:scale-110"
                     />
                   </div>
@@ -119,6 +123,8 @@ export default function IconsPage() {
                     <img
                       src={`/icons/light/${item.icon}`}
                       alt={`${item.name} light`}
+                      loading="lazy"
+                      decoding="async"
                       className="max-h-8 transition-transform group-hover:scale-110"
                     />
                   </div>
@@ -139,6 +145,8 @@ export default function IconsPage() {
                     <img
                       src={`/icons/bg/${item.icon}`}
                       alt={`${item.name} bg`}
+                      loading="lazy"
+                      decoding="async"
                       className="max-h-8 transition-transform group-hover:scale-110"
                     />
                   </div>

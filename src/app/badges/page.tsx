@@ -79,6 +79,8 @@ export default function BadgesPage() {
                   <img
                     src={`/badges/brand/${item.badge}`}
                     alt={`${item.name} brand`}
+                    loading="lazy"
+                    decoding="async"
                     className="max-h-6 transition-transform group-hover/badge:scale-105"
                   />
                 </div>
