@@ -40,3 +40,20 @@ export interface StreakStats {
   firstContributionDate?: string;
   theme?: Theme;
 }
+
+export interface RepoStats {
+  name: string;
+  owner: string;
+  description: string;
+  stars: number;
+  forks: number;
+  language?: {
+    name: string;
+    color: string;
+    techKey?: string | null;
+  };
+  topics?: string[];
+  isFork?: boolean;
+  theme?: Theme;
+  showOwner?: boolean;
+}

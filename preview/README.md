@@ -11,6 +11,7 @@ Welcome to the marquee previews! Select a style below to view its examples and c
 ## Stats Previews
 
 - [Streak Stats](./streak.md) - Real-time streak tracking, longest streak, and total contributions with animated flame
+- [Pinned Repository](./pin.md) - Showcase featured repositories with dynamic stars, forks, and language colors
 - [Top Languages](./top-langs.md) - Highly customized most-used languages widget
 - [Contribution Snake](./snake.md) - Interactive animated snake crawling over contribution activity
 

@@ -21,6 +21,7 @@ You can also browse all supported brands, icons, and badges visually at the **`/
 - `/api/tech-badge-marquee` - Generates an animated tech stack **badge** marquee.
 - `/api/snake` - Generates an animated GitHub contribution grid snake animation.
 - `/api/terminal` - Generates an animated macOS/Linux typing terminal card with custom commands and syntax highlights.
+- `/api/pin` - Generates a dynamic pinned repository showcase card with live stars, forks, and language colors.
 
 ## ✨ Features & Parameter Tables
 
@@ -163,6 +164,35 @@ Generates a macOS/Linux terminal window with animated typing lines and a blinkin
 | `theme`    | `string` | `brand`             | Theme preset: `brand`, `dark`, `matrix`, `dracula`, `monokai`, `light`, or `bg`                  |
 | `lines`    | `string` | _Default developer_ | Semicolon-separated `command:output` pairs (e.g. `whoami:Engineer;cat bio.txt:Building systems`) |
 | `width`    | `number` | `850`               | ViewBox width of the terminal SVG                                                                |
+
+---
+
+### 8. Pinned Repository Card (`/api/pin`)
+
+Generates a dynamic pinned repository card displaying live stars, forks, language colors, and descriptions. Supports single cards, multi-card SVG grids, and side-by-side Markdown embedding:
+
+```markdown
+<!-- Single Repository Card -->
+<img src="https://readme-stats-theta-sepia.vercel.app/api/pin?username=your-username&repo=your-repo" alt="Pinned Repo" />
+
+<!-- Multi-Repo Grid in Single SVG -->
+<img src="https://readme-stats-theta-sepia.vercel.app/api/pin?username=your-username&repos=repo1,repo2" alt="Pinned Repos Grid" />
+
+<!-- Individually Clickable Side-by-Side Cards -->
+<p align="center">
+  <a href="https://github.com/username/repo1"><img src="https://readme-stats-theta-sepia.vercel.app/api/pin?username=username&repo=repo1" width="49%" /></a>
+  <a href="https://github.com/username/repo2"><img src="https://readme-stats-theta-sepia.vercel.app/api/pin?username=username&repo=repo2" width="49%" /></a>
+</p>
+```
+
+| Parameter     | Type      | Default    | Description                                                                   |
+| ------------- | --------- | ---------- | ----------------------------------------------------------------------------- |
+| `username`    | `string`  | _Required_ | Repository owner / GitHub username (alias: `owner`)                           |
+| `repo`        | `string`  | _Required_ | Repository name, or comma-separated list (e.g. `repo1,repo2`). Alias: `repos` |
+| `cols`        | `number`  | `2`        | Columns for multi-repo grids (e.g. `1` or `2`)                                |
+| `theme`       | `string`  | `brand`    | Color theme: `brand`, `dark`, `light`, or `bg`                                |
+| `show_owner`  | `boolean` | `false`    | When `true`, displays title as `owner/repo`                                   |
+| `description` | `string`  | _Auto_     | Custom description override if you wish to customize the text                 |
 
 ## 🚀 GitHub Actions Pre-Generation Pipeline (Zero Cold Starts)
 

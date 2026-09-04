@@ -80,6 +80,17 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 - `lines`: (Optional) Semicolon-separated `command:output` pairs.
 - `width`: (Optional) Card width in pixels (default: 850).
 
+### 9. Pinned Repository Card
+**Endpoint**: `/api/pin`
+**Description**: Generates a dynamic pinned repository card showing live stars, forks, primary language, and description. Supports single cards and multi-card SVG grids.
+**Query Parameters**:
+- `username` / `owner`: (Required) GitHub username or organization name.
+- `repo` / `repos`: (Required) GitHub repository name, or comma-separated list of repos (e.g. `repo1,repo2`). Supports `owner/repo` syntax.
+- `cols`: (Optional) Columns for multi-repo grids (e.g. `1` or `2`, default `2`).
+- `theme`: (Optional) `brand`, `dark`, `light`, or `bg`.
+- `show_owner`: (Optional) `true` or `false` (default: `false`).
+- `description`: (Optional) Custom description override for single cards.
+
 ## Markdown Usage Example
 ```markdown
 [![Tech Stack](https://<domain>/api/tech-badge-marquee?techs=react,nextjs,typescript,tailwindcss)](https://<domain>)

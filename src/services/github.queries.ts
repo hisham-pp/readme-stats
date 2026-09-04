@@ -68,3 +68,30 @@ export const CONTRIBUTIONS_QUERY = `
     }
   }
 `;
+
+export const REPO_INFO_QUERY = `
+  query repoInfo($owner: String!, $name: String!) {
+    repository(owner: $owner, name: $name) {
+      name
+      owner {
+        login
+      }
+      description
+      stargazerCount
+      forkCount
+      isFork
+      isTemplate
+      primaryLanguage {
+        name
+        color
+      }
+      repositoryTopics(first: 5) {
+        nodes {
+          topic {
+            name
+          }
+        }
+      }
+    }
+  }
+`;

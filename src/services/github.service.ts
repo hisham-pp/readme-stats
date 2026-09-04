@@ -3,11 +3,13 @@ import {
   GitHubLanguage,
   ContributionCell,
   StreakStats,
+  RepoStats,
 } from "@/types/github.types";
 import {
   USER_INFO_QUERY,
   TOP_LANGS_QUERY,
   CONTRIBUTIONS_QUERY,
+  REPO_INFO_QUERY,
 } from "./github.queries";
 
 import { githubLanguageToTechMapKey } from "@/config/github.config";
@@ -311,5 +313,69 @@ export async function fetchStreakStats(username: string): Promise<StreakStats> {
     longestStreak,
     longestStreakStart: formatDateRange(longestStreakStart, longestStreakEnd),
     longestStreakEnd: longestStreakEnd,
+  };
+}
+
+export async function fetchRepoStats(
+  owner: string,
+  repo: string,
+): Promise<RepoStats> {
+  const token = process.env.GITHUB_TOKEN;
+
+  if (!token) {
+    throw new Error("GITHUB_TOKEN is missing");
+  }
+
+  const query = REPO_INFO_QUERY;
+
+  const response = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ query, variables: { owner, name: repo } }),
+    next: { revalidate: 3600 }, // Cache for 1 hour
+  });
+
+  if (!response.ok) {
+    throw new Error(`GitHub API error: ${response.statusText}`);
+  }
+
+  const data = await response.json();
+
+  if (data.errors) {
+    throw new Error(`GraphQL error: ${data.errors[0].message}`);
+  }
+
+  const repository = data.data?.repository;
+  if (!repository) {
+    throw new Error(`Repository ${owner}/${repo} not found`);
+  }
+
+  const primaryLang = repository.primaryLanguage;
+  const langKey = primaryLang?.name
+    ? githubLanguageToTechMapKey[primaryLang.name] || null
+    : null;
+
+  const topics = (repository.repositoryTopics?.nodes || []).map(
+    (n: any) => n.topic.name,
+  );
+
+  return {
+    name: repository.name,
+    owner: repository.owner?.login || owner,
+    description: repository.description || "No description provided.",
+    stars: repository.stargazerCount || 0,
+    forks: repository.forkCount || 0,
+    isFork: repository.isFork || false,
+    language: primaryLang
+      ? {
+          name: primaryLang.name,
+          color: primaryLang.color || "#858585",
+          techKey: langKey,
+        }
+      : undefined,
+    topics,
   };
 }

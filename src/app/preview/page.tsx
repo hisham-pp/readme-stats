@@ -74,11 +74,17 @@ const DOC_METADATA: Record<
     category: "Animations",
     order: 9,
   },
+  "pin.md": {
+    id: "pin",
+    title: "Pinned Repository",
+    category: "Projects & Repos",
+    order: 10,
+  },
   "pipeline.md": {
     id: "pipeline",
     title: "Pre-Generation Pipeline",
     category: "Workflows & CI/CD",
-    order: 10,
+    order: 11,
   },
 };
 
