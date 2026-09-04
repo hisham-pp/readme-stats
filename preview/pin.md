@@ -154,8 +154,8 @@ If you want each card in your profile README to be **individually clickable** di
   <a href="https://github.com/vercel/next.js">
     <img src="https://readme-stats-theta-sepia.vercel.app/api/pin?username=vercel&repo=next.js" width="49%" alt="Next.js" />
   </a>
-  <a href="https://github.com/vercel/turbo">
-    <img src="https://readme-stats-theta-sepia.vercel.app/api/pin?username=vercel&repo=turbo" width="49%" alt="Turbo" />
+  <a href="https://github.com/vercel/turborepo">
+    <img src="https://readme-stats-theta-sepia.vercel.app/api/pin?username=vercel&repo=turborepo" width="49%" alt="Turborepo" />
   </a>
 </p>
 
