@@ -91,7 +91,7 @@ export function renderSingleCard(repo: RepoStats): string {
     metaColor = "#8B949E";
     iconColor = "#8B949E";
     starColor = "#E3B341";
-  } else if (theme === "bg") {
+  } else if (theme === "bg" || theme === "transparent") {
     bg = "transparent";
     stroke = "transparent";
     titleColor = "#58A6FF";

@@ -45,7 +45,7 @@ export function generateStreakSvg(stats: StreakStats): string {
     flame = "#FA7A18";
     trophy = "#F1E05A";
     calendar = "#8B949E";
-  } else if (theme === "bg") {
+  } else if (theme === "bg" || theme === "transparent") {
     bg = "transparent";
     stroke = "transparent";
     title = "#58A6FF";

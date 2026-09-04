@@ -102,18 +102,18 @@ High-contrast crisp light theme designed for light profile backgrounds.
 
 ---
 
-## Transparent Theme (`theme=bg`)
+## Transparent Theme (`theme=transparent` or `theme=bg`)
 
-Seamless transparent background with no outer border, blending smoothly into custom README profile layouts.
+Seamless transparent background with no outer border, blending smoothly into custom README profile layouts. Supports both `theme=transparent` and `theme=bg`.
 
 <p align="center">
-  <img src="https://readme-stats-theta-sepia.vercel.app/api/activity-graph?username=hisham-pp&theme=bg" alt="Activity Graph Transparent" />
+  <img src="https://readme-stats-theta-sepia.vercel.app/api/activity-graph?username=hisham-pp&theme=transparent" alt="Activity Graph Transparent" />
 </p>
 
 **Code snippet:**
 
 ```markdown
-<img src="https://readme-stats-theta-sepia.vercel.app/api/activity-graph?username=your-username&theme=bg" alt="Activity Graph" />
+<img src="https://readme-stats-theta-sepia.vercel.app/api/activity-graph?username=your-username&theme=transparent" alt="Activity Graph" />
 ```
 
 ---
@@ -136,12 +136,12 @@ Customize curve line color and gradient fill:
 
 ## Parameters
 
-| Parameter      | Type      | Default         | Description                                                            |
-| -------------- | --------- | --------------- | ---------------------------------------------------------------------- |
-| `username`     | `string`  | _Required_      | GitHub username (aliases: `user`, `login`)                             |
-| `theme`        | `string`  | `brand`         | Preset: `brand`, `dark`, `matrix`, `dracula`, `monokai`, `light`, `bg` |
-| `days`         | `number`  | `365`           | Number of days of historical activity (e.g. `30`, `90`, `365`)         |
-| `line_color`   | `string`  | _Theme default_ | Custom stroke hex color (URL-encoded e.g. `%23ec4899`)                 |
-| `area_color`   | `string`  | _Line color_    | Custom gradient fill hex color                                         |
-| `hide_title`   | `boolean` | `false`         | When `true`, hides the title header                                    |
-| `hide_metrics` | `boolean` | `false`         | When `true`, hides the top metric badges (Total, Weekly Avg, Peak)     |
+| Parameter      | Type      | Default         | Description                                                                           |
+| -------------- | --------- | --------------- | ------------------------------------------------------------------------------------- |
+| `username`     | `string`  | _Required_      | GitHub username (aliases: `user`, `login`)                                            |
+| `theme`        | `string`  | `brand`         | Preset: `brand`, `dark`, `matrix`, `dracula`, `monokai`, `light`, `transparent`, `bg` |
+| `days`         | `number`  | `365`           | Number of days of historical activity (e.g. `30`, `90`, `365`)                        |
+| `line_color`   | `string`  | _Theme default_ | Custom stroke hex color (URL-encoded e.g. `%23ec4899`)                                |
+| `area_color`   | `string`  | _Line color_    | Custom gradient fill hex color                                                        |
+| `hide_title`   | `boolean` | `false`         | When `true`, hides the title header                                                   |
+| `hide_metrics` | `boolean` | `false`         | When `true`, hides the top metric badges (Total, Weekly Avg, Peak)                    |

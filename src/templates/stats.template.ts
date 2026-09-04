@@ -12,7 +12,11 @@ export function generateStatsSvg(stats: GitHubStats) {
     bg = "#FFFFFF";
     header = "#0969DA";
     stat = "#24292F";
-  } else if (theme === "brand") {
+  } else if (theme === "bg" || theme === "transparent") {
+    bg = "transparent";
+    header = "#58A6FF";
+    stat = "#C9D1D9";
+  } else if (theme === "brand" || theme === "dark") {
     bg = "#0D1117";
     header = "#58A6FF";
     stat = "#C9D1D9";
@@ -25,7 +29,7 @@ export function generateStatsSvg(stats: GitHubStats) {
         .stat { font: 400 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${stat}; }
         .icon { fill: ${header}; }
       </style>
-      <rect width="495" height="195" rx="4.5" fill="${bg}" stroke="${bg}" />
+      <rect width="495" height="195" rx="4.5" fill="${bg}" stroke="${bg === "transparent" ? "transparent" : bg}" />
       <text x="25" y="35" class="header">${name}'s GitHub Stats</text>
       
       <!-- Total Stars -->

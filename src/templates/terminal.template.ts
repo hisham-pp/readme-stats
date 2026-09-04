@@ -94,6 +94,16 @@ const THEMES: Record<string, ThemeConfig> = {
     output: "#7EE787",
     cursor: "#58A6FF",
   },
+  transparent: {
+    bg: "transparent",
+    headerBg: "rgba(255, 255, 255, 0.05)",
+    border: "rgba(255, 255, 255, 0.15)",
+    title: "#8B949E",
+    prompt: "#58A6FF",
+    command: "#F0F6FC",
+    output: "#7EE787",
+    cursor: "#58A6FF",
+  },
 };
 
 function escapeXml(str: string): string {

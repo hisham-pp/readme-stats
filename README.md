@@ -36,10 +36,10 @@ Generates a summary card of your GitHub stars, commits, PRs, and issues:
 <img src="https://readme-stats-theta-sepia.vercel.app/api/stats?username=your-username" alt="GitHub Stats" />
 ```
 
-| Parameter  | Type     | Default    | Description                              |
-| ---------- | -------- | ---------- | ---------------------------------------- |
-| `username` | `string` | _Required_ | GitHub username                          |
-| `theme`    | `string` | `brand`    | Theme: `brand`, `dark`, `light`, or `bg` |
+| Parameter  | Type     | Default    | Description                                             |
+| ---------- | -------- | ---------- | ------------------------------------------------------- |
+| `username` | `string` | _Required_ | GitHub username                                         |
+| `theme`    | `string` | `brand`    | Theme: `brand`, `dark`, `light`, `transparent`, or `bg` |
 
 ---
 
@@ -51,10 +51,10 @@ Displays your current streak, longest streak, and total contributions with anima
 <img src="https://readme-stats-theta-sepia.vercel.app/api/streak?username=your-username" alt="GitHub Streak" />
 ```
 
-| Parameter  | Type     | Default    | Description                              |
-| ---------- | -------- | ---------- | ---------------------------------------- |
-| `username` | `string` | _Required_ | GitHub username                          |
-| `theme`    | `string` | `brand`    | Theme: `brand`, `dark`, `light`, or `bg` |
+| Parameter  | Type     | Default    | Description                                             |
+| ---------- | -------- | ---------- | ------------------------------------------------------- |
+| `username` | `string` | _Required_ | GitHub username                                         |
+| `theme`    | `string` | `brand`    | Theme: `brand`, `dark`, `light`, `transparent`, or `bg` |
 
 ---
 
@@ -164,7 +164,7 @@ Generates a macOS/Linux terminal window with animated typing lines and a blinkin
 | `username` | `string` | _Optional_          | GitHub username used in prompt and window title                                                  |
 | `title`    | `string` | `bash — 80x24`      | Text displayed in the macOS window title bar                                                     |
 | `prompt`   | `string` | `➜ ~`               | Shell prompt prefix symbol                                                                       |
-| `theme`    | `string` | `brand`             | Theme preset: `brand`, `dark`, `matrix`, `dracula`, `monokai`, `light`, or `bg`                  |
+| `theme`    | `string` | `brand`             | Theme preset: `brand`, `dark`, `matrix`, `dracula`, `monokai`, `light`, `transparent`, or `bg`   |
 | `lines`    | `string` | _Default developer_ | Semicolon-separated `command:output` pairs (e.g. `whoami:Engineer;cat bio.txt:Building systems`) |
 | `width`    | `number` | `850`               | ViewBox width of the terminal SVG                                                                |
 
@@ -193,7 +193,7 @@ Generates a dynamic pinned repository card displaying live stars, forks, languag
 | `username`    | `string`  | _Required_ | Repository owner / GitHub username (alias: `owner`)                           |
 | `repo`        | `string`  | _Required_ | Repository name, or comma-separated list (e.g. `repo1,repo2`). Alias: `repos` |
 | `cols`        | `number`  | `2`        | Columns for multi-repo grids (e.g. `1` or `2`)                                |
-| `theme`       | `string`  | `brand`    | Color theme: `brand`, `dark`, `light`, or `bg`                                |
+| `theme`       | `string`  | `brand`    | Color theme: `brand`, `dark`, `light`, `transparent`, or `bg`                 |
 | `show_owner`  | `boolean` | `false`    | When `true`, displays title as `owner/repo`                                   |
 | `description` | `string`  | _Auto_     | Custom description override if you wish to customize the text                 |
 
@@ -211,7 +211,7 @@ Embed any of our **280+ technology icons** directly with theme and size controls
 | Parameter | Type     | Default | Description                                                                     |
 | --------- | -------- | ------- | ------------------------------------------------------------------------------- |
 | `name`    | `string` | _Req_   | Technology name or identifier (e.g. `react`, `python`, `docker`). Alias: `tech` |
-| `theme`   | `string` | `brand` | Color theme: `brand`, `dark`, `light`, or `bg`                                  |
+| `theme`   | `string` | `brand` | Color theme: `brand`, `dark`, `light`, `transparent`, or `bg`                   |
 | `size`    | `number` | _Auto_  | Icon width & height in pixels (e.g. `48`, `64`). Alias: `width`                 |
 
 ---
@@ -241,15 +241,15 @@ Generates a smooth Bézier curve area chart of your annual GitHub contribution a
 <img src="https://readme-stats-theta-sepia.vercel.app/api/activity-graph?username=your-username" alt="Activity Graph" width="100%" />
 ```
 
-| Parameter      | Type      | Default         | Description                                                            |
-| -------------- | --------- | --------------- | ---------------------------------------------------------------------- |
-| `username`     | `string`  | _Required_      | GitHub username (aliases: `user`, `login`)                             |
-| `theme`        | `string`  | `brand`         | Preset: `brand`, `dark`, `matrix`, `dracula`, `monokai`, `light`, `bg` |
-| `days`         | `number`  | `365`           | Number of days of activity to display (e.g. `30`, `90`, `365`)         |
-| `line_color`   | `string`  | _Theme default_ | Custom line stroke hex color (URL-encoded e.g. `%23ec4899`)            |
-| `area_color`   | `string`  | _Line color_    | Custom gradient fill hex color                                         |
-| `hide_title`   | `boolean` | `false`         | When `true`, hides the header title                                    |
-| `hide_metrics` | `boolean` | `false`         | When `true`, hides the metric pill badges (Total, Weekly Avg, Peak)    |
+| Parameter      | Type      | Default         | Description                                                                              |
+| -------------- | --------- | --------------- | ---------------------------------------------------------------------------------------- |
+| `username`     | `string`  | _Required_      | GitHub username (aliases: `user`, `login`)                                               |
+| `theme`        | `string`  | `brand`         | Preset: `brand`, `dark`, `matrix`, `dracula`, `monokai`, `light`, `transparent`, or `bg` |
+| `days`         | `number`  | `365`           | Number of days of activity to display (e.g. `30`, `90`, `365`)                           |
+| `line_color`   | `string`  | _Theme default_ | Custom line stroke hex color (URL-encoded e.g. `%23ec4899`)                              |
+| `area_color`   | `string`  | _Line color_    | Custom gradient fill hex color                                                           |
+| `hide_title`   | `boolean` | `false`         | When `true`, hides the header title                                                      |
+| `hide_metrics` | `boolean` | `false`         | When `true`, hides the metric pill badges (Total, Weekly Avg, Peak)                      |
 
 ---
 

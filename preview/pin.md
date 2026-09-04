@@ -58,18 +58,18 @@ Crisp light theme for white and light-themed profile documentation.
 
 ---
 
-## Transparent Theme (`theme=bg`)
+## Transparent Theme (`theme=transparent` or `theme=bg`)
 
-Transparent background without card borders to blend smoothly with your README layout.
+Transparent background without card borders to blend smoothly with your README layout. Supports both `theme=transparent` and `theme=bg`.
 
 <p align="center">
-  <img src="https://readme-stats-theta-sepia.vercel.app/api/pin?username=vercel&repo=next.js&theme=bg" alt="Pinned Repo Card Transparent" />
+  <img src="https://readme-stats-theta-sepia.vercel.app/api/pin?username=vercel&repo=next.js&theme=transparent" alt="Pinned Repo Card Transparent" />
 </p>
 
 **Code snippet:**
 
 ```markdown
-<img src="https://readme-stats-theta-sepia.vercel.app/api/pin?username=username&repo=repo&theme=bg" alt="Pinned Repo" />
+<img src="https://readme-stats-theta-sepia.vercel.app/api/pin?username=username&repo=repo&theme=transparent" alt="Pinned Repo" />
 ```
 
 ---
@@ -201,6 +201,6 @@ If you want each card in your profile README to be **individually clickable** di
 | `username`    | `string`  | _Required_ | GitHub username or organization name (alias: `owner`)                          |
 | `repo`        | `string`  | _Required_ | GitHub repo name, or comma-separated list (e.g. `repo1,repo2`). Alias: `repos` |
 | `cols`        | `number`  | `2`        | Number of columns for multi-repo grids (e.g. `1` or `2`)                       |
-| `theme`       | `string`  | `brand`    | Color theme: `brand`, `dark`, `light`, or `bg`                                 |
+| `theme`       | `string`  | `brand`    | Color theme: `brand`, `dark`, `light`, `transparent`, or `bg`                  |
 | `show_owner`  | `boolean` | `false`    | When `true`, displays the repository heading as `owner/repo`                   |
 | `description` | `string`  | _Auto_     | Custom description override for single-repo cards                              |

@@ -56,25 +56,25 @@ High-contrast crisp light theme for light profile backgrounds.
 
 ---
 
-## Transparent Theme (`theme=bg`)
+## Transparent Theme (`theme=transparent` or `theme=bg`)
 
-Transparent background without outer borders, blending seamlessly with any profile container.
+Transparent background without outer borders, blending seamlessly with any profile container. Supports both `theme=transparent` and `theme=bg`.
 
 <p align="center">
-  <img src="https://readme-stats-theta-sepia.vercel.app/api/streak?username=hisham-pp&theme=bg" alt="GitHub Streak Transparent" />
+  <img src="https://readme-stats-theta-sepia.vercel.app/api/streak?username=hisham-pp&theme=transparent" alt="GitHub Streak Transparent" />
 </p>
 
 **Code snippet:**
 
 ```markdown
-<img src="https://readme-stats-theta-sepia.vercel.app/api/streak?username=your-username&theme=bg" alt="GitHub Streak" />
+<img src="https://readme-stats-theta-sepia.vercel.app/api/streak?username=your-username&theme=transparent" alt="GitHub Streak" />
 ```
 
 ---
 
 ## Parameters
 
-| Parameter  | Type     | Default    | Description                              |
-| ---------- | -------- | ---------- | ---------------------------------------- |
-| `username` | `string` | _Required_ | GitHub username                          |
-| `theme`    | `string` | `brand`    | Theme: `brand`, `dark`, `light`, or `bg` |
+| Parameter  | Type     | Default    | Description                                             |
+| ---------- | -------- | ---------- | ------------------------------------------------------- |
+| `username` | `string` | _Required_ | GitHub username                                         |
+| `theme`    | `string` | `brand`    | Theme: `brand`, `dark`, `light`, `transparent`, or `bg` |

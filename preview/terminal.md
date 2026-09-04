@@ -88,6 +88,22 @@ Clean light mode terminal with crisp borders and high-contrast typography.
 
 ---
 
+## Transparent Theme (`theme=transparent` or `theme=bg`)
+
+Transparent card background designed to integrate cleanly into custom profile banners. Supports both `theme=transparent` and `theme=bg`.
+
+<p align="center">
+  <img src="https://readme-stats-theta-sepia.vercel.app/api/terminal?username=hisham-pp&theme=transparent" alt="Terminal Card Transparent" width="850" />
+</p>
+
+**Code snippet:**
+
+```markdown
+<img src="https://readme-stats-theta-sepia.vercel.app/api/terminal?username=your-username&theme=transparent" alt="Terminal Bio" width="100%" />
+```
+
+---
+
 ## Custom Lines (`lines=...`)
 
 You can provide completely custom command and output pairs separated by semicolons (`;`) using `command:output`:
@@ -111,6 +127,6 @@ You can provide completely custom command and output pairs separated by semicolo
 | `username` | `string` | _Optional_          | GitHub username used in the default prompt and window title                                      |
 | `title`    | `string` | `bash — 80x24`      | Text displayed in the macOS window title bar                                                     |
 | `prompt`   | `string` | `➜ ~`               | Shell prompt prefix symbol                                                                       |
-| `theme`    | `string` | `brand`             | Theme preset: `brand`, `dark`, `matrix`, `dracula`, `monokai`, `light`, or `bg`                  |
+| `theme`    | `string` | `brand`             | Theme preset: `brand`, `dark`, `matrix`, `dracula`, `monokai`, `light`, `transparent`, or `bg`   |
 | `lines`    | `string` | _Default developer_ | Semicolon-separated `command:output` pairs (e.g. `whoami:Engineer;cat bio.txt:Building systems`) |
 | `width`    | `number` | `850`               | ViewBox width of the terminal SVG                                                                |

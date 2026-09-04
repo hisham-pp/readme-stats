@@ -53,14 +53,14 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 **Description**: Displays general GitHub statistics for a user.
 **Query Parameters**:
 - \`username\`: (Required) GitHub username.
-- \`theme\`: (Optional) \`brand\`, \`dark\`, or \`light\`.
+- \`theme\`: (Optional) \`brand\`, \`dark\`, \`light\`, \`transparent\`, or \`bg\`.
 
 ### 6. GitHub Streak
 **Endpoint**: \`/api/streak\`
 **Description**: Displays GitHub current streak, longest streak, and total contributions with an animated flame icon.
 **Query Parameters**:
 - \`username\`: (Required) GitHub username.
-- \`theme\`: (Optional) \`brand\`, \`dark\`, \`light\`, or \`bg\`.
+- \`theme\`: (Optional) \`brand\`, \`dark\`, \`light\`, \`transparent\`, or \`bg\`.
 
 ### 7. GitHub Contribution Snake Animation
 **Endpoint**: \`/api/snake\`
@@ -80,7 +80,7 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 - \`username\`: (Optional) GitHub username for prompt/title.
 - \`title\`: (Optional) Window title text (default: \`bash — 80x24\`).
 - \`prompt\`: (Optional) Shell prompt prefix (default: \`➜ ~\`).
-- \`theme\`: (Optional) \`brand\`, \`dark\`, \`matrix\`, \`dracula\`, \`monokai\`, \`light\`, or \`bg\`.
+- \`theme\`: (Optional) \`brand\`, \`dark\`, \`matrix\`, \`dracula\`, \`monokai\`, \`light\`, \`transparent\`, or \`bg\`.
 - \`lines\`: (Optional) Semicolon-separated \`command:output\` pairs.
 - \`width\`: (Optional) Card width in pixels (default: 850).
 
@@ -91,7 +91,7 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 - \`username\` / \`owner\`: (Required) GitHub username or organization name.
 - \`repo\` / \`repos\`: (Required) GitHub repository name, or comma-separated list of repos (e.g. \`repo1,repo2\`). Supports \`owner/repo\` syntax.
 - \`cols\`: (Optional) Columns for multi-repo grids (e.g. \`1\` or \`2\`, default \`2\`).
-- \`theme\`: (Optional) \`brand\`, \`dark\`, \`light\`, or \`bg\`.
+- \`theme\`: (Optional) \`brand\`, \`dark\`, \`light\`, \`transparent\`, or \`bg\`.
 - \`show_owner\`: (Optional) \`true\` or \`false\` (default: \`false\`).
 - \`description\`: (Optional) Custom description override for single cards.
 
@@ -100,7 +100,7 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 **Description**: Generates an individual SVG icon for any of 280+ supported technologies with theme and size controls.
 **Query Parameters**:
 - \`name\` / \`tech\`: (Required) Technology name or identifier (e.g. \`react\`, \`python\`, \`docker\`).
-- \`theme\`: (Optional) \`brand\`, \`dark\`, \`light\`, or \`bg\` (default: \`brand\`).
+- \`theme\`: (Optional) \`brand\`, \`dark\`, \`light\`, \`transparent\`, or \`bg\` (default: \`brand\`).
 - \`size\`: (Optional) Icon width & height in pixels (e.g. \`48\`, \`64\`).
 
 ### 11. Single Technology Badge
@@ -116,7 +116,7 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 **Description**: Generates a smooth Bézier curve area chart of annual GitHub contribution activity with timeline labels and peak statistics.
 **Query Parameters**:
 - \`username\` / \`user\` / \`login\`: (Required) GitHub username.
-- \`theme\`: (Optional) \`brand\`, \`dark\`, \`matrix\`, \`dracula\`, \`monokai\`, \`light\`, or \`bg\` (default: \`brand\`).
+- \`theme\`: (Optional) \`brand\`, \`dark\`, \`matrix\`, \`dracula\`, \`monokai\`, \`light\`, \`transparent\`, or \`bg\` (default: \`brand\`).
 - \`days\`: (Optional) Days of history to display (default: \`365\`).
 - \`line_color\`: (Optional) Custom stroke hex color (URL-encoded e.g. \`%23ec4899\`).
 - \`area_color\`: (Optional) Custom gradient fill hex color.

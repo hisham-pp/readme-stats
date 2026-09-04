@@ -110,7 +110,7 @@ export function generateActivityGraphSvg(stats: ActivityGraphStats): string {
     lineGradTo = "#A6E22E";
     badgeBg = "rgba(253, 151, 31, 0.1)";
     badgeText = "#FD971F";
-  } else if (theme === "bg") {
+  } else if (theme === "bg" || theme === "transparent") {
     bg = "transparent";
     border = "transparent";
     titleColor = "#58A6FF";
