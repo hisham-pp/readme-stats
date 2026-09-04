@@ -86,6 +86,12 @@ const DOC_METADATA: Record<
     category: "Stats & Metrics",
     order: 8,
   },
+  "activity-graph.md": {
+    id: "activity-graph",
+    title: "Activity Graph",
+    category: "Stats & Metrics",
+    order: 8.5,
+  },
   "snake.md": {
     id: "snake",
     title: "Contribution Snake",

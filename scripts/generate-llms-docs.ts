@@ -111,6 +111,18 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 - \`height\`: (Optional) Badge height in pixels (default: \`20\`, preserves aspect ratio).
 - \`width\`: (Optional) Explicit badge width in pixels.
 
+### 12. GitHub Contribution Activity Graph
+**Endpoint**: \`/api/activity-graph\`
+**Description**: Generates a smooth Bézier curve area chart of annual GitHub contribution activity with timeline labels and peak statistics.
+**Query Parameters**:
+- \`username\` / \`user\` / \`login\`: (Required) GitHub username.
+- \`theme\`: (Optional) \`brand\`, \`dark\`, \`matrix\`, \`dracula\`, \`monokai\`, \`light\`, or \`bg\` (default: \`brand\`).
+- \`days\`: (Optional) Days of history to display (default: \`365\`).
+- \`line_color\`: (Optional) Custom stroke hex color (URL-encoded e.g. \`%23ec4899\`).
+- \`area_color\`: (Optional) Custom gradient fill hex color.
+- \`hide_title\`: (Optional) \`true\` or \`false\` (default: \`false\`).
+- \`hide_metrics\`: (Optional) \`true\` or \`false\` (default: \`false\`).
+
 ## Markdown Usage Example
 \`\`\`markdown
 [![Tech Stack](https://<domain>/api/tech-badge-marquee?techs=react,nextjs,typescript,tailwindcss)](https://<domain>)

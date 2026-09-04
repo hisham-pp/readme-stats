@@ -57,3 +57,25 @@ export interface RepoStats {
   theme?: Theme;
   showOwner?: boolean;
 }
+
+export interface ActivityGraphPoint {
+  date: string;
+  count: number;
+  dayOfWeek: number;
+}
+
+export interface ActivityGraphStats {
+  name: string;
+  username: string;
+  totalContributions: number;
+  weeklyAverage: number;
+  maxDayCount: number;
+  peakDate: string;
+  points: ActivityGraphPoint[];
+  months: { label: string; xPercent: number }[];
+  theme?: string;
+  lineColor?: string;
+  areaColor?: string;
+  hideTitle?: boolean;
+  hideMetrics?: boolean;
+}

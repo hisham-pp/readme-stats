@@ -15,6 +15,7 @@ You can also browse all supported brands, icons, and badges visually at the **`/
 
 - `/api/stats` - Generates a GitHub stats card.
 - `/api/streak` - Generates a GitHub streak and consistency card.
+- `/api/activity-graph` - Generates a smooth Bézier curve annual contribution activity area chart.
 - `/api/top-langs` - Generates a top languages card.
 - `/api/tech-icon-rain` - Generates an animated tech rainfall banner with custom text.
 - `/api/tech-icon-marquee` - Generates an animated tech stack **icon** marquee.
@@ -22,6 +23,8 @@ You can also browse all supported brands, icons, and badges visually at the **`/
 - `/api/snake` - Generates an animated GitHub contribution grid snake animation.
 - `/api/terminal` - Generates an animated macOS/Linux typing terminal card with custom commands and syntax highlights.
 - `/api/pin` - Generates a dynamic pinned repository showcase card with live stars, forks, and language colors.
+- `/api/icon` - Generates a standalone technology icon with theme and size controls.
+- `/api/badge` - Generates a standalone shields-style technology badge with custom height.
 
 ## ✨ Features & Parameter Tables
 
@@ -227,6 +230,26 @@ Embed individual shields-style technology badges:
 | `name`    | `string` | _Req_   | Technology name or identifier (e.g. `typescript`, `docker`). Alias: `tech` |
 | `height`  | `number` | `20`    | Badge height in pixels (scales width proportionally)                       |
 | `width`   | `number` | _Auto_  | Explicit badge width in pixels                                             |
+
+---
+
+### 11. GitHub Contribution Activity Graph (`/api/activity-graph`)
+
+Generates a smooth Bézier curve area chart of your annual GitHub contribution activity, including total contributions, weekly average, peak day count, and timeline months:
+
+```markdown
+<img src="https://readme-stats-theta-sepia.vercel.app/api/activity-graph?username=your-username" alt="Activity Graph" width="100%" />
+```
+
+| Parameter      | Type      | Default         | Description                                                            |
+| -------------- | --------- | --------------- | ---------------------------------------------------------------------- |
+| `username`     | `string`  | _Required_      | GitHub username (aliases: `user`, `login`)                             |
+| `theme`        | `string`  | `brand`         | Preset: `brand`, `dark`, `matrix`, `dracula`, `monokai`, `light`, `bg` |
+| `days`         | `number`  | `365`           | Number of days of activity to display (e.g. `30`, `90`, `365`)         |
+| `line_color`   | `string`  | _Theme default_ | Custom line stroke hex color (URL-encoded e.g. `%23ec4899`)            |
+| `area_color`   | `string`  | _Line color_    | Custom gradient fill hex color                                         |
+| `hide_title`   | `boolean` | `false`         | When `true`, hides the header title                                    |
+| `hide_metrics` | `boolean` | `false`         | When `true`, hides the metric pill badges (Total, Weekly Avg, Peak)    |
 
 ---
 

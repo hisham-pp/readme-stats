@@ -4,6 +4,8 @@ import {
   ContributionCell,
   StreakStats,
   RepoStats,
+  ActivityGraphStats,
+  ActivityGraphPoint,
 } from "@/types/github.types";
 import {
   USER_INFO_QUERY,
@@ -377,5 +379,114 @@ export async function fetchRepoStats(
         }
       : undefined,
     topics,
+  };
+}
+
+const MONTH_NAMES = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+export async function fetchActivityGraphStats(
+  username: string,
+  daysBack: number = 365,
+): Promise<ActivityGraphStats> {
+  const token = process.env.GITHUB_TOKEN;
+
+  if (!token) {
+    throw new Error("GITHUB_TOKEN is missing");
+  }
+
+  const query = CONTRIBUTIONS_QUERY;
+
+  const response = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ query, variables: { login: username } }),
+    next: { revalidate: 3600 },
+  });
+
+  if (!response.ok) {
+    throw new Error(`GitHub API error: ${response.statusText}`);
+  }
+
+  const data = await response.json();
+
+  if (data.errors) {
+    throw new Error(`GraphQL error: ${data.errors[0].message}`);
+  }
+
+  const user = data.data?.user;
+  if (!user) {
+    throw new Error(`User ${username} not found`);
+  }
+
+  const calendar = user.contributionsCollection?.contributionCalendar;
+  const weeks = calendar?.weeks || [];
+
+  const allDays: ActivityGraphPoint[] = [];
+  for (const week of weeks) {
+    for (const day of week.contributionDays || []) {
+      allDays.push({
+        date: day.date,
+        count: day.contributionCount,
+        dayOfWeek: day.weekday,
+      });
+    }
+  }
+
+  const slicedDays = allDays.slice(-Math.max(14, Math.min(365, daysBack)));
+  const totalContributions = slicedDays.reduce((acc, d) => acc + d.count, 0);
+
+  const numWeeks = Math.max(1, slicedDays.length / 7);
+  const weeklyAverage = Math.round(totalContributions / numWeeks);
+
+  let maxDayCount = 0;
+  let peakDate = "";
+  for (const d of slicedDays) {
+    if (d.count > maxDayCount) {
+      maxDayCount = d.count;
+      peakDate = d.date;
+    }
+  }
+
+  // Calculate month labels along the X-axis
+  const months: { label: string; xPercent: number }[] = [];
+  let lastMonth = -1;
+
+  slicedDays.forEach((d, idx) => {
+    const monthIndex = new Date(d.date).getUTCMonth();
+    if (monthIndex !== lastMonth) {
+      lastMonth = monthIndex;
+      const xPercent = (idx / Math.max(1, slicedDays.length - 1)) * 100;
+      months.push({
+        label: MONTH_NAMES[monthIndex],
+        xPercent,
+      });
+    }
+  });
+
+  return {
+    name: user.name || user.login || username,
+    username: user.login || username,
+    totalContributions,
+    weeklyAverage,
+    maxDayCount: Math.max(1, maxDayCount),
+    peakDate,
+    points: slicedDays,
+    months,
   };
 }
