@@ -18,7 +18,7 @@ interface ShowcaseItem {
   label: string;
   endpoint: string;
   description: string;
-  iconName: "rain" | "badge" | "icon" | "langs" | "stats";
+  iconName: "rain" | "badge" | "icon" | "langs" | "stats" | "snake";
   previewSrc: string;
   markdownSnippet: string;
   builderHref: string;
@@ -77,7 +77,17 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     iconName: "stats",
     previewSrc: "/api/stats?username=hisham-pp&theme=dark",
     markdownSnippet: `<p align="center">\n  <img src="https://readme-stats-theta-sepia.vercel.app/api/stats?username=your-username&theme=dark" alt="GitHub Stats" />\n</p>`,
-    builderHref: "/docs",
+    builderHref: "/preview?file=overview",
+  },
+  {
+    id: "snake",
+    label: "Contribution Snake",
+    endpoint: "/api/snake",
+    description: "Animated snake traveling through your contribution graph.",
+    iconName: "snake",
+    previewSrc: "/api/snake?username=hisham-pp",
+    markdownSnippet: `<p align="center">\n  <img src="https://readme-stats-theta-sepia.vercel.app/api/snake?username=your-username" alt="Contribution Snake" width="100%" />\n</p>`,
+    builderHref: "/preview?file=snake",
   },
 ];
 
@@ -110,6 +120,8 @@ export default function ShowcaseTabs() {
         return <Activity className="w-4 h-4 text-purple-400" />;
       case "stats":
         return <TrendingUp className="w-4 h-4 text-amber-400" />;
+      case "snake":
+        return <Sparkles className="w-4 h-4 text-emerald-400" />;
     }
   };
 

@@ -83,9 +83,9 @@ const QUICK_TOOLS: SearchItem[] = [
   },
   {
     id: "tool-docs",
-    title: "API Documentation & Endpoints",
+    title: "Asset Previews & Documentation",
     category: "Documentation",
-    url: "/docs",
+    url: "/preview",
     type: "tool",
   },
 ];
@@ -521,7 +521,7 @@ export default function PreviewClient({
   };
 
   return (
-    <div className="flex flex-col min-h-[calc(100vh-65px)] w-full bg-[#0a0a0a] text-zinc-200 font-sans">
+    <div className="flex flex-col min-h-[calc(100vh-65px)] w-full bg-transparent text-zinc-200 font-sans">
       {/* Search Modal / Command Palette Dialog */}
       {isSearchOpen && (
         <div

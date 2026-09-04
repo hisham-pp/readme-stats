@@ -25,13 +25,18 @@ export default function IconsPage() {
   });
 
   return (
-    <div className="flex flex-col min-h-screen items-center bg-zinc-900 font-sans p-8">
-      <main className="flex w-full max-w-6xl flex-col mt-4">
-        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-zinc-800 pb-6 mb-8 gap-4">
+    <div className="flex flex-col min-h-screen items-center bg-transparent font-sans p-4 sm:p-6 lg:p-8">
+      <main className="flex w-full max-w-[1600px] flex-col mt-2">
+        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-zinc-800/80 pb-6 mb-8 gap-4">
           <div>
-            <h1 className="text-3xl font-bold text-zinc-100">All Icons</h1>
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-zinc-100 via-zinc-200 to-zinc-400 bg-clip-text text-transparent">
+              All Icons
+            </h1>
             <p className="text-sm text-zinc-400 mt-2">
-              Browse all available SVGs. Use the <code>?techs=...</code>{" "}
+              Browse all available SVGs. Use the{" "}
+              <code className="text-zinc-300 font-mono bg-zinc-900 px-1.5 py-0.5 rounded border border-zinc-800">
+                ?techs=...
+              </code>{" "}
               parameter to load these directly in the API.
             </p>
           </div>
@@ -41,22 +46,22 @@ export default function IconsPage() {
               placeholder="Search icons..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="px-4 py-2 bg-zinc-950 border border-zinc-800 rounded-md text-zinc-100 focus:outline-none focus:border-zinc-500 transition-colors w-full"
+              className="px-4 py-2.5 bg-zinc-950/70 border border-zinc-800 rounded-xl text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/50 transition-all w-full text-sm"
             />
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-5">
           {iconsList.map((item) => (
             <div
               key={item.id}
-              className="flex flex-col p-5 bg-zinc-950 border border-zinc-800 rounded-xl hover:border-zinc-700 transition-colors group shadow-lg"
+              className="flex flex-col p-5 bg-zinc-950/60 backdrop-blur-sm border border-zinc-800/80 rounded-2xl hover:border-zinc-700 transition-all group shadow-xl hover:shadow-blue-500/5 hover:-translate-y-0.5 duration-200"
             >
               <div className="flex justify-between items-center mb-4">
-                <h3 className="text-sm font-semibold text-zinc-200 truncate pr-2">
+                <h3 className="text-sm font-semibold text-zinc-200 truncate pr-2 group-hover:text-zinc-100">
                   {item.name}
                 </h3>
-                <code className="text-[10px] text-zinc-500 bg-zinc-900 px-1.5 py-0.5 rounded border border-zinc-800">
+                <code className="text-[10px] text-zinc-400 bg-zinc-900/80 px-1.5 py-0.5 rounded border border-zinc-800 font-mono">
                   {item.id}
                 </code>
               </div>

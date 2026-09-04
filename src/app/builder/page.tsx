@@ -84,10 +84,10 @@ export default function BuilderPage() {
   const htmlCode = `<img src="${generatedUrl}" alt="Readme Stats" />`;
 
   return (
-    <div className="flex flex-col min-h-screen items-center bg-zinc-900 font-sans p-8">
-      <main className="flex w-full max-w-6xl flex-col mt-4 gap-8 lg:flex-row">
+    <div className="flex flex-col min-h-screen items-center font-sans p-4 sm:p-6 lg:p-8">
+      <main className="flex w-full max-w-[1600px] flex-col mt-2 gap-8 lg:flex-row">
         {/* Left: Configuration Form */}
-        <div className="w-full lg:w-1/3 flex flex-col gap-6 bg-zinc-950 p-6 rounded-xl border border-zinc-800 h-fit">
+        <div className="w-full lg:w-1/3 flex flex-col gap-6 bg-zinc-950/70 backdrop-blur-md p-6 rounded-2xl border border-zinc-800/80 shadow-xl h-fit">
           <div>
             <h2 className="text-xl font-bold text-zinc-100 mb-1">
               API Builder
@@ -203,22 +203,29 @@ export default function BuilderPage() {
 
         {/* Right: Preview and Code */}
         <div className="w-full lg:w-2/3 flex flex-col gap-6">
-          <div className="w-full bg-zinc-950 p-6 rounded-xl border border-zinc-800 h-fit">
-            <h3 className="text-lg font-bold text-zinc-100 mb-4 border-b border-zinc-800 pb-2">
-              Live Preview
+          <div className="w-full bg-zinc-950/70 backdrop-blur-md p-6 rounded-2xl border border-zinc-800/80 shadow-xl h-fit">
+            <h3 className="text-lg font-bold text-zinc-100 mb-4 border-b border-zinc-800/80 pb-3 flex items-center justify-between">
+              <span>Live Preview</span>
+              <span className="text-[11px] font-normal text-zinc-500">
+                Real-time SVG rendering
+              </span>
             </h3>
-            <div className="w-full bg-[#0d1117] p-8 rounded-lg flex items-center justify-center overflow-x-auto min-h-[200px] border border-zinc-800">
+            <div className="w-full bg-[#0d1117] p-8 rounded-xl flex items-center justify-center overflow-x-auto min-h-[220px] border border-zinc-800/80 shadow-inner">
               {baseUrl ? (
-                <img src={generatedUrl} alt="Preview" />
+                <img
+                  src={generatedUrl}
+                  alt="Preview"
+                  className="max-w-full h-auto rounded"
+                />
               ) : (
                 <span className="text-zinc-500">Loading preview...</span>
               )}
             </div>
           </div>
 
-          <div className="w-full bg-zinc-950 p-6 rounded-xl border border-zinc-800 h-fit flex flex-col gap-4">
-            <h3 className="text-lg font-bold text-zinc-100 border-b border-zinc-800 pb-2">
-              Generated Code
+          <div className="w-full bg-zinc-950/70 backdrop-blur-md p-6 rounded-2xl border border-zinc-800/80 shadow-xl h-fit flex flex-col gap-5">
+            <h3 className="text-lg font-bold text-zinc-100 border-b border-zinc-800/80 pb-3">
+              Generated Snippets
             </h3>
 
             <div className="flex flex-col gap-2">
