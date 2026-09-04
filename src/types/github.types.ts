@@ -19,3 +19,11 @@ export interface GitHubLanguage {
   percent: string;
   embeddedSvg?: string;
 }
+
+export interface ContributionCell {
+  x: number;
+  y: number;
+  date: string;
+  count: number;
+  level: number;
+}

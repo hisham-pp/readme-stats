@@ -50,6 +50,16 @@ Showcase your most-used GitHub languages using dedicated endpoints for each visu
 
 > **Tip:** You can also pass `?theme=dark|light|brand` or use the query parameter `?type=badge|icon|treemap` on `/api/top-langs`.
 
+### 4. GitHub Contribution Snake Animation (`/api/snake`)
+
+Dynamically generate an animated snake that crawls through your real GitHub contribution graph:
+
+```markdown
+<img src="https://readme-stats-theta-sepia.vercel.app/api/snake?username=your-username" alt="Contribution Snake" width="100%" />
+```
+
+> **Options:** `?palette=github-dark|github-light` • `?color_snake=purple|#38bdf8` • `?color_dots=...`
+
 ## 🤖 AI Agents
 
 This repository is optimized for AI agents! We provide a comprehensive `llms.txt` at the root of the domain.

@@ -46,3 +46,22 @@ export const TOP_LANGS_QUERY = `
     }
   }
 `;
+
+export const CONTRIBUTIONS_QUERY = `
+  query contributions($login: String!) {
+    user(login: $login) {
+      contributionsCollection {
+        contributionCalendar {
+          weeks {
+            contributionDays {
+              contributionCount
+              contributionLevel
+              weekday
+              date
+            }
+          }
+        }
+      }
+    }
+  }
+`;

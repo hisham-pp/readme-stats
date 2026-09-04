@@ -56,6 +56,12 @@ const DOC_METADATA: Record<
     category: "Stats & Metrics",
     order: 6,
   },
+  "snake.md": {
+    id: "snake",
+    title: "Contribution Snake",
+    category: "Animations",
+    order: 7,
+  },
 };
 
 function slugify(text: string) {
