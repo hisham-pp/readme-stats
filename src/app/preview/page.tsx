@@ -56,17 +56,23 @@ const DOC_METADATA: Record<
     category: "Stats & Metrics",
     order: 6,
   },
+  "streak.md": {
+    id: "streak",
+    title: "GitHub Streak",
+    category: "Stats & Metrics",
+    order: 7,
+  },
   "snake.md": {
     id: "snake",
     title: "Contribution Snake",
     category: "Animations",
-    order: 7,
+    order: 8,
   },
   "pipeline.md": {
     id: "pipeline",
     title: "Pre-Generation Pipeline",
     category: "Workflows & CI/CD",
-    order: 8,
+    order: 9,
   },
 };
 

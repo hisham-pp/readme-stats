@@ -2,6 +2,7 @@ import {
   GitHubStats,
   GitHubLanguage,
   ContributionCell,
+  StreakStats,
 } from "@/types/github.types";
 import {
   USER_INFO_QUERY,
@@ -173,4 +174,142 @@ export async function fetchUserContributions(
         0,
     })),
   );
+}
+
+function formatStreakDate(dateStr?: string, includeYear = false): string {
+  if (!dateStr) return "";
+  const [year, month, day] = dateStr.split("-").map(Number);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    ...(includeYear ? { year: "numeric" } : {}),
+    timeZone: "UTC",
+  });
+}
+
+function formatDateRange(start?: string, end?: string): string {
+  if (!start) return "";
+  if (!end || start === end) return formatStreakDate(start);
+  return `${formatStreakDate(start)} - ${formatStreakDate(end)}`;
+}
+
+export async function fetchStreakStats(username: string): Promise<StreakStats> {
+  const token = process.env.GITHUB_TOKEN;
+
+  if (!token) {
+    throw new Error("GITHUB_TOKEN is missing");
+  }
+
+  const query = CONTRIBUTIONS_QUERY;
+
+  const response = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ query, variables: { login: username } }),
+    next: { revalidate: 3600 }, // Cache for 1 hour
+  });
+
+  if (!response.ok) {
+    throw new Error(`GitHub API error: ${response.statusText}`);
+  }
+
+  const data = await response.json();
+
+  if (data.errors) {
+    throw new Error(`GraphQL error: ${data.errors[0].message}`);
+  }
+
+  const user = data.data.user;
+  if (!user) {
+    throw new Error(`User ${username} not found`);
+  }
+
+  const calendar = user.contributionsCollection?.contributionCalendar;
+  const weeks = calendar?.weeks || [];
+
+  const days: { date: string; count: number }[] = [];
+  for (const week of weeks) {
+    for (const day of week.contributionDays || []) {
+      days.push({
+        date: day.date,
+        count: day.contributionCount,
+      });
+    }
+  }
+
+  const totalContributions =
+    calendar?.totalContributions ?? days.reduce((acc, d) => acc + d.count, 0);
+
+  let longestStreak = 0;
+  let longestStreakStart = "";
+  let longestStreakEnd = "";
+
+  let tempStreak = 0;
+  let tempStart = "";
+  let tempEnd = "";
+
+  for (const day of days) {
+    if (day.count > 0) {
+      if (tempStreak === 0) {
+        tempStart = day.date;
+      }
+      tempStreak++;
+      tempEnd = day.date;
+
+      if (tempStreak > longestStreak) {
+        longestStreak = tempStreak;
+        longestStreakStart = tempStart;
+        longestStreakEnd = tempEnd;
+      }
+    } else {
+      tempStreak = 0;
+    }
+  }
+
+  let currentStreak = 0;
+  let currentStreakStart = "";
+  let currentStreakEnd = "";
+
+  if (days.length > 0) {
+    const lastIndex = days.length - 1;
+    const lastDay = days[lastIndex];
+
+    let startIndex = -1;
+    if (lastDay.count > 0) {
+      startIndex = lastIndex;
+    } else if (lastIndex > 0 && days[lastIndex - 1].count > 0) {
+      startIndex = lastIndex - 1;
+    }
+
+    if (startIndex >= 0) {
+      currentStreakEnd = days[startIndex].date;
+      for (let i = startIndex; i >= 0; i--) {
+        if (days[i].count > 0) {
+          currentStreak++;
+          currentStreakStart = days[i].date;
+        } else {
+          break;
+        }
+      }
+    }
+  }
+
+  const firstDate = days[0]?.date ? formatStreakDate(days[0].date, true) : "";
+  const totalRange = firstDate ? `${firstDate} - Present` : "";
+
+  return {
+    name: user.name || user.login || username,
+    totalContributions,
+    firstContributionDate: totalRange,
+    currentStreak,
+    currentStreakStart: formatDateRange(currentStreakStart, currentStreakEnd),
+    currentStreakEnd: currentStreakEnd,
+    longestStreak,
+    longestStreakStart: formatDateRange(longestStreakStart, longestStreakEnd),
+    longestStreakEnd: longestStreakEnd,
+  };
 }

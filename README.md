@@ -9,11 +9,12 @@ A dynamic GitHub profile statistics generator built with Next.js. This applicati
 Don't want to type out query parameters manually? We have a visual builder!
 Navigate to the **`/builder`** route on the live deployment to visually select your technologies, customize your themes, and instantly generate the exact Markdown and HTML code to paste into your GitHub README.
 
-You can also browse all supported icons and badges visually at the **`/icons`** and **`/badges`** routes!
+You can also browse all supported brands, icons, and badges visually at the **`/brands`** route, or explore live interactive examples in the **`/preview`** documentation!
 
 ## 🚀 Endpoints
 
 - `/api/stats` - Generates a GitHub stats card.
+- `/api/streak` - Generates a GitHub streak and consistency card.
 - `/api/top-langs` - Generates a top languages card.
 - `/api/tech-icon-rain` - Generates an animated tech rainfall banner with custom text.
 - `/api/tech-icon-marquee` - Generates an animated tech stack **icon** marquee.
@@ -37,7 +38,22 @@ Generates a summary card of your GitHub stars, commits, PRs, and issues:
 
 ---
 
-### 2. Top Languages Card (`/api/top-langs`)
+### 2. GitHub Streak Card (`/api/streak`)
+
+Displays your current streak, longest streak, and total contributions with animated flame highlights:
+
+```markdown
+<img src="https://readme-stats-theta-sepia.vercel.app/api/streak?username=your-username" alt="GitHub Streak" />
+```
+
+| Parameter  | Type     | Default    | Description                              |
+| ---------- | -------- | ---------- | ---------------------------------------- |
+| `username` | `string` | _Required_ | GitHub username                          |
+| `theme`    | `string` | `brand`    | Theme: `brand`, `dark`, `light`, or `bg` |
+
+---
+
+### 3. Top Languages Card (`/api/top-langs`)
 
 Showcase your most-used GitHub languages using dedicated endpoints for each visual layout:
 
@@ -73,7 +89,7 @@ Showcase your most-used GitHub languages using dedicated endpoints for each visu
 
 ---
 
-### 3. Tech Icon Rainfall Banner (`/api/tech-icon-rain`)
+### 4. Tech Icon Rainfall Banner (`/api/tech-icon-rain`)
 
 Animated tech logos raining in the background behind your name and bio:
 
@@ -95,7 +111,7 @@ Animated tech logos raining in the background behind your name and bio:
 
 ---
 
-### 4. Tech Marquees (`/api/tech-badge-marquee` & `/api/tech-icon-marquee`)
+### 5. Tech Marquees (`/api/tech-badge-marquee` & `/api/tech-icon-marquee`)
 
 Infinite animated carousel displaying badges or icons:
 
@@ -111,7 +127,7 @@ Infinite animated carousel displaying badges or icons:
 
 ---
 
-### 5. GitHub Contribution Snake Animation (`/api/snake`)
+### 6. GitHub Contribution Snake Animation (`/api/snake`)
 
 Dynamically generate an animated snake that crawls through your real GitHub contribution graph:
 
@@ -164,8 +180,9 @@ jobs:
           # 2. Tech Marquees
           curl -s -f "${BASE_URL}/api/tech-badge-marquee?techs=react,nextjs,typescript" -o dist/marquee-frontend.svg
 
-          # 3. Stats & Languages
+          # 3. Stats, Streak & Languages
           curl -s -f "${BASE_URL}/api/stats?username=${{ github.repository_owner }}" -o dist/github-stats.svg
+          curl -s -f "${BASE_URL}/api/streak?username=${{ github.repository_owner }}" -o dist/github-streak.svg
           curl -s -f "${BASE_URL}/api/top-langs?username=${{ github.repository_owner }}&type=treemap-icon" -o dist/top-langs.svg
 
       # Generate snake animation

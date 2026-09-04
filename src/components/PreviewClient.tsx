@@ -62,23 +62,9 @@ const QUICK_TOOLS: SearchItem[] = [
   },
   {
     id: "tool-brands",
-    title: "Browse Brand Badges",
+    title: "Browse Brands & Badges",
     category: "Tools",
     url: "/brands",
-    type: "tool",
-  },
-  {
-    id: "tool-icons",
-    title: "Browse Tech Icons",
-    category: "Tools",
-    url: "/icons",
-    type: "tool",
-  },
-  {
-    id: "tool-badges",
-    title: "Browse All Badges",
-    category: "Tools",
-    url: "/badges",
     type: "tool",
   },
   {

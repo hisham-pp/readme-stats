@@ -3,7 +3,7 @@
 Welcome, AI Agent! This document explains how to use the Readme Stats API to generate dynamic SVGs for GitHub READMEs.
 
 ## Overview
-This project provides an API that generates beautiful, dynamic SVGs (such as scrolling tech icon marquees, badges, top languages, and GitHub stats) for use in Markdown files. 
+This project provides an API that generates beautiful, dynamic SVGs (such as scrolling tech icon marquees, badges, tech rainfall banners, top languages, GitHub stats, streak counters, and contribution snake animations) for use in Markdown files. 
 
 ## Endpoints & Parameters
 
@@ -22,7 +22,21 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 - `techs`: (Required) Comma-separated list of technology IDs. See `/tech-list.txt` for supported IDs.
 - `width`: (Optional) ViewBox width (default: 850).
 
-### 3. Top Languages
+### 3. Tech Icon Rainfall Banner
+**Endpoint**: `/api/tech-icon-rain`
+**Description**: Generates an animated tech logos rainfall banner with custom title text and description.
+**Query Parameters**:
+- `techs`: (Optional) Comma-separated list of technology IDs (defaults to all supported techs).
+- `name`: (Optional) Centered title text.
+- `description`: (Optional) Subtitle / bio description.
+- `width`: (Optional) SVG width in pixels (default: 850).
+- `height`: (Optional) SVG height in pixels (default: 300).
+- `theme`: (Optional) `brand`, `dark`, `light`, or `bg`.
+- `color`: (Optional) Text color hex code (default: #FFFFFF).
+- `bgcolor`: (Optional) Background color hex code or `transparent`.
+- `fontSize`: (Optional) Title font size (default: 54).
+
+### 4. Top Languages
 **Endpoint**: `/api/top-langs`
 **Description**: Displays the top programming languages for a GitHub user.
 **Query Parameters**:
@@ -30,12 +44,30 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 - `theme`: (Optional) `brand`, `dark`, or `light`.
 - `type`: (Optional) Visual style: `default`, `icon`, `badge`, `treemap_icon`, or `treemap_badge`.
 
-### 4. GitHub Stats
+### 5. GitHub Stats
 **Endpoint**: `/api/stats`
 **Description**: Displays general GitHub statistics for a user.
 **Query Parameters**:
 - `username`: (Required) GitHub username.
 - `theme`: (Optional) `brand`, `dark`, or `light`.
+
+### 6. GitHub Streak
+**Endpoint**: `/api/streak`
+**Description**: Displays GitHub current streak, longest streak, and total contributions with an animated flame icon.
+**Query Parameters**:
+- `username`: (Required) GitHub username.
+- `theme`: (Optional) `brand`, `dark`, `light`, or `bg`.
+
+### 7. GitHub Contribution Snake Animation
+**Endpoint**: `/api/snake`
+**Description**: Generates an animated snake that crawls through the user's real GitHub contribution calendar grid.
+**Query Parameters**:
+- `username`: (Required) GitHub username.
+- `palette` / `theme`: (Optional) Color preset (`github-dark`, `github-light`, `github`, `gitlab-dark`, `codeberg-dark`).
+- `color_snake`: (Optional) Hex or named color for the snake (e.g. `#38bdf8`, `purple`, `orange`).
+- `color_dots`: (Optional) Comma-separated list of 5 colors for contribution levels 0 to 4.
+- `color_background`: (Optional) Background color hex or named color.
+- `speed`: (Optional) Step duration in milliseconds (default: 100).
 
 ## Markdown Usage Example
 ```markdown

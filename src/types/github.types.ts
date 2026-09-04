@@ -27,3 +27,16 @@ export interface ContributionCell {
   count: number;
   level: number;
 }
+
+export interface StreakStats {
+  name: string;
+  currentStreak: number;
+  currentStreakStart?: string;
+  currentStreakEnd?: string;
+  longestStreak: number;
+  longestStreakStart?: string;
+  longestStreakEnd?: string;
+  totalContributions: number;
+  firstContributionDate?: string;
+  theme?: Theme;
+}
