@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { Metadata } from "next";
 import { headers } from "next/headers";
-import { marked } from "marked";
+import { marked, Tokens } from "marked";
 import PreviewClient, {
   PreviewDoc,
   HeadingItem,
@@ -65,6 +65,15 @@ function slugify(text: string) {
     .replace(/[^\w\s-]/g, "")
     .trim()
     .replace(/\s+/g, "-");
+}
+
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
 function extractHeadings(content: string): HeadingItem[] {
@@ -132,6 +141,31 @@ export default async function PreviewPage({ searchParams }: PageProps) {
           return `<a href="/preview?file=${clean}" data-preview-file="${clean}">${text}</a>`;
         }
         return false;
+      },
+      code(token: Tokens.Code) {
+        const lang = token.lang || "code";
+        const displayLang = lang.toUpperCase();
+        const escaped = escapeHtml(token.text);
+        return `<div class="code-block-wrapper my-4 rounded-lg overflow-hidden border border-zinc-800 bg-[#161b22]">
+  <div class="code-block-header flex items-center justify-between px-3.5 py-1.5 bg-zinc-900/90 border-b border-zinc-800/80 text-xs select-none">
+    <span class="font-mono text-[11px] text-zinc-500 font-semibold tracking-wider">${displayLang}</span>
+    <button
+      type="button"
+      class="code-copy-btn inline-flex items-center gap-1.5 px-2.5 py-1 text-xs text-zinc-400 hover:text-zinc-100 bg-zinc-800/70 hover:bg-zinc-800 border border-zinc-700/60 rounded-md transition-all cursor-pointer shadow-xs"
+      title="Copy code snippet"
+    >
+      <svg class="copy-icon w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+        <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+      </svg>
+      <svg class="check-icon w-3.5 h-3.5 hidden text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+      <span class="copy-text text-[11px] font-medium">Copy</span>
+    </button>
+  </div>
+  <pre class="overflow-x-auto p-3.5 m-0 text-xs sm:text-sm font-mono"><code class="language-${lang}">${escaped}</code></pre>
+</div>`;
       },
     },
   });
