@@ -22,10 +22,13 @@ const badgeBundles: Record<string, Record<string, string>> = {
   brand: badgesBrandBundle,
 };
 
-export async function GET(request: NextRequest) {
+export async function handleTopLangs(
+  request: NextRequest,
+  defaultType: string = "default",
+) {
   const searchParams = request.nextUrl.searchParams;
   const username = searchParams.get("username");
-  const type = searchParams.get("type") || "default";
+  const type = searchParams.get("type") || defaultType;
 
   const globalThemeQuery = searchParams.get("theme") as any;
   const theme = THEMES.includes(globalThemeQuery) ? globalThemeQuery : "brand";
@@ -93,4 +96,8 @@ export async function GET(request: NextRequest) {
   } catch (error: any) {
     return new NextResponse(`Error: ${error.message}`, { status: 500 });
   }
+}
+
+export async function GET(request: NextRequest) {
+  return handleTopLangs(request, "default");
 }

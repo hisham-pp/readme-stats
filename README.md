@@ -20,39 +20,35 @@ You can also browse all supported icons and badges visually at the **`/icons`** 
 
 ## ✨ Features
 
-### Top Languages with Custom Icons/Badges
+### 3. Top Languages Card
 
-You can render your most-used languages using your custom icons or badges by appending the `?type=` query parameter.
+Showcase your most-used GitHub languages using dedicated endpoints for each visual layout:
 
-**Default Dots:**
+**Default Dots (`/api/top-langs`):**
 
 ```markdown
 <img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username" alt="Top Languages" />
 ```
 
-**Custom Icons (`?type=icon`):**
+**Custom Badges (`/api/top-langs/badge`):**
 
 ```markdown
-<img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username&type=icon" alt="Top Languages Icons" />
+<img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs/badge?username=your-username" alt="Top Languages Badges" />
 ```
 
-**Custom Badges (`?type=badge`):**
+**Custom Icons (`/api/top-langs/icon`):**
 
 ```markdown
-<img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username&type=badge" alt="Top Languages Badges" />
+<img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs/icon?username=your-username" alt="Top Languages Icons" />
 ```
 
-**Treemap Icons (`?type=treemap-icon`):**
+**Treemap (`/api/top-langs/treemap`):**
 
 ```markdown
-<img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username&type=treemap-icon" alt="Top Languages Treemap Icons" />
+<img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs/treemap?username=your-username" alt="Top Languages Treemap" />
 ```
 
-**Treemap Badges (`?type=treemap-badge`):**
-
-```markdown
-<img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username&type=treemap-badge" alt="Top Languages Treemap Badges" />
-```
+> **Tip:** You can also pass `?theme=dark|light|brand` or use the query parameter `?type=badge|icon|treemap` on `/api/top-langs`.
 
 ## 🤖 AI Agents
 
