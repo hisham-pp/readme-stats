@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+if (process.env.VERCEL || process.env.CI) {
+  process.exit(0);
+}
+
 const userAgent = process.env.npm_config_user_agent || "";
 const execPath = process.env.npm_execpath || "";
 

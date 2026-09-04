@@ -8,30 +8,44 @@ Showcase your most-used GitHub languages using highly customized layouts. Instea
 
 The standard GitHub Readme Stats layout.
 
-\\\markdown
+<p align="center">
+  <img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=hisham-pp" alt="Top Languages Default" />
+</p>
+
+**Code snippet:**
+
+```markdown
 <img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username" alt="Top Languages" />
-\\\
-*(Preview will render when deployed)*
+```
 
 ---
 
-## Icon Style (\?type=icon\)
+## Icon Style (`?type=icon`)
 
 Replaces the default colored dots with beautifully detailed tech icons from your configuration.
 
-\\\markdown
+<p align="center">
+  <img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=hisham-pp&type=icon" alt="Top Languages Icons" />
+</p>
+
+**Code snippet:**
+
+```markdown
 <img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username&type=icon" alt="Top Languages Icons" />
-\\\
-*(Preview will render when deployed)*
+```
 
 ---
 
-## Badge Style (\?type=badge\)
+## Badge Style (`?type=badge`)
 
 Swaps the standard text legend for full tech badges, creating a wider and highly stylized stat card.
 
-\\\markdown
-<img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username&type=badge" alt="Top Languages Badges" />
-\\\
-*(Preview will render when deployed)*
+<p align="center">
+  <img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=hisham-pp&type=badge" alt="Top Languages Badges" />
+</p>
 
+**Code snippet:**
+
+```markdown
+<img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username&type=badge" alt="Top Languages Badges" />
+```

@@ -2,20 +2,20 @@
   "name": "readme-stats",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@11.1.2",
   "scripts": {
     "preinstall": "node ./scripts/only-allow-pnpm.js",
     "dev": "next dev",
-    "prebuild": "pnpm run config:merge && pnpm run badges:generate && pnpm run icons:generate && pnpm run bundle:svgs",
-    "build:llms": "npx tsx scripts/generate-llms-docs.ts",
+    "prebuild": "node ./scripts/prebuild.js",
     "build": "next build",
+    "build:llms": "npx tsx scripts/generate-llms-docs.ts",
     "start": "next start",
     "lint": "eslint",
+    "generate:assets": "pnpm run config:merge && pnpm run badges:generate && pnpm run icons:generate && pnpm run bundle:svgs",
     "config:merge": "npx tsx scripts/merge-tech-config.ts",
     "badges:generate": "pnpm run config:merge && npx tsx scripts/generate-badges.ts",
     "icons:generate": "pnpm run config:merge && npx tsx scripts/generate-icons.ts",
     "bundle:svgs": "npx tsx scripts/bundle-svgs.ts",
-    "postinstall": "lefthook install"
+    "postinstall": "node -e \"if (!process.env.VERCEL && !process.env.CI) try { require('child_process').execSync('lefthook install', { stdio: 'inherit' }) } catch (e) {}\""
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
