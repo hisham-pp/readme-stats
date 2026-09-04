@@ -71,7 +71,7 @@ export async function GET(request: NextRequest) {
   const cols = colsParam ? parseInt(colsParam, 10) : undefined;
 
   try {
-    const statsList = await Promise.all(
+    const settled = await Promise.allSettled(
       targets.map(async (target, idx) => {
         const stats = await fetchRepoStats(target.owner, target.name);
         stats.theme = theme;
@@ -82,6 +82,20 @@ export async function GET(request: NextRequest) {
         return stats;
       }),
     );
+
+    const statsList = settled
+      .filter(
+        (res): res is PromiseFulfilledResult<any> => res.status === "fulfilled",
+      )
+      .map((res) => res.value);
+
+    if (statsList.length === 0) {
+      const firstRejected = settled.find((res) => res.status === "rejected") as
+        PromiseRejectedResult | undefined;
+      const msg =
+        firstRejected?.reason?.message || "Failed to load repositories";
+      return new NextResponse(`Error: ${msg}`, { status: 404 });
+    }
 
     const svg = generatePinSvg(statsList, { cols, theme });
 

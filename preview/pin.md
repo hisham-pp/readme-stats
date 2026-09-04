@@ -125,13 +125,13 @@ Pass multiple repositories separated by commas using `repos=repo1,repo2` (or `re
 You can pass 4 repositories to create a neat 2x2 grid in a single SVG image:
 
 <p align="center">
-  <img src="https://readme-stats-theta-sepia.vercel.app/api/pin?username=vercel&repos=next.js,turbo,swc,hyper" alt="4 Pinned Repos Grid" />
+  <img src="https://readme-stats-theta-sepia.vercel.app/api/pin?username=vercel&repos=next.js,turborepo,hyper,pkg" alt="4 Pinned Repos Grid" />
 </p>
 
 **Code snippet:**
 
 ```markdown
-<img src="https://readme-stats-theta-sepia.vercel.app/api/pin?username=vercel&repos=next.js,turbo,swc,hyper" alt="Pinned Repos Grid" />
+<img src="https://readme-stats-theta-sepia.vercel.app/api/pin?username=vercel&repos=next.js,turborepo,hyper,pkg" alt="Pinned Repos Grid" />
 ```
 
 ### Cross-Owner Repositories
