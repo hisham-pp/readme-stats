@@ -158,9 +158,8 @@ export function getSingleIconSvg(
 
   let cleanedSvg = rawSvg.replace(/<\?xml.*?\?>/g, "").trim();
 
-  if (options.size && options.size > 0) {
-    cleanedSvg = resizeSvg(cleanedSvg, options.size, options.size);
-  }
+  const size = options.size && options.size > 0 ? options.size : 48;
+  cleanedSvg = resizeSvg(cleanedSvg, size, size);
 
   return { svg: cleanedSvg, tech };
 }
@@ -191,12 +190,14 @@ export function getSingleBadgeSvg(
 
   let cleanedSvg = rawSvg.replace(/<\?xml.*?\?>/g, "").trim();
 
-  if (
-    (options.height && options.height > 0) ||
-    (options.width && options.width > 0)
-  ) {
-    cleanedSvg = resizeSvg(cleanedSvg, options.width, options.height);
-  }
+  const targetHeight =
+    options.height && options.height > 0
+      ? options.height
+      : options.width
+        ? undefined
+        : 20;
+
+  cleanedSvg = resizeSvg(cleanedSvg, options.width, targetHeight);
 
   return { svg: cleanedSvg, tech };
 }

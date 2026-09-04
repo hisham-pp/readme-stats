@@ -44,11 +44,17 @@ const DOC_METADATA: Record<
     category: "Marquees",
     order: 4,
   },
-  "single-icons-badges.md": {
-    id: "single-icons-badges",
-    title: "Single Icons & Badges",
+  "icon.md": {
+    id: "icon",
+    title: "Single Icon",
     category: "Tech Stack & Brands",
     order: 4.5,
+  },
+  "badge.md": {
+    id: "badge",
+    title: "Single Badge",
+    category: "Tech Stack & Brands",
+    order: 4.6,
   },
   "tech-icon-rain.md": {
     id: "tech-icon-rain",
