@@ -20,6 +20,7 @@ You can also browse all supported brands, icons, and badges visually at the **`/
 - `/api/tech-icon-marquee` - Generates an animated tech stack **icon** marquee.
 - `/api/tech-badge-marquee` - Generates an animated tech stack **badge** marquee.
 - `/api/snake` - Generates an animated GitHub contribution grid snake animation.
+- `/api/terminal` - Generates an animated macOS/Linux typing terminal card with custom commands and syntax highlights.
 
 ## ✨ Features & Parameter Tables
 
@@ -143,6 +144,25 @@ Dynamically generate an animated snake that crawls through your real GitHub cont
 | `color_dots`        | `string` | _5 colors_    | Comma-separated list of 5 colors from 0 to 4 contribution level                       |
 | `color_background`  | `string` | `#0c1116`     | Background color of the SVG                                                           |
 | `speed`             | `number` | `100`         | Step duration in milliseconds (lower = faster)                                        |
+
+---
+
+### 7. Animated Typing Terminal (`/api/terminal`)
+
+Generates a macOS/Linux terminal window with animated typing lines and a blinking cursor:
+
+```markdown
+<img src="https://readme-stats-theta-sepia.vercel.app/api/terminal?username=your-username" alt="Terminal Bio" width="100%" />
+```
+
+| Parameter  | Type     | Default             | Description                                                                                      |
+| ---------- | -------- | ------------------- | ------------------------------------------------------------------------------------------------ |
+| `username` | `string` | _Optional_          | GitHub username used in prompt and window title                                                  |
+| `title`    | `string` | `bash — 80x24`      | Text displayed in the macOS window title bar                                                     |
+| `prompt`   | `string` | `➜ ~`               | Shell prompt prefix symbol                                                                       |
+| `theme`    | `string` | `brand`             | Theme preset: `brand`, `dark`, `matrix`, `dracula`, `monokai`, `light`, or `bg`                  |
+| `lines`    | `string` | _Default developer_ | Semicolon-separated `command:output` pairs (e.g. `whoami:Engineer;cat bio.txt:Building systems`) |
+| `width`    | `number` | `850`               | ViewBox width of the terminal SVG                                                                |
 
 ## 🚀 GitHub Actions Pre-Generation Pipeline (Zero Cold Starts)
 

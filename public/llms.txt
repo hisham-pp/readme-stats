@@ -69,6 +69,17 @@ This project provides an API that generates beautiful, dynamic SVGs (such as scr
 - `color_background`: (Optional) Background color hex or named color.
 - `speed`: (Optional) Step duration in milliseconds (default: 100).
 
+### 8. Animated Typing Terminal
+**Endpoint**: `/api/terminal`
+**Description**: Generates an animated macOS/Linux typing terminal with custom commands and syntax-highlighted responses.
+**Query Parameters**:
+- `username`: (Optional) GitHub username for prompt/title.
+- `title`: (Optional) Window title text (default: `bash — 80x24`).
+- `prompt`: (Optional) Shell prompt prefix (default: `➜ ~`).
+- `theme`: (Optional) `brand`, `dark`, `matrix`, `dracula`, `monokai`, `light`, or `bg`.
+- `lines`: (Optional) Semicolon-separated `command:output` pairs.
+- `width`: (Optional) Card width in pixels (default: 850).
+
 ## Markdown Usage Example
 ```markdown
 [![Tech Stack](https://<domain>/api/tech-badge-marquee?techs=react,nextjs,typescript,tailwindcss)](https://<domain>)

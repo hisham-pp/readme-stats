@@ -50,29 +50,35 @@ const DOC_METADATA: Record<
     category: "Banners",
     order: 5,
   },
+  "terminal.md": {
+    id: "terminal",
+    title: "Typing Terminal",
+    category: "Banners",
+    order: 6,
+  },
   "top-langs.md": {
     id: "top-langs",
     title: "Top Languages",
     category: "Stats & Metrics",
-    order: 6,
+    order: 7,
   },
   "streak.md": {
     id: "streak",
     title: "GitHub Streak",
     category: "Stats & Metrics",
-    order: 7,
+    order: 8,
   },
   "snake.md": {
     id: "snake",
     title: "Contribution Snake",
     category: "Animations",
-    order: 8,
+    order: 9,
   },
   "pipeline.md": {
     id: "pipeline",
     title: "Pre-Generation Pipeline",
     category: "Workflows & CI/CD",
-    order: 9,
+    order: 10,
   },
 };
 
