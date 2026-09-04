@@ -35,6 +35,7 @@ export interface PreviewDoc {
 interface PreviewClientProps {
   docs: PreviewDoc[];
   initialDocId?: string;
+  initialSlug?: string;
   currentBaseUrl?: string;
 }
 
@@ -92,15 +93,36 @@ const QUICK_TOOLS: SearchItem[] = [
 export default function PreviewClient({
   docs,
   initialDocId = "overview",
+  initialSlug,
   currentBaseUrl = PROD_BASE_URL,
 }: PreviewClientProps) {
   const router = useRouter();
   const [activeDocId, setActiveDocId] = useState<string>(() => {
-    if (initialDocId === "README") return "overview";
-    return initialDocId || docs[0]?.id || "overview";
+    let clean = initialDocId;
+    if (clean?.includes("#")) {
+      clean = clean.split("#")[0];
+    }
+    clean = clean?.replace(/^(\.\.\/|\.\/)+/, "").replace(/\.md$/, "");
+    if (clean === "README" || !clean) return "overview";
+    return docs.some((d) => d.id === clean) ? clean : docs[0]?.id || "overview";
   });
   const [copied, setCopied] = useState(false);
-  const [activeHeadingSlug, setActiveHeadingSlug] = useState<string>("");
+  const [activeHeadingSlug, setActiveHeadingSlug] = useState<string>(
+    () => initialSlug || "",
+  );
+
+  // Auto scroll to target heading slug on initial mount
+  useEffect(() => {
+    if (initialSlug) {
+      setTimeout(() => {
+        const el = document.getElementById(initialSlug);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+          setActiveHeadingSlug(initialSlug);
+        }
+      }, 200);
+    }
+  }, [initialSlug]);
 
   // Search state
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -125,10 +147,12 @@ export default function PreviewClient({
   useEffect(() => {
     const handlePopState = () => {
       const params = new URLSearchParams(window.location.search);
-      let fileParam = params.get("file");
-      if (fileParam === "README") fileParam = "overview";
-      if (fileParam && docs.some((d) => d.id === fileParam)) {
-        setActiveDocId(fileParam);
+      const rawFile = params.get("file");
+      let cleanFile = rawFile ? rawFile.split("#")[0] : "";
+      cleanFile = cleanFile.replace(/^(\.\.\/|\.\/)+/, "").replace(/\.md$/, "");
+      if (cleanFile === "README" || !cleanFile) cleanFile = "overview";
+      if (docs.some((d) => d.id === cleanFile)) {
+        setActiveDocId(cleanFile);
       }
     };
     window.addEventListener("popstate", handlePopState);
@@ -346,13 +370,20 @@ export default function PreviewClient({
       return;
     }
 
-    // 2. Intercept relative markdown links (e.g. ./badge-marquee.md)
+    // 2. Intercept relative markdown links (e.g. ./badge-marquee.md or ./pipeline.md#section)
     const target = (e.target as HTMLElement).closest("a");
     if (!target) return;
     const previewFile = target.getAttribute("data-preview-file");
     if (previewFile) {
       e.preventDefault();
-      selectDoc(previewFile);
+      let docTarget = previewFile;
+      let slugTarget: string | undefined = undefined;
+      if (docTarget.includes("#")) {
+        const [d, s] = docTarget.split("#");
+        docTarget = d;
+        slugTarget = s;
+      }
+      selectDoc(docTarget, slugTarget);
     }
   };
 

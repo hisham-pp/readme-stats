@@ -62,6 +62,12 @@ const DOC_METADATA: Record<
     category: "Animations",
     order: 7,
   },
+  "pipeline.md": {
+    id: "pipeline",
+    title: "Pre-Generation Pipeline",
+    category: "Workflows & CI/CD",
+    order: 8,
+  },
 };
 
 function slugify(text: string) {
@@ -214,17 +220,35 @@ export default async function PreviewPage({ searchParams }: PageProps) {
 
   docs.sort((a, b) => a.order - b.order);
 
-  // Normalize initial doc id
-  let initialId = resolvedParams?.file || "overview";
-  if (initialId === "README") initialId = "overview";
-  if (!docs.some((d) => d.id === initialId)) {
-    initialId = docs[0]?.id || "overview";
+  // Normalize initial doc id & anchor
+  let requestedFile = resolvedParams?.file || "overview";
+  let targetSlug: string | undefined = undefined;
+
+  if (requestedFile.includes("#")) {
+    const [filePart, hashPart] = requestedFile.split("#");
+    requestedFile = filePart;
+    targetSlug = hashPart;
   }
+
+  // Strip path traversal and extension
+  requestedFile = requestedFile
+    .replace(/^(\.\.\/|\.\/)+/, "")
+    .replace(/\.md$/, "")
+    .trim();
+
+  if (requestedFile === "README" || !requestedFile) {
+    requestedFile = "overview";
+  }
+
+  const initialId = docs.some((d) => d.id === requestedFile)
+    ? requestedFile
+    : docs[0]?.id || "overview";
 
   return (
     <PreviewClient
       docs={docs}
       initialDocId={initialId}
+      initialSlug={targetSlug}
       currentBaseUrl={currentBaseUrl}
     />
   );

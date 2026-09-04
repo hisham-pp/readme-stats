@@ -14,4 +14,4 @@ Welcome to the marquee previews! Select a style below to view its examples and c
 
 ## Pre-Generation Pipeline (Zero Cold Starts)
 
-Pre-generate all your profile SVGs on a scheduled GitHub Actions workflow and deploy directly to your repository's `output` branch for instant rendering without dynamic server delays. See the full workflow guide in the [Main Documentation](../README.md#github-actions-pre-generation-pipeline-zero-cold-starts).
+- [GitHub Actions Pipeline](./pipeline.md) - Pre-generate all profile SVGs on a scheduled workflow and deploy to the `output` branch for instant loading with zero cold starts.
