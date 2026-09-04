@@ -5,6 +5,7 @@ A dynamic GitHub profile statistics generator built with Next.js. This applicati
 **Live Deployment:** [https://readme-stats-theta-sepia.vercel.app/](https://readme-stats-theta-sepia.vercel.app/)
 
 ## 🎨 Interactive API Builder
+
 Don't want to type out query parameters manually? We have a visual builder!
 Navigate to the **`/builder`** route on the live deployment to visually select your technologies, customize your themes, and instantly generate the exact Markdown and HTML code to paste into your GitHub README.
 
@@ -20,38 +21,48 @@ You can also browse all supported icons and badges visually at the **`/icons`** 
 ## ✨ Features
 
 ### Top Languages with Custom Icons/Badges
+
 You can render your most-used languages using your custom icons or badges by appending the `?type=` query parameter.
 
 **Default Dots:**
+
 ```markdown
 <img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username" alt="Top Languages" />
 ```
 
 **Custom Icons (`?type=icon`):**
+
 ```markdown
 <img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username&type=icon" alt="Top Languages Icons" />
 ```
 
 **Custom Badges (`?type=badge`):**
+
 ```markdown
 <img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username&type=badge" alt="Top Languages Badges" />
 ```
 
 **Treemap Icons (`?type=treemap-icon`):**
+
 ```markdown
 <img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username&type=treemap-icon" alt="Top Languages Treemap Icons" />
 ```
 
 **Treemap Badges (`?type=treemap-badge`):**
+
 ```markdown
 <img src="https://readme-stats-theta-sepia.vercel.app/api/top-langs?username=your-username&type=treemap-badge" alt="Top Languages Treemap Badges" />
 ```
 
 ## 🤖 AI Agents
-This repository is optimized for AI agents! We provide a comprehensive `llms.txt` at the root of the domain. 
+
+This repository is optimized for AI agents! We provide a comprehensive `llms.txt` at the root of the domain.
 AI Agents can visit `/llms.txt` and `/tech-list.txt` to learn how to interact with this API and get the full list of supported technology IDs.
 
 ## 🛠️ Getting Started
+
+> [!NOTE]
+> This project exclusively supports **[pnpm](https://pnpm.io/)** as its package manager. Running with `npm`, `yarn`, or `bun` is not supported.
 
 First, install dependencies:
 
