@@ -1,6 +1,6 @@
 # Single Technology Badges (`/api/badge`)
 
-> **View other styles:** [Badge Marquee](./badge-marquee.md) | [Single Icon](./icon.md) | [Icon Marquee](./icon-marquee.md) | [Icon Rain](./icon-rain.md)
+> **View other styles:** [Badge Marquee](./badge-marquee.md) | [Single Icon](./icon.md) | [Icon Marquee](./icon-marquee.md) | [Available Brands](./brands.md)
 
 Embed individual shields-style technology badges with official brand logos, titles, and custom scaling anywhere in your profile README or documentation.
 

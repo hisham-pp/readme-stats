@@ -56,6 +56,12 @@ const DOC_METADATA: Record<
     category: "Tech Stack & Brands",
     order: 4.6,
   },
+  "brands.md": {
+    id: "brands",
+    title: "Available Brands",
+    category: "Tech Stack & Brands",
+    order: 4.7,
+  },
   "tech-icon-rain.md": {
     id: "tech-icon-rain",
     title: "Rainfall Banner",

@@ -1,6 +1,6 @@
 # Single Technology Icons (`/api/icon`)
 
-> **View other styles:** [Badge Marquee](./badge-marquee.md) | [Icon Marquee](./icon-marquee.md) | [Icon Background Marquee](./iconbg-marquee.md) | [Single Badge](./badge.md) | [Icon Rain](./icon-rain.md)
+> **View other styles:** [Badge Marquee](./badge-marquee.md) | [Icon Marquee](./icon-marquee.md) | [Icon Background Marquee](./iconbg-marquee.md) | [Single Badge](./badge.md) | [Available Brands](./brands.md)
 
 Embed individual technology icons anywhere in your GitHub README, documentation, or website with high performance, customizable sizing, and multi-theme support.
 
